@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rational Choice & Routine Activity Theory · Cornish & Clarke; Cohen & Felson</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f3ee;--card:#fff;--en:#1b2a44;--en-t:#dce8f8;--pr-bg:#ece8f8;--pr-bd:#c5b8ef;--pr-t:#3d2b80;--ko-bg:#fdf6ec;--ko-t:#5a3820;--ko-bd:#f0dfc0;--gr-bg:#edf6ec;--gr-t:#1a4f1a;--gr-bd:#b8dab8;--ac:#c8a84b;--bd:#ddd8cc;--sh:0 2px 14px rgba(0,0,0,.07);--r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans','Noto Sans KR',sans-serif;background:var(--bg);color:#2a2a2a;line-height:1.75;font-size:15px}
+.hdr{background:var(--en);color:var(--en-t);padding:clamp(1.2rem,4vw,2rem) clamp(.8rem,3vw,1.5rem);text-align:center;border-bottom:4px solid var(--ac)}
+.badge{display:inline-block;background:var(--ac);color:var(--en);font-size:.65rem;font-weight:700;padding:.2rem .8rem;border-radius:20px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem}
+.hdr h1{font-family:'Lora',serif;font-size:clamp(1.1rem,3.5vw,1.5rem);font-weight:600;margin-bottom:.3rem}
+.hdr h2{font-size:clamp(.8rem,2.5vw,.95rem);opacity:.7}
+.wrap{max-width:860px;margin:0 auto;padding:clamp(1rem,3vw,2rem) clamp(.7rem,2.5vw,1.2rem) 4rem}
+.slabel{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#999;margin:clamp(1.2rem,3vw,2rem) 0 .8rem;padding-bottom:.4rem;border-bottom:1px solid var(--bd)}
+.blk{background:var(--card);border-radius:var(--r);margin-bottom:1.2rem;overflow:hidden;box-shadow:var(--sh);border:1px solid var(--bd)}
+.en-r{background:var(--en);color:var(--en-t);padding:clamp(.8rem,2.5vw,1rem) clamp(.8rem,2.5vw,1.2rem);display:flex;gap:.6rem;align-items:flex-start}
+.sn{background:var(--ac);color:#fff;font-size:.6rem;font-weight:700;padding:.15rem .45rem;border-radius:4px;white-space:nowrap;margin-top:.3rem;flex-shrink:0}
+.en-t{font-family:'Lora',serif;font-size:clamp(.9rem,2.3vw,1.05rem);line-height:1.85}
+.pr-r{background:var(--pr-bg);border-top:1px solid var(--pr-bd);border-bottom:1px solid var(--pr-bd);padding:clamp(.55rem,2vw,.7rem) clamp(.8rem,2.5vw,1.2rem)}
+.rl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.6;margin-bottom:.4rem}
+.pr-r .rl{color:var(--pr-t)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{background:#fff;border:1px solid var(--pr-bd);border-radius:5px;padding:.22rem clamp(.45rem,1.5vw,.65rem);font-size:clamp(.72rem,1.9vw,.8rem);display:flex;align-items:flex-start;gap:.3rem;flex-wrap:wrap;flex-direction:column}
+.chip-top{display:flex;align-items:center;gap:.3rem;flex-wrap:wrap}
+.cw{font-weight:700;color:var(--pr-t)}
+.ci{font-family:'DM Mono',monospace;color:#666;font-size:clamp(.67rem,1.7vw,.75rem)}
+.ca{color:#999;font-size:clamp(.67rem,1.7vw,.75rem)}
+.cm{color:#444;font-size:clamp(.67rem,1.7vw,.74rem);border-top:1px solid #e0d8f4;padding-top:.18rem;margin-top:.1rem;width:100%}
+.ko-r{background:var(--ko-bg);border-top:1px solid var(--ko-bd);padding:clamp(.65rem,2vw,.8rem) clamp(.8rem,2.5vw,1.2rem);color:var(--ko-t);font-family:'Noto Sans KR',sans-serif;font-size:clamp(.82rem,2.2vw,.9rem);line-height:1.85}
+.ko-r .rl{color:var(--ko-t)}
+.gr-r{background:var(--gr-bg);border-top:1px solid var(--gr-bd);padding:clamp(.65rem,2vw,.8rem) clamp(.8rem,2.5vw,1.2rem);color:var(--gr-t);font-size:clamp(.78rem,2vw,.85rem);line-height:1.8;overflow-x:auto}
+.gr-r .rl{color:var(--gr-t)}
+.gr-r code{font-family:'DM Mono',monospace;background:rgba(0,0,0,.08);padding:.1rem .32rem;border-radius:3px;font-size:clamp(.7rem,1.8vw,.78rem);word-break:break-all}
+.gr-r b{color:#0d3d0d}
+.mt{width:100%;border-collapse:collapse;margin:.6rem 0;font-size:clamp(.72rem,1.8vw,.8rem);display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mt table{width:100%;border-collapse:collapse}
+.mt th{background:rgba(0,0,0,.07);padding:.38rem .6rem;text-align:left;font-weight:600;border:1px solid #c8dac8;white-space:nowrap}
+.mt td{padding:.38rem .6rem;border:1px solid #c8dac8}
+.mt tr:nth-child(even) td{background:rgba(255,255,255,.5)}
+.vc{background:var(--card);border-radius:var(--r);margin-bottom:.8rem;overflow:hidden;box-shadow:var(--sh);border:1px solid var(--bd);display:grid;grid-template-columns:clamp(120px,28vw,190px) 1fr}
+.vl{background:var(--en);color:var(--en-t);padding:clamp(.7rem,2vw,1rem);display:flex;flex-direction:column;justify-content:center}
+.vw{font-family:'Lora',serif;font-size:clamp(.85rem,2.2vw,1rem);font-weight:600;margin-bottom:.2rem;word-break:break-word}
+.vi{font-family:'DM Mono',monospace;font-size:clamp(.62rem,1.6vw,.74rem);color:var(--ac);margin-bottom:.1rem;word-break:break-all}
+.va{font-size:clamp(.62rem,1.6vw,.74rem);opacity:.55}
+.vr{padding:clamp(.7rem,2vw,1rem) clamp(.8rem,2.5vw,1.2rem)}
+.vm{font-weight:600;font-size:clamp(.82rem,2.2vw,.92rem);margin-bottom:.35rem;color:#222}
+.ve{font-size:clamp(.75rem,1.9vw,.84rem);color:#555;font-style:italic;margin-bottom:.2rem}
+.vk{font-size:clamp(.72rem,1.8vw,.8rem);color:var(--ko-t);font-family:'Noto Sans KR',sans-serif}
+@media(max-width:480px){.vc{grid-template-columns:1fr}.vl{flex-direction:row;align-items:center;gap:.6rem;flex-wrap:wrap;padding:.7rem .9rem}.vw{margin-bottom:0}.vi{margin-bottom:0}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="badge">Lecture 8 · Environmental Criminology</div>
+  <h1>Rational Choice & Routine Activity Theory</h1>
+  <h2>Cornish & Clarke; Cohen & Felson (1970s–80s)</h2>
+</div>
+<div class="wrap">
+<div class="slabel">📖 Script — Sentence by Sentence</div>
+
+<!-- S1 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S1</span><p class="en-t">Today we examine two closely related theories that transformed how criminologists think about crime — Rational Choice Theory and Routine Activity Theory, both emerging in the late 1970s and 1980s.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">examine</span><span class="ci">/ɪɡˈzæmɪn/</span><span class="ca">이그재민</span></div><div class="cm">검토하다, 조사하다 / 시험을 치다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">transformed</span><span class="ci">/trænsˈfɔːrmd/</span><span class="ca">트랜스폼드</span></div><div class="cm">변화시킨, 바꿔놓은</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">criminologists</span><span class="ci">/ˌkrɪmɪˈnɒlədʒɪsts/</span><span class="ca">크리미놀러지스츠</span></div><div class="cm">범죄학자들</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">emerging</span><span class="ci">/ɪˈmɜːrdʒɪŋ/</span><span class="ca">이머징</span></div><div class="cm">등장하는, 부상하는</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>오늘은 범죄학자들이 범죄에 대해 생각하는 방식을 변화시킨 밀접하게 관련된 두 이론 — 합리적 선택 이론과 일상활동 이론을 살펴본다. 두 이론 모두 1970년대 후반과 1980년대에 등장했다.</div>
+</div>
+
+<!-- S2 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S2</span><p class="en-t">These theories drew heavily on ideas from the Classical School — particularly Beccaria and Bentham's notion that human beings are rational actors who seek pleasure and avoid pain.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">drew heavily on</span><span class="ci">/druː ˈhevɪli ɒn/</span><span class="ca">드루 헤빌리 온</span></div><div class="cm">~에 크게 의존했다, ~에서 많이 가져왔다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">Beccaria</span><span class="ci">/beˈkɑːriə/</span><span class="ca">베카리아</span></div><div class="cm">인명 고유명사 (이탈리아 계몽사상가)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">Bentham</span><span class="ci">/ˈbenθəm/</span><span class="ca">벤덤</span></div><div class="cm">인명 고유명사 (영국 공리주의 철학자)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">rational</span><span class="ci">/ˈræʃənəl/</span><span class="ca">래셔널</span></div><div class="cm">합리적인, 이성적인</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이 이론들은 고전학파의 사상에 크게 의존했다 — 특히 인간은 쾌락을 추구하고 고통을 피하는 합리적 행위자라는 베카리아와 벤담의 관념에서 비롯되었다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>drew heavily on</b> : <code>draw on</code>의 과거형 — "~에서 끌어오다, ~에 의존하다". <code>heavily</code>가 정도를 강조<br>
+    <b>who seek pleasure and avoid pain</b> : 관계절 — 합리적 행위자의 정의를 설명
+  </div>
+</div>
+
+<!-- S3 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S3</span><p class="en-t">The core premise of Rational Choice Theory is straightforward: offenders make rational calculations, weighing the potential costs against the expected benefits before deciding to commit a crime.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">premise</span><span class="ci">/ˈpremɪs/</span><span class="ca">프레미스</span></div><div class="cm">전제, 가정 / 건물 부지</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">offenders</span><span class="ci">/əˈfendərz/</span><span class="ca">어펜더즈</span></div><div class="cm">범죄자들, 위반자들</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">calculations</span><span class="ci">/ˌkælkjʊˈleɪʃənz/</span><span class="ca">캘큘레이션즈</span></div><div class="cm">계산, 산출 / 타산</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">weighing</span><span class="ci">/ˈweɪɪŋ/</span><span class="ca">웨이잉</span></div><div class="cm">저울질하는, 비교하는</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>합리적 선택 이론의 핵심 전제는 단순명쾌하다: 범죄자들은 합리적인 계산을 하며, 범죄를 저지르기로 결정하기 전에 잠재적 비용과 기대 이익을 비교한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>weighing A against B</b> : <code>weigh A against B</code> — "A와 B를 비교하여 따져보다". 분사구문으로 주절을 보충 설명<br>
+    <b>before deciding to commit</b> : <code>before + 동명사</code> — "~하기 전에"
+  </div>
+</div>
+
+<!-- S4 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S4</span><p class="en-t">However, this does not mean offenders sit down with a spreadsheet and a calculator. The theory acknowledges what economists call <strong>bounded rationality</strong> — decisions are rational, but within limits of time, information, and cognitive ability.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">spreadsheet</span><span class="ci">/ˈspredʃiːt/</span><span class="ca">스프레드시트</span></div><div class="cm">스프레드시트, 표 계산 프로그램</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">acknowledges</span><span class="ci">/əkˈnɒlɪdʒɪz/</span><span class="ca">억날리지즈</span></div><div class="cm">인정하다, 인지하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">bounded rationality</span><span class="ci">/ˈbaʊndɪd ˌræʃəˈnælɪti/</span><span class="ca">바운디드 래셔낼리티</span></div><div class="cm">제한된 합리성</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">cognitive</span><span class="ci">/ˈkɒɡnɪtɪv/</span><span class="ca">코그니티브</span></div><div class="cm">인지적인, 인식의</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>그러나 이것은 범죄자가 스프레드시트와 계산기를 펼쳐놓고 앉아 있다는 뜻이 아니다. 이 이론은 경제학자들이 <strong>제한된 합리성</strong>이라 부르는 것을 인정한다 — 결정은 합리적이지만, 시간, 정보, 인지 능력의 한계 안에서만 그러하다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>what economists call ~</b> : <code>what</code>절이 목적어 — "경제학자들이 ~라고 부르는 것"<br>
+    <b>within limits of ~</b> : "~의 한계 안에서" — 범위·제약을 표현하는 전치사구
+  </div>
+</div>
+
+<!-- S5 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S5</span><p class="en-t">Derek Cornish and Ronald Clarke, the key architects of the theory, insisted that analysis must be <strong>crime-specific</strong>. The decision to commit a burglary is entirely different from the decision to commit tax fraud.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">architects</span><span class="ci">/ˈɑːrkɪtekts/</span><span class="ca">아키텍츠</span></div><div class="cm">설계자, 건축가 / (비유) 입안자</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">insisted</span><span class="ci">/ɪnˈsɪstɪd/</span><span class="ca">인시스티드</span></div><div class="cm">주장했다, 강조했다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">burglary</span><span class="ci">/ˈbɜːrɡləri/</span><span class="ca">버글러리</span></div><div class="cm">주거침입절도, 빈집털이</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">fraud</span><span class="ci">/frɔːd/</span><span class="ca">프로드</span></div><div class="cm">사기, 기만 / 사기꾼</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이 이론의 핵심 설계자인 데릭 코니시와 로날드 클라크는 분석이 반드시 <strong>범죄 유형별</strong>이어야 한다고 주장했다. 절도를 저지르려는 결정은 세금 사기를 저지르려는 결정과 완전히 다르다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>crime-specific</b> : 하이픈으로 연결된 복합 형용사 — "범죄 유형에 특화된". 범죄를 하나의 덩어리로 보지 말라는 뜻<br>
+    <b>entirely different from</b> : <code>different from ~</code>에 <code>entirely</code>로 강조 — "~와 완전히 다른"
+  </div>
+</div>
+
+<!-- S6 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S6</span><p class="en-t">Cornish and Clarke distinguished between two types of decisions: <strong>involvement decisions</strong> — whether to get into crime at all — and <strong>event decisions</strong> — how and when to commit a particular crime.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">distinguished</span><span class="ci">/dɪˈstɪŋɡwɪʃt/</span><span class="ca">디스팅귀쉬트</span></div><div class="cm">구별했다, 구분했다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">involvement</span><span class="ci">/ɪnˈvɒlvmənt/</span><span class="ca">인볼브먼트</span></div><div class="cm">관여, 참여 / 연루</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">particular</span><span class="ci">/pərˈtɪkjʊlər/</span><span class="ca">퍼티큘러</span></div><div class="cm">특정한, 특별한 / 까다로운</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>코니시와 클라크는 두 가지 유형의 결정을 구분했다: <strong>관여 결정</strong> — 범죄에 발을 들일 것인가의 여부 — 와 <strong>사건 결정</strong> — 특정 범죄를 어떻게, 언제 저지를 것인가이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>distinguished between A and B</b> : <code>distinguish between</code> — "A와 B를 구분하다"<br>
+    <b>whether to get into crime at all</b> : <code>whether to + 동사원형</code> — "~할 것인지 여부". <code>at all</code>은 "도대체, 아예"로 강조
+  </div>
+</div>
+
+<!-- S7 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S7</span><p class="en-t">This distinction led directly to <strong>Situational Crime Prevention</strong> — the idea that we can reduce crime not by changing offenders, but by changing the situations and environments in which crime occurs.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">distinction</span><span class="ci">/dɪˈstɪŋkʃən/</span><span class="ca">디스팅션</span></div><div class="cm">구별, 차이 / 구분 / 특출남</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">situational</span><span class="ci">/ˌsɪtʃuˈeɪʃənəl/</span><span class="ca">시추에이셔널</span></div><div class="cm">상황의, 상황에 따른</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">environments</span><span class="ci">/ɪnˈvaɪrənmənts/</span><span class="ca">인바이런먼츠</span></div><div class="cm">환경들</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이 구분은 <strong>상황적 범죄 예방</strong>으로 직접 이어졌다 — 범죄자를 바꾸는 것이 아니라, 범죄가 발생하는 상황과 환경을 바꿈으로써 범죄를 줄일 수 있다는 발상이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>not by A, but by B</b> : "A에 의해서가 아니라 B에 의해서" — 대조 구문. 범죄 예방의 초점 전환을 강조<br>
+    <b>in which crime occurs</b> : 격식체 관계절 — "범죄가 발생하는 (환경)"
+  </div>
+</div>
+
+<!-- S8 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S8</span><p class="en-t">Clarke eventually developed 25 techniques of situational crime prevention, organized into five categories: increasing the effort, increasing the risks, reducing the rewards, reducing provocations, and removing excuses.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">eventually</span><span class="ci">/ɪˈventʃuəli/</span><span class="ca">이벤추얼리</span></div><div class="cm">결국, 마침내</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">techniques</span><span class="ci">/tekˈniːks/</span><span class="ca">테크닉스</span></div><div class="cm">기법들, 기술들</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">provocations</span><span class="ci">/ˌprɒvəˈkeɪʃənz/</span><span class="ca">프로버케이션즈</span></div><div class="cm">도발, 자극 / 유발 요인들</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">excuses</span><span class="ci">/ɪkˈskjuːsɪz/</span><span class="ca">익스큐시즈</span></div><div class="cm">변명, 핑계 / 구실</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>클라크는 결국 상황적 범죄 예방의 25가지 기법을 개발했으며, 이를 다섯 범주로 정리했다: 노력 증가, 위험 증가, 보상 감소, 도발 감소, 변명 제거이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>organized into five categories</b> : <code>organize into</code>의 과거분사 — "~로 정리된, ~로 분류된"<br>
+    <div class="mt"><table>
+      <tr><th>범주</th><th>영어</th><th>예시</th></tr>
+      <tr><td>노력 증가</td><td>Increase the effort</td><td>자물쇠, 잠금장치 강화</td></tr>
+      <tr><td>위험 증가</td><td>Increase the risks</td><td>CCTV, 경비원 배치</td></tr>
+      <tr><td>보상 감소</td><td>Reduce the rewards</td><td>현금 보유량 최소화</td></tr>
+      <tr><td>도발 감소</td><td>Reduce provocations</td><td>혼잡 줄이기, 분쟁 완화</td></tr>
+      <tr><td>변명 제거</td><td>Remove excuses</td><td>규칙 게시, 양심에 호소</td></tr>
+    </table></div>
+  </div>
+</div>
+
+<!-- S9 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S9</span><p class="en-t">For example, installing steering column locks in cars dramatically reduced auto theft in several countries — a classic case of increasing the effort required to commit the crime.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">steering column</span><span class="ci">/ˈstɪərɪŋ ˈkɒləm/</span><span class="ca">스티어링 칼럼</span></div><div class="cm">조향 기둥 (핸들 축)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">dramatically</span><span class="ci">/drəˈmætɪkli/</span><span class="ca">드러매티클리</span></div><div class="cm">극적으로, 크게</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">auto theft</span><span class="ci">/ˈɔːtoʊ θeft/</span><span class="ca">오토 세프트</span></div><div class="cm">자동차 절도</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>예를 들어, 자동차에 조향 기둥 잠금장치를 설치한 것은 여러 나라에서 자동차 절도를 극적으로 줄였다 — 범죄를 저지르는 데 필요한 노력을 증가시킨 고전적 사례이다.</div>
+</div>
+
+<!-- S10 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S10</span><p class="en-t">Now let us turn to the second theory. In 1979, Lawrence Cohen and Marcus Felson published a landmark article introducing <strong>Routine Activity Theory</strong>.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">Lawrence Cohen</span><span class="ci">/ˈlɔːrəns ˈkoʊən/</span><span class="ca">로런스 코언</span></div><div class="cm">인명 고유명사</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">Marcus Felson</span><span class="ci">/ˈmɑːrkəs ˈfelsən/</span><span class="ca">마커스 펠슨</span></div><div class="cm">인명 고유명사</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">landmark</span><span class="ci">/ˈlændmɑːrk/</span><span class="ca">랜드마크</span></div><div class="cm">획기적인, 기념비적인 / 랜드마크</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">routine</span><span class="ci">/ruːˈtiːn/</span><span class="ca">루틴</span></div><div class="cm">일상, 일과 / 일상적인</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이제 두 번째 이론으로 넘어가자. 1979년, 로런스 코언과 마커스 펠슨은 <strong>일상활동 이론</strong>을 소개하는 획기적인 논문을 발표했다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>let us turn to</b> : 강의 전환 표현 — "~으로 넘어가다". <code>turn to</code> = 주제를 바꿀 때 사용<br>
+    <b>a landmark article introducing ~</b> : 현재분사 <code>introducing</code>이 <code>article</code>을 수식 — "~을 소개하는 기념비적 논문"
+  </div>
+</div>
+
+<!-- S11 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S11</span><p class="en-t">Their central argument was elegant: for a crime to occur, three elements must converge in time and space — a <strong>motivated offender</strong>, a <strong>suitable target</strong>, and the <strong>absence of a capable guardian</strong>.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">elegant</span><span class="ci">/ˈelɪɡənt/</span><span class="ca">엘리건트</span></div><div class="cm">우아한, 세련된 / (이론이) 간결하고 아름다운</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">converge</span><span class="ci">/kənˈvɜːrdʒ/</span><span class="ca">컨버지</span></div><div class="cm">한곳에 모이다, 수렴하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">suitable</span><span class="ci">/ˈsuːtəbəl/</span><span class="ca">수터블</span></div><div class="cm">적합한, 알맞은</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">guardian</span><span class="ci">/ˈɡɑːrdiən/</span><span class="ca">가디언</span></div><div class="cm">보호자, 감시자 / 후견인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">absence</span><span class="ci">/ˈæbsəns/</span><span class="ca">앱선스</span></div><div class="cm">부재, 없음 / 결석</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>그들의 핵심 주장은 간결했다: 범죄가 발생하려면, 세 가지 요소가 시간과 공간에서 만나야 한다 — <strong>동기가 있는 범죄자</strong>, <strong>적합한 표적</strong>, 그리고 <strong>유능한 감시자의 부재</strong>이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>for a crime to occur</b> : <code>for + 목적어 + to부정사</code> — "범죄가 발생하기 위해서" (목적/조건을 표현)<br>
+    <b>converge in time and space</b> : "시간과 공간에서 수렴하다/만나다" — 세 요소의 동시적 조합을 강조
+  </div>
+</div>
+
+<!-- S12 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S12</span><p class="en-t">Remove any one of these three elements, and the crime will not happen. This is sometimes visualized as the <strong>Crime Triangle</strong>, also known as the Problem Analysis Triangle.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">remove</span><span class="ci">/rɪˈmuːv/</span><span class="ca">리무브</span></div><div class="cm">제거하다, 없애다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">visualized</span><span class="ci">/ˈvɪʒuəlaɪzd/</span><span class="ca">비주얼라이즈드</span></div><div class="cm">시각화된, 도식화된</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">triangle</span><span class="ci">/ˈtraɪæŋɡəl/</span><span class="ca">트라이앵글</span></div><div class="cm">삼각형 / 삼각 관계</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이 세 요소 중 하나라도 제거하면 범죄는 발생하지 않는다. 이것은 때때로 <strong>범죄 삼각형</strong>으로 시각화되며, 문제 분석 삼각형이라고도 불린다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>Remove any one ~, and ~</b> : 명령문 + <code>and</code> — "~하라, 그러면 ~할 것이다" (= If you remove any one ~, the crime will not happen)<br>
+    <b>also known as</b> : "~으로도 알려진" — 별칭을 소개할 때 쓰는 표현
+  </div>
+</div>
+
+<!-- S13 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S13</span><p class="en-t">A key insight of Routine Activity Theory is that crime rates can rise even without any increase in the number of motivated offenders. What changes is the structure of everyday life.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">insight</span><span class="ci">/ˈɪnsaɪt/</span><span class="ca">인사이트</span></div><div class="cm">통찰, 깊은 이해</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">increase</span><span class="ci">/ˈɪnkriːs/</span><span class="ca">인크리스</span></div><div class="cm">증가 (명사) / 증가하다 (동사: /ɪnˈkriːs/)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">structure</span><span class="ci">/ˈstrʌktʃər/</span><span class="ca">스트럭처</span></div><div class="cm">구조 / 체계 / 구성</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>일상활동 이론의 핵심 통찰은 동기가 있는 범죄자의 수가 증가하지 않더라도 범죄율이 올라갈 수 있다는 것이다. 변하는 것은 일상생활의 구조이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>even without any increase</b> : <code>even without</code> — "~조차 없이도". <code>even</code>이 예상 밖의 상황을 강조<br>
+    <b>What changes is ~</b> : <code>what</code>절이 주어인 강조 분열문 — "변하는 것은 ~이다"
+  </div>
+</div>
+
+<!-- S14 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S14</span><p class="en-t">Cohen and Felson pointed to postwar social changes: more women entering the workforce meant more homes left empty during the day, reducing guardianship and increasing the number of suitable targets.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">postwar</span><span class="ci">/ˈpoʊstwɔːr/</span><span class="ca">포스트워</span></div><div class="cm">전후(戰後)의</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">workforce</span><span class="ci">/ˈwɜːrkfɔːrs/</span><span class="ca">워크포스</span></div><div class="cm">노동력, 노동 인구</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">guardianship</span><span class="ci">/ˈɡɑːrdiənʃɪp/</span><span class="ca">가디언십</span></div><div class="cm">보호, 감시 / 후견</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>코언과 펠슨은 전후 사회 변화를 지적했다: 더 많은 여성이 노동시장에 진입하면서 낮 동안 더 많은 집이 비게 되었고, 이는 감시를 줄이고 적합한 표적의 수를 늘렸다.</div>
+</div>
+
+<!-- S15 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S15</span><p class="en-t">Similarly, the spread of lightweight, portable electronics — televisions, laptops, smartphones — created a vast supply of attractive, easy-to-steal targets that simply did not exist before.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">similarly</span><span class="ci">/ˈsɪmɪlərli/</span><span class="ca">시밀러리</span></div><div class="cm">마찬가지로, 비슷하게</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">lightweight</span><span class="ci">/ˈlaɪtweɪt/</span><span class="ca">라이트웨이트</span></div><div class="cm">가벼운 / 경량의</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">portable</span><span class="ci">/ˈpɔːrtəbəl/</span><span class="ca">포터블</span></div><div class="cm">휴대용의, 이동식의</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">vast</span><span class="ci">/væst/</span><span class="ca">배스트</span></div><div class="cm">방대한, 광대한 / 막대한</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>마찬가지로, 가볍고 휴대 가능한 전자제품 — 텔레비전, 노트북, 스마트폰 — 의 확산은 이전에는 존재하지 않았던 매력적이고 훔치기 쉬운 방대한 표적의 공급을 만들어냈다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>easy-to-steal</b> : 하이픈 복합 형용사 — "훔치기 쉬운". <code>easy-to-V</code> 패턴은 형용사처럼 명사를 수식<br>
+    <b>that simply did not exist before</b> : 관계절 — <code>simply</code>는 "단순히, 그냥" — 이전에는 존재 자체가 없었음을 강조
+  </div>
+</div>
+
+<!-- S16 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S16</span><p class="en-t">To assess target suitability, scholars developed the <strong>VIVA</strong> model: Value, Inertia, Visibility, and Access. A target is more suitable when it has high value, low inertia — meaning it is easy to move — high visibility, and easy access.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">assess</span><span class="ci">/əˈses/</span><span class="ca">어세스</span></div><div class="cm">평가하다, 가늠하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">suitability</span><span class="ci">/ˌsuːtəˈbɪlɪti/</span><span class="ca">수터빌리티</span></div><div class="cm">적합성, 적절성</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">inertia</span><span class="ci">/ɪˈnɜːrʃə/</span><span class="ca">이너셔</span></div><div class="cm">관성, 타성 / (여기서) 이동 저항, 무게감</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">visibility</span><span class="ci">/ˌvɪzɪˈbɪlɪti/</span><span class="ca">비저빌리티</span></div><div class="cm">가시성, 눈에 띄는 정도</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>표적의 적합성을 평가하기 위해 학자들은 <strong>VIVA</strong> 모델을 개발했다: 가치(Value), 관성(Inertia), 가시성(Visibility), 접근성(Access). 표적은 높은 가치, 낮은 관성 — 즉 옮기기 쉬울 때 —, 높은 가시성, 쉬운 접근성을 가질 때 더 적합하다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <div class="mt"><table>
+      <tr><th>약자</th><th>영어</th><th>의미</th><th>적합한 표적</th></tr>
+      <tr><td>V</td><td>Value</td><td>가치</td><td>높을수록 적합</td></tr>
+      <tr><td>I</td><td>Inertia</td><td>관성 (무게/크기)</td><td>낮을수록 적합 (가벼울수록)</td></tr>
+      <tr><td>V</td><td>Visibility</td><td>가시성</td><td>높을수록 적합 (눈에 잘 띌수록)</td></tr>
+      <tr><td>A</td><td>Access</td><td>접근성</td><td>쉬울수록 적합</td></tr>
+    </table></div>
+  </div>
+</div>
+
+<!-- S17 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S17</span><p class="en-t">Notice that the theory takes the motivated offender largely for granted. It does not ask <em>why</em> someone wants to commit crime — it asks <em>where</em> and <em>when</em> crime opportunities arise.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">takes ~ for granted</span><span class="ci">/teɪks ~ fɔːr ˈɡræntɪd/</span><span class="ca">테이크스 ~ 포 그랜티드</span></div><div class="cm">~을 당연시하다, ~을 전제하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">opportunities</span><span class="ci">/ˌɒpərˈtjuːnɪtiz/</span><span class="ca">아퍼튜니티즈</span></div><div class="cm">기회들</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">arise</span><span class="ci">/əˈraɪz/</span><span class="ca">어라이즈</span></div><div class="cm">발생하다, 생기다 / 일어나다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이 이론은 동기가 있는 범죄자를 대체로 당연한 것으로 전제한다는 점에 주목하라. <em>왜</em> 누군가가 범죄를 저지르고 싶어하는지를 묻지 않는다 — <em>어디서</em> 그리고 <em>언제</em> 범죄 기회가 발생하는지를 묻는다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>takes ~ for granted</b> : 관용 표현 — "~을 당연시하다". 범죄 동기 자체는 분석 대상에서 제외한다는 뜻<br>
+    <b>why / where / when</b> 대비 : 이론의 초점이 "원인"에서 "상황"으로 전환됨을 보여주는 강의 기법
+  </div>
+</div>
+
+<!-- S18 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S18</span><p class="en-t">These ideas have had enormous practical impact. <strong>Hot spots policing</strong> — concentrating police resources in high-crime areas — is a direct application of routine activity thinking.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">enormous</span><span class="ci">/ɪˈnɔːrməs/</span><span class="ca">이노머스</span></div><div class="cm">막대한, 거대한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">practical</span><span class="ci">/ˈpræktɪkəl/</span><span class="ca">프랙티컬</span></div><div class="cm">실용적인, 실질적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">concentrating</span><span class="ci">/ˈkɒnsəntreɪtɪŋ/</span><span class="ca">칸선트레이팅</span></div><div class="cm">집중시키는</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">application</span><span class="ci">/ˌæplɪˈkeɪʃən/</span><span class="ca">애플리케이션</span></div><div class="cm">적용, 응용 / 신청서 / 앱</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이러한 아이디어들은 막대한 실질적 영향을 미쳤다. <strong>핫스팟 치안활동</strong> — 고범죄 지역에 경찰 자원을 집중하는 것 — 은 일상활동 사고방식의 직접적 적용이다.</div>
+</div>
+
+<!-- S19 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S19</span><p class="en-t"><strong>CPTED</strong> — Crime Prevention Through Environmental Design — modifies the built environment to reduce opportunities: better lighting, natural surveillance through open sightlines, and clear territorial markers.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">CPTED</span><span class="ci">/ˈseptɪd/</span><span class="ca">셉티드</span></div><div class="cm">환경설계를 통한 범죄예방 (약어)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">surveillance</span><span class="ci">/sɜːrˈveɪləns/</span><span class="ca">서베일런스</span></div><div class="cm">감시, 감독 / 사찰</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">sightlines</span><span class="ci">/ˈsaɪtlaɪnz/</span><span class="ca">사이트라인즈</span></div><div class="cm">시야선, 조망선</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">territorial</span><span class="ci">/ˌterɪˈtɔːriəl/</span><span class="ca">테리토리얼</span></div><div class="cm">영역의, 영토의</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div><strong>CPTED</strong> — 환경설계를 통한 범죄예방 — 는 기회를 줄이기 위해 건조 환경을 변경한다: 더 나은 조명, 개방된 시야선을 통한 자연적 감시, 그리고 명확한 영역 표시이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>modifies the built environment</b> : <code>built environment</code> — "건조 환경" (인간이 만든 물리적 환경: 건물, 도로, 공원 등)<br>
+    <b>natural surveillance</b> : "자연적 감시" — CCTV 같은 기계적 감시가 아니라 도시 설계로 자연스럽게 생기는 시선의 감시
+  </div>
+</div>
+
+<!-- S20 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S20</span><p class="en-t"><strong>Target hardening</strong> is another widely used strategy — making targets more resistant to attack through locks, barriers, anti-theft devices, and security systems.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">target hardening</span><span class="ci">/ˈtɑːrɡɪt ˈhɑːrdənɪŋ/</span><span class="ca">타깃 하드닝</span></div><div class="cm">표적 강화 (범죄 대상을 공격하기 어렵게 만드는 것)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">resistant</span><span class="ci">/rɪˈzɪstənt/</span><span class="ca">리지스턴트</span></div><div class="cm">저항력 있는, ~에 견디는</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">barriers</span><span class="ci">/ˈbæriərz/</span><span class="ca">배리어즈</span></div><div class="cm">장벽, 방벽 / 장애물</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div><strong>표적 강화</strong>는 또 다른 널리 사용되는 전략이다 — 잠금장치, 방벽, 도난 방지 장치, 보안 시스템을 통해 표적을 공격에 더 저항력 있게 만드는 것이다.</div>
+</div>
+
+<!-- S21 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S21</span><p class="en-t">Now, let us consider the criticisms. The most common objection is that these theories ignore the <strong>root causes</strong> of crime — poverty, inequality, lack of education, and trauma.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">criticisms</span><span class="ci">/ˈkrɪtɪsɪzəmz/</span><span class="ca">크리티시즘즈</span></div><div class="cm">비판들, 비평들</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">objection</span><span class="ci">/əbˈdʒekʃən/</span><span class="ca">옵젝션</span></div><div class="cm">반대, 이의 / 비판</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">root causes</span><span class="ci">/ruːt ˈkɔːzɪz/</span><span class="ca">루트 코지즈</span></div><div class="cm">근본 원인들</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">trauma</span><span class="ci">/ˈtrɔːmə/</span><span class="ca">트로마</span></div><div class="cm">트라우마, 정신적 외상 / 외상</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이제 비판들을 살펴보자. 가장 흔한 반대 의견은 이 이론들이 범죄의 <strong>근본 원인</strong> — 빈곤, 불평등, 교육 부족, 트라우마 — 을 무시한다는 것이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>let us consider</b> : 강의 전환 표현 — "~을 살펴보겠다". 비판 섹션으로 넘어갈 때 사용<br>
+    <b>root causes</b> : "근본 원인" — 표면적 요인이 아닌 근저에 있는 구조적 요인을 의미
+  </div>
+</div>
+
+<!-- S22 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S22</span><p class="en-t">Critics also argue that Rational Choice Theory assumes too much rationality. Many crimes — especially violent ones — are impulsive, emotional, or committed under the influence of alcohol and drugs.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">assumes</span><span class="ci">/əˈsjuːmz/</span><span class="ca">어슈움즈</span></div><div class="cm">가정하다, 전제하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">impulsive</span><span class="ci">/ɪmˈpʌlsɪv/</span><span class="ca">임펄시브</span></div><div class="cm">충동적인, 즉흥적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">influence</span><span class="ci">/ˈɪnfluəns/</span><span class="ca">인플루언스</span></div><div class="cm">영향 / 영향력</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>비판론자들은 또한 합리적 선택 이론이 너무 많은 합리성을 가정한다고 주장한다. 많은 범죄 — 특히 폭력 범죄 — 는 충동적이거나, 감정적이거나, 알코올과 약물의 영향 하에 저질러진다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>under the influence of ~</b> : "~의 영향 하에" — 법적 맥락에서 <code>DUI</code>(driving under the influence)로 자주 사용됨<br>
+    <b>especially violent ones</b> : <code>ones</code> = <code>crimes</code>를 대신하는 대명사 — 반복을 피하기 위한 용법
+  </div>
+</div>
+
+<!-- S23 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S23</span><p class="en-t">Furthermore, both theories have been accused of being <strong>class-blind and race-blind</strong>. By focusing on situations rather than social structures, they risk justifying increased surveillance of already marginalized communities.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">furthermore</span><span class="ci">/ˌfɜːrðərˈmɔːr/</span><span class="ca">퍼더모어</span></div><div class="cm">더욱이, 게다가</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">accused</span><span class="ci">/əˈkjuːzd/</span><span class="ca">어큐즈드</span></div><div class="cm">비난받은, 고발당한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">marginalized</span><span class="ci">/ˈmɑːrdʒɪnəlaɪzd/</span><span class="ca">마지널라이즈드</span></div><div class="cm">소외된, 주변화된</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">justifying</span><span class="ci">/ˈdʒʌstɪfaɪɪŋ/</span><span class="ca">저스티파이잉</span></div><div class="cm">정당화하는</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>더욱이, 두 이론 모두 <strong>계급과 인종에 무관심하다</strong>는 비난을 받아왔다. 사회 구조가 아닌 상황에 초점을 맞춤으로써, 이미 소외된 공동체에 대한 감시 강화를 정당화할 위험이 있다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>have been accused of being ~</b> : <code>be accused of + 동명사</code>의 현재완료 수동태 — "~라는 비난을 받아왔다"<br>
+    <b>class-blind and race-blind</b> : "계급/인종을 보지 못하는" — 하이픈 복합 형용사. <code>color-blind</code>와 같은 패턴
+  </div>
+</div>
+
+<!-- S24 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S24</span><p class="en-t">Despite these limitations, the legacy of both theories is immense. They fundamentally shifted criminological attention from <em>why criminals exist</em> to <em>why crime happens in specific places at specific times</em>.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">legacy</span><span class="ci">/ˈleɡəsi/</span><span class="ca">레거시</span></div><div class="cm">유산, 업적 / 남겨진 것</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">immense</span><span class="ci">/ɪˈmens/</span><span class="ca">이멘스</span></div><div class="cm">막대한, 엄청난</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">fundamentally</span><span class="ci">/ˌfʌndəˈmentəli/</span><span class="ca">펀더멘털리</span></div><div class="cm">근본적으로, 본질적으로</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">shifted</span><span class="ci">/ʃɪftɪd/</span><span class="ca">쉬프티드</span></div><div class="cm">전환시켰다, 이동시켰다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이러한 한계에도 불구하고, 두 이론의 유산은 막대하다. 이 이론들은 범죄학의 관심을 <em>왜 범죄자가 존재하는가</em>에서 <em>왜 범죄가 특정 장소에서 특정 시간에 발생하는가</em>로 근본적으로 전환시켰다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>shifted A from B to C</b> : "A를 B에서 C로 전환시키다" — 두 이론의 핵심 공헌을 한 문장으로 요약<br>
+    <b>Despite these limitations</b> : <code>despite + 명사</code> — "~에도 불구하고" (= Although there are these limitations)
+  </div>
+</div>
+
+<!-- S25 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S25</span><p class="en-t">In conclusion, Rational Choice Theory and Routine Activity Theory remind us that crime is not simply a product of broken individuals — it is a product of situations, opportunities, and the structure of everyday life. Prevent the opportunity, and you prevent the crime.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">conclusion</span><span class="ci">/kənˈkluːʒən/</span><span class="ca">컨클루전</span></div><div class="cm">결론 / 결말 / 체결</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">product</span><span class="ci">/ˈprɒdʌkt/</span><span class="ca">프로덕트</span></div><div class="cm">산물, 결과 / 제품</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">opportunity</span><span class="ci">/ˌɒpərˈtjuːnɪti/</span><span class="ca">아퍼튜니티</span></div><div class="cm">기회</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">prevent</span><span class="ci">/prɪˈvent/</span><span class="ca">프리벤트</span></div><div class="cm">예방하다, 방지하다 / 막다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>결론적으로, 합리적 선택 이론과 일상활동 이론은 범죄가 단순히 결함 있는 개인의 산물이 아님을 일깨워준다 — 범죄는 상황, 기회, 그리고 일상생활의 구조의 산물이다. 기회를 예방하면 범죄를 예방하게 된다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>not simply A — it is B</b> : "단순히 A가 아니라 B이다" — 대비를 통한 강조 구문<br>
+    <b>Prevent the opportunity, and you prevent the crime</b> : 명령문 + <code>and</code> — "~하라, 그러면 ~하게 된다". 간결하고 기억에 남는 강의 마무리 기법
+  </div>
+</div>
+
+<div class="slabel">📚 핵심 어휘 정리</div>
+
+<div class="vc"><div class="vl"><div class="vw">rational</div><div class="vi">/ˈræʃənəl/</div><div class="va">래셔널</div></div><div class="vr"><div class="vm">합리적인, 이성적인 / 논리적인</div><div class="ve">Rational Choice Theory assumes offenders make calculated decisions.</div><div class="vk">합리적 선택 이론은 범죄자들이 계산된 결정을 내린다고 가정한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">deterrence</div><div class="vi">/dɪˈterəns/</div><div class="va">디테런스</div></div><div class="vr"><div class="vm">억제, 저지 / 억지력</div><div class="ve">Increasing the perceived risk of punishment enhances deterrence.</div><div class="vk">인지된 처벌 위험을 높이는 것은 억제력을 강화한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">bounded rationality</div><div class="vi">/ˈbaʊndɪd ˌræʃəˈnælɪti/</div><div class="va">바운디드 래셔낼리티</div></div><div class="vr"><div class="vm">제한된 합리성 (불완전한 정보와 인지적 한계 속에서의 합리적 결정)</div><div class="ve">Offenders exercise bounded rationality, not perfect calculation.</div><div class="vk">범죄자들은 완벽한 계산이 아닌 제한된 합리성을 행사한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">situational</div><div class="vi">/ˌsɪtʃuˈeɪʃənəl/</div><div class="va">시추에이셔널</div></div><div class="vr"><div class="vm">상황의, 상황에 따른 / 상황적</div><div class="ve">Situational crime prevention focuses on reducing crime opportunities.</div><div class="vk">상황적 범죄 예방은 범죄 기회를 줄이는 데 초점을 맞춘다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">guardian</div><div class="vi">/ˈɡɑːrdiən/</div><div class="va">가디언</div></div><div class="vr"><div class="vm">보호자, 감시자 / 후견인</div><div class="ve">The absence of a capable guardian is one of the three elements needed for crime.</div><div class="vk">유능한 감시자의 부재는 범죄에 필요한 세 요소 중 하나이다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">surveillance</div><div class="vi">/sɜːrˈveɪləns/</div><div class="va">서베일런스</div></div><div class="vr"><div class="vm">감시, 감독 / 사찰</div><div class="ve">Natural surveillance through open sightlines deters potential offenders.</div><div class="vk">개방된 시야선을 통한 자연적 감시는 잠재적 범죄자를 억제한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">target hardening</div><div class="vi">/ˈtɑːrɡɪt ˈhɑːrdənɪŋ/</div><div class="va">타깃 하드닝</div></div><div class="vr"><div class="vm">표적 강화 (물리적 보안 조치로 범죄 대상을 공격하기 어렵게 만드는 것)</div><div class="ve">Target hardening includes installing locks, alarms, and security cameras.</div><div class="vk">표적 강화에는 잠금장치, 경보기, 보안 카메라 설치가 포함된다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">routine</div><div class="vi">/ruːˈtiːn/</div><div class="va">루틴</div></div><div class="vr"><div class="vm">일상, 일과 / 일상적인, 틀에 박힌</div><div class="ve">Changes in routine activities can create new crime opportunities.</div><div class="vk">일상 활동의 변화는 새로운 범죄 기회를 만들어낼 수 있다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">capable</div><div class="vi">/ˈkeɪpəbəl/</div><div class="va">케이퍼블</div></div><div class="vr"><div class="vm">유능한, 능력 있는 / ~할 수 있는</div><div class="ve">A capable guardian does not have to be a police officer — any watchful person can serve.</div><div class="vk">유능한 감시자가 반드시 경찰관일 필요는 없다 — 주의를 기울이는 누구라도 그 역할을 할 수 있다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">opportunity</div><div class="vi">/ˌɒpərˈtjuːnɪti/</div><div class="va">아퍼튜니티</div></div><div class="vr"><div class="vm">기회 / (범죄학) 범죄가 일어날 수 있는 상황적 조건</div><div class="ve">Reduce the opportunity, and you reduce the crime.</div><div class="vk">기회를 줄이면 범죄가 줄어든다.</div></div></div>
+
+</div>
+</body>
+</html>

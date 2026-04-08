@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Self-Control Theory · Gottfredson & Hirschi 1990</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f3ee;--card:#fff;--en:#1b2a44;--en-t:#dce8f8;--pr-bg:#ece8f8;--pr-bd:#c5b8ef;--pr-t:#3d2b80;--ko-bg:#fdf6ec;--ko-t:#5a3820;--ko-bd:#f0dfc0;--gr-bg:#edf6ec;--gr-t:#1a4f1a;--gr-bd:#b8dab8;--ac:#c8a84b;--bd:#ddd8cc;--sh:0 2px 14px rgba(0,0,0,.07);--r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans','Noto Sans KR',sans-serif;background:var(--bg);color:#2a2a2a;line-height:1.75;font-size:15px}
+.hdr{background:var(--en);color:var(--en-t);padding:clamp(1.2rem,4vw,2rem) clamp(.8rem,3vw,1.5rem);text-align:center;border-bottom:4px solid var(--ac)}
+.badge{display:inline-block;background:var(--ac);color:var(--en);font-size:.65rem;font-weight:700;padding:.2rem .8rem;border-radius:20px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem}
+.hdr h1{font-family:'Lora',serif;font-size:clamp(1.1rem,3.5vw,1.5rem);font-weight:600;margin-bottom:.3rem}
+.hdr h2{font-size:clamp(.8rem,2.5vw,.95rem);opacity:.7}
+.wrap{max-width:860px;margin:0 auto;padding:clamp(1rem,3vw,2rem) clamp(.7rem,2.5vw,1.2rem) 4rem}
+.slabel{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#999;margin:clamp(1.2rem,3vw,2rem) 0 .8rem;padding-bottom:.4rem;border-bottom:1px solid var(--bd)}
+.blk{background:var(--card);border-radius:var(--r);margin-bottom:1.2rem;overflow:hidden;box-shadow:var(--sh);border:1px solid var(--bd)}
+.en-r{background:var(--en);color:var(--en-t);padding:clamp(.8rem,2.5vw,1rem) clamp(.8rem,2.5vw,1.2rem);display:flex;gap:.6rem;align-items:flex-start}
+.sn{background:var(--ac);color:#fff;font-size:.6rem;font-weight:700;padding:.15rem .45rem;border-radius:4px;white-space:nowrap;margin-top:.3rem;flex-shrink:0}
+.en-t{font-family:'Lora',serif;font-size:clamp(.9rem,2.3vw,1.05rem);line-height:1.85}
+.pr-r{background:var(--pr-bg);border-top:1px solid var(--pr-bd);border-bottom:1px solid var(--pr-bd);padding:clamp(.55rem,2vw,.7rem) clamp(.8rem,2.5vw,1.2rem)}
+.rl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.6;margin-bottom:.4rem}
+.pr-r .rl{color:var(--pr-t)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{background:#fff;border:1px solid var(--pr-bd);border-radius:5px;padding:.22rem clamp(.45rem,1.5vw,.65rem);font-size:clamp(.72rem,1.9vw,.8rem);display:flex;align-items:flex-start;gap:.3rem;flex-wrap:wrap;flex-direction:column}
+.chip-top{display:flex;align-items:center;gap:.3rem;flex-wrap:wrap}
+.cw{font-weight:700;color:var(--pr-t)}
+.ci{font-family:'DM Mono',monospace;color:#666;font-size:clamp(.67rem,1.7vw,.75rem)}
+.ca{color:#999;font-size:clamp(.67rem,1.7vw,.75rem)}
+.cm{color:#444;font-size:clamp(.67rem,1.7vw,.74rem);border-top:1px solid #e0d8f4;padding-top:.18rem;margin-top:.1rem;width:100%}
+.ko-r{background:var(--ko-bg);border-top:1px solid var(--ko-bd);padding:clamp(.65rem,2vw,.8rem) clamp(.8rem,2.5vw,1.2rem);color:var(--ko-t);font-family:'Noto Sans KR',sans-serif;font-size:clamp(.82rem,2.2vw,.9rem);line-height:1.85}
+.ko-r .rl{color:var(--ko-t)}
+.gr-r{background:var(--gr-bg);border-top:1px solid var(--gr-bd);padding:clamp(.65rem,2vw,.8rem) clamp(.8rem,2.5vw,1.2rem);color:var(--gr-t);font-size:clamp(.78rem,2vw,.85rem);line-height:1.8;overflow-x:auto}
+.gr-r .rl{color:var(--gr-t)}
+.gr-r code{font-family:'DM Mono',monospace;background:rgba(0,0,0,.08);padding:.1rem .32rem;border-radius:3px;font-size:clamp(.7rem,1.8vw,.78rem);word-break:break-all}
+.gr-r b{color:#0d3d0d}
+.mt{width:100%;border-collapse:collapse;margin:.6rem 0;font-size:clamp(.72rem,1.8vw,.8rem);display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mt table{width:100%;border-collapse:collapse}
+.mt th{background:rgba(0,0,0,.07);padding:.38rem .6rem;text-align:left;font-weight:600;border:1px solid #c8dac8;white-space:nowrap}
+.mt td{padding:.38rem .6rem;border:1px solid #c8dac8}
+.mt tr:nth-child(even) td{background:rgba(255,255,255,.5)}
+/* element highlight boxes */
+.bond-box{background:#1b2a44;color:#dce8f8;border-radius:8px;padding:.7rem 1rem;margin:.5rem 0;font-size:clamp(.8rem,2vw,.88rem)}
+.bond-box .bond-title{color:var(--ac);font-weight:700;font-size:clamp(.85rem,2.2vw,.95rem);margin-bottom:.25rem}
+.vc{background:var(--card);border-radius:var(--r);margin-bottom:.8rem;overflow:hidden;box-shadow:var(--sh);border:1px solid var(--bd);display:grid;grid-template-columns:clamp(120px,28vw,190px) 1fr}
+.vl{background:var(--en);color:var(--en-t);padding:clamp(.7rem,2vw,1rem);display:flex;flex-direction:column;justify-content:center}
+.vw{font-family:'Lora',serif;font-size:clamp(.85rem,2.2vw,1rem);font-weight:600;margin-bottom:.2rem;word-break:break-word}
+.vi{font-family:'DM Mono',monospace;font-size:clamp(.62rem,1.6vw,.74rem);color:var(--ac);margin-bottom:.1rem;word-break:break-all}
+.va{font-size:clamp(.62rem,1.6vw,.74rem);opacity:.55}
+.vr{padding:clamp(.7rem,2vw,1rem) clamp(.8rem,2.5vw,1.2rem)}
+.vm{font-weight:600;font-size:clamp(.82rem,2.2vw,.92rem);margin-bottom:.35rem;color:#222}
+.ve{font-size:clamp(.75rem,1.9vw,.84rem);color:#555;font-style:italic;margin-bottom:.2rem}
+.vk{font-size:clamp(.72rem,1.8vw,.8rem);color:var(--ko-t);font-family:'Noto Sans KR',sans-serif}
+@media(max-width:480px){.vc{grid-template-columns:1fr}.vl{flex-direction:row;align-items:center;gap:.6rem;flex-wrap:wrap;padding:.7rem .9rem}.vw{margin-bottom:0}.vi{margin-bottom:0}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="badge">Lecture 10 · Individual Trait</div>
+  <h1>Self-Control Theory (A General Theory of Crime)</h1>
+  <h2>Gottfredson & Hirschi (1990)</h2>
+</div>
+<div class="wrap">
+<div class="slabel">📖 Script — Sentence by Sentence</div>
+
+<!-- S1 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S1</span><p class="en-t">Today we examine one of the most ambitious theories in criminology — Gottfredson and Hirschi's Self-Control Theory, presented in their 1990 book, <em>A General Theory of Crime</em>.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">ambitious</span><span class="ci">/æmˈbɪʃəs/</span><span class="ca">앰비셔스</span></div><div class="cm">야심찬, 대담한 / 포부가 큰</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">Gottfredson</span><span class="ci">/ˈɡɒtfrɛdsən/</span><span class="ca">갓프레드슨</span></div><div class="cm">인명 고유명사</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">Hirschi</span><span class="ci">/ˈhɜːrʃi/</span><span class="ca">허쉬</span></div><div class="cm">인명 고유명사</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">presented</span><span class="ci">/prɪˈzentɪd/</span><span class="ca">프리젠티드</span></div><div class="cm">제시된, 발표된</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>오늘은 범죄학에서 가장 야심찬 이론 중 하나를 살펴본다 — 갓프레드슨과 허쉬의 자기통제이론으로, 1990년 그들의 저서 『범죄의 일반이론』에서 제시되었다.</div>
+</div>
+
+<!-- S2 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S2</span><p class="en-t">You may remember Travis Hirschi from Social Bond Theory. In 1990, he joined forces with Michael Gottfredson and shifted his focus from social bonds to individual traits.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">joined forces</span><span class="ci">/dʒɔɪnd ˈfɔːrsɪz/</span><span class="ca">조인드 포시즈</span></div><div class="cm">힘을 합치다, 협력하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">shifted</span><span class="ci">/ʃɪftɪd/</span><span class="ca">쉬프티드</span></div><div class="cm">옮기다, 전환하다 / 바꾸다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">traits</span><span class="ci">/treɪts/</span><span class="ca">트레이츠</span></div><div class="cm">특성, 특질 / 성격적 특성</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>사회유대이론에서 트래비스 허쉬를 기억할 것이다. 1990년, 그는 마이클 갓프레드슨과 힘을 합치고 초점을 사회적 유대에서 개인적 특성으로 전환했다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>joined forces with ~</b> : "~와 힘을 합치다" — 학자들의 공동 연구를 소개할 때 쓰는 표현<br>
+    <b>shifted his focus from A to B</b> : "초점을 A에서 B로 옮기다" — 학문적 전환을 설명하는 핵심 패턴
+  </div>
+</div>
+
+<!-- S3 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S3</span><p class="en-t">The core claim of Self-Control Theory is bold and simple: low self-control is the primary individual-level cause of crime.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">bold</span><span class="ci">/boʊld/</span><span class="ca">보울드</span></div><div class="cm">대담한, 과감한 / 굵은(글자)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">primary</span><span class="ci">/ˈpraɪmeri/</span><span class="ca">프라이머리</span></div><div class="cm">주된, 주요한 / 1차적인 / 초등의</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">individual-level</span><span class="ci">/ˌɪndɪˈvɪdʒuəl ˈlevəl/</span><span class="ca">인디비주얼 레벌</span></div><div class="cm">개인 수준의</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>자기통제이론의 핵심 주장은 대담하면서도 단순하다: 낮은 자기통제력이 범죄의 주된 개인 수준 원인이라는 것이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>bold and simple</b> : 두 형용사를 병렬하여 이론의 성격을 압축적으로 소개 — "대담하면서도 단순한"<br>
+    <b>individual-level</b> : 하이픈으로 연결된 복합형용사 — "개인 수준의" (↔ <code>macro-level</code> = 거시 수준의)
+  </div>
+</div>
+
+<!-- S4 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S4</span><p class="en-t">But what exactly is low self-control? Gottfredson and Hirschi identified six key elements. Let's examine each one carefully.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">exactly</span><span class="ci">/ɪɡˈzæktli/</span><span class="ca">이그잭틀리</span></div><div class="cm">정확히, 꼭 / 도대체</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">identified</span><span class="ci">/aɪˈdentɪfaɪd/</span><span class="ca">아이덴티파이드</span></div><div class="cm">확인했다, 규명했다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">elements</span><span class="ci">/ˈelɪmənts/</span><span class="ca">엘리먼츠</span></div><div class="cm">요소, 구성요소</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>그렇다면 낮은 자기통제력은 정확히 무엇인가? 갓프레드슨과 허쉬는 여섯 가지 핵심 요소를 규명했다. 각각을 자세히 살펴보겠다.</div>
+</div>
+
+<!-- S5 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S5</span><p class="en-t">First, <strong>impulsivity</strong> — people with low self-control tend to act on the spur of the moment, seeking immediate gratification without considering the long-term consequences.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">impulsivity</span><span class="ci">/ˌɪmpʌlˈsɪvɪti/</span><span class="ca">임펄시비티</span></div><div class="cm">충동성 / 충동적으로 행동하는 성향</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">spur of the moment</span><span class="ci">/spɜːr əv ðə ˈmoʊmənt/</span><span class="ca">스퍼 오브 더 모먼트</span></div><div class="cm">즉흥적으로, 충동적으로</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">gratification</span><span class="ci">/ˌɡrætɪfɪˈkeɪʃən/</span><span class="ca">그래티피케이션</span></div><div class="cm">만족, 충족 / 욕구 충족</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">consequences</span><span class="ci">/ˈkɒnsɪkwensɪz/</span><span class="ca">칸시퀀시즈</span></div><div class="cm">결과, 영향 / (부정적) 대가</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>첫째, <strong>충동성(impulsivity)</strong> — 자기통제력이 낮은 사람들은 즉흥적으로 행동하는 경향이 있으며, 장기적 결과를 고려하지 않고 즉각적인 만족을 추구한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <div class="bond-box">
+      <div class="bond-title">① Impulsivity (충동성)</div>
+      즉각적인 욕구 충족을 추구하고, 행동의 장기적 결과를 고려하지 못한다.<br>
+      → "Here and now" orientation — 지금 당장의 쾌락에만 집중
+    </div>
+    <b>on the spur of the moment</b> : 관용표현 — "즉흥적으로, 순간의 충동으로" (<code>spur</code> = 박차, 자극)
+  </div>
+</div>
+
+<!-- S6 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S6</span><p class="en-t">Second, a <strong>preference for simple tasks</strong> — they favor easy, uncomplicated activities and lack the persistence to complete difficult or complex tasks.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">preference</span><span class="ci">/ˈprefrəns/</span><span class="ca">프레프런스</span></div><div class="cm">선호, 선호도 / 우선권</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">uncomplicated</span><span class="ci">/ʌnˈkɒmplɪkeɪtɪd/</span><span class="ca">언컴플리케이티드</span></div><div class="cm">복잡하지 않은, 단순한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">persistence</span><span class="ci">/pərˈsɪstəns/</span><span class="ca">퍼시스턴스</span></div><div class="cm">끈기, 인내 / 지속성</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>둘째, <strong>단순한 과제에 대한 선호</strong> — 그들은 쉽고 복잡하지 않은 활동을 선호하며, 어렵거나 복잡한 과제를 완수할 끈기가 부족하다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <div class="bond-box">
+      <div class="bond-title">② Preference for Simple Tasks (단순 과제 선호)</div>
+      복잡하거나 어려운 활동을 피하고, 쉽고 빠르게 끝나는 것을 좋아한다.<br>
+      → 범죄도 대부분 계획 없이 단순하고 쉽게 실행 가능한 행위
+    </div>
+  </div>
+</div>
+
+<!-- S7 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S7</span><p class="en-t">Third, <strong>risk-seeking</strong> — individuals with low self-control are drawn to excitement, thrills, and danger rather than stability and caution.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">risk-seeking</span><span class="ci">/ˈrɪsk ˌsiːkɪŋ/</span><span class="ca">리스크 시킹</span></div><div class="cm">위험 추구적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">thrills</span><span class="ci">/θrɪlz/</span><span class="ca">쓰릴즈</span></div><div class="cm">스릴, 전율 / 흥분</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">caution</span><span class="ci">/ˈkɔːʃən/</span><span class="ca">코션</span></div><div class="cm">주의, 조심 / 경고</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>셋째, <strong>위험 추구(risk-seeking)</strong> — 자기통제력이 낮은 개인은 안정과 조심보다 흥분, 스릴, 위험에 끌린다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <div class="bond-box">
+      <div class="bond-title">③ Risk-seeking (위험 추구)</div>
+      스릴과 흥분을 갈망하며, 위험한 상황을 두려워하지 않는다.<br>
+      → 범죄 자체가 주는 흥분감(thrill)이 동기가 될 수 있음
+    </div>
+    <b>are drawn to ~</b> : <code>be drawn to</code> — "~에 끌리다" (수동태 표현으로 무의식적 끌림을 나타냄)
+  </div>
+</div>
+
+<!-- S8 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S8</span><p class="en-t">Fourth, a <strong>preference for physical over mental activities</strong>. Fifth, <strong>self-centeredness</strong> — a lack of empathy or concern for others. And sixth, <strong>low frustration tolerance</strong> — a tendency to respond to conflict with anger rather than negotiation.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">self-centeredness</span><span class="ci">/ˌselfˈsentərdnəs/</span><span class="ca">셀프센터드니스</span></div><div class="cm">자기중심성, 이기심</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">empathy</span><span class="ci">/ˈempəθi/</span><span class="ca">엠퍼씨</span></div><div class="cm">공감, 감정이입</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">frustration</span><span class="ci">/frʌˈstreɪʃən/</span><span class="ca">프러스트레이션</span></div><div class="cm">좌절, 좌절감 / 실망</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">tolerance</span><span class="ci">/ˈtɒlərəns/</span><span class="ca">톨러런스</span></div><div class="cm">인내, 관용 / 허용 범위</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">negotiation</span><span class="ci">/nɪˌɡoʊʃiˈeɪʃən/</span><span class="ca">니고우시에이션</span></div><div class="cm">협상, 교섭</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>넷째, <strong>정신적 활동보다 신체적 활동에 대한 선호</strong>. 다섯째, <strong>자기중심성(self-centeredness)</strong> — 타인에 대한 공감이나 배려의 부족. 그리고 여섯째, <strong>낮은 좌절 인내력(low frustration tolerance)</strong> — 갈등에 협상보다 분노로 반응하는 경향.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <div class="bond-box">
+      <div class="bond-title">④⑤⑥ 나머지 세 요소</div>
+      ④ Physical > Mental : 앉아서 공부하기보다 몸을 쓰는 것을 선호<br>
+      ⑤ Self-centeredness : 타인의 고통에 둔감하고, 자기 욕구만 중시<br>
+      ⑥ Low frustration tolerance : 쉽게 화를 내고, 인내심이 부족
+    </div>
+    <b>physical over mental</b> : <code>A over B</code> — "B보다 A를 (선호)" — 비교·우선순위를 나타내는 구문
+  </div>
+</div>
+
+<!-- S9 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S9</span><p class="en-t">Now, here is the crucial question: where does self-control come from? Gottfredson and Hirschi argue that self-control is established early in life — primarily by age eight to ten — through effective parenting.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">crucial</span><span class="ci">/ˈkruːʃəl/</span><span class="ca">크루셜</span></div><div class="cm">결정적인, 매우 중요한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">established</span><span class="ci">/ɪˈstæblɪʃt/</span><span class="ca">이스태블리쉬트</span></div><div class="cm">확립된, 형성된 / 설립된</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">effective</span><span class="ci">/ɪˈfektɪv/</span><span class="ca">이펙티브</span></div><div class="cm">효과적인, 유효한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">parenting</span><span class="ci">/ˈpeərəntɪŋ/</span><span class="ca">페어런팅</span></div><div class="cm">양육, 육아 / 부모 역할</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>자, 여기서 결정적인 질문이 나온다: 자기통제력은 어디서 오는가? 갓프레드슨과 허쉬는 자기통제력이 인생 초기에 — 주로 8세에서 10세 사이에 — 효과적인 양육을 통해 형성된다고 주장한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>here is the crucial question</b> : 강의에서 핵심 논점으로 전환할 때 쓰는 표현 — "자, 여기서 결정적인 질문이 있다"<br>
+    <b>is established</b> : 수동태 — 자기통제력은 스스로 생기는 것이 아니라 양육에 의해 "형성되는" 것임을 강조
+  </div>
+</div>
+
+<!-- S10 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S10</span><p class="en-t">Effective parenting, they argued, requires three conditions: first, parents must <strong>monitor</strong> the child's behavior; second, they must <strong>recognize</strong> deviant behavior when it occurs; and third, they must <strong>consistently punish</strong> such behavior.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">monitor</span><span class="ci">/ˈmɒnɪtər/</span><span class="ca">모니터</span></div><div class="cm">감시하다, 관찰하다 / 모니터</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">recognize</span><span class="ci">/ˈrekəɡnaɪz/</span><span class="ca">레커그나이즈</span></div><div class="cm">인식하다, 알아차리다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">deviant</span><span class="ci">/ˈdiːviənt/</span><span class="ca">디비언트</span></div><div class="cm">일탈적인, 비정상적인 / 일탈자</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">consistently</span><span class="ci">/kənˈsɪstəntli/</span><span class="ca">컨시스턴틀리</span></div><div class="cm">일관되게, 꾸준히</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">punish</span><span class="ci">/ˈpʌnɪʃ/</span><span class="ca">퍼니쉬</span></div><div class="cm">처벌하다, 벌을 주다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>효과적인 양육에는 세 가지 조건이 필요하다고 그들은 주장했다: 첫째, 부모는 아이의 행동을 <strong>감시</strong>해야 한다; 둘째, 일탈 행동이 발생했을 때 이를 <strong>인식</strong>해야 한다; 셋째, 그러한 행동을 <strong>일관되게 처벌</strong>해야 한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <div class="bond-box">
+      <div class="bond-title">효과적 양육의 3요건</div>
+      ① Monitoring — 아이의 행동을 주시하고 파악<br>
+      ② Recognition — 문제 행동을 문제로 인식<br>
+      ③ Consistent punishment — 매번 동일하게 적절한 제재 적용
+    </div>
+    <b>requires three conditions</b> : <code>require</code> — "필요로 하다" (need보다 격식적이고 강한 의무감)
+  </div>
+</div>
+
+<!-- S11 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S11</span><p class="en-t">If any one of these three conditions is missing — if parents do not watch, do not notice, or do not correct — the child is likely to develop low self-control.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">missing</span><span class="ci">/ˈmɪsɪŋ/</span><span class="ca">미싱</span></div><div class="cm">빠진, 결여된 / 실종된</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">correct</span><span class="ci">/kəˈrekt/</span><span class="ca">커렉트</span></div><div class="cm">교정하다, 바로잡다 / 올바른</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">develop</span><span class="ci">/dɪˈveləp/</span><span class="ca">디벨럽</span></div><div class="cm">발달시키다 / (특성을) 갖게 되다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이 세 가지 조건 중 하나라도 빠져 있다면 — 부모가 지켜보지 않거나, 알아차리지 못하거나, 교정하지 않는다면 — 아이는 낮은 자기통제력을 발달시킬 가능성이 높다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>If any one of ~ is missing</b> : "~중 어느 하나라도 빠져 있다면" — <code>any one</code>이 단수 주어임에 주의<br>
+    <b>do not watch, do not notice, or do not correct</b> : 세 가지 결여를 병렬 나열하여 세 조건의 각각을 강조
+  </div>
+</div>
+
+<!-- S12 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S12</span><p class="en-t">This leads us to one of the most controversial aspects of the theory — the <strong>stability thesis</strong>. Gottfredson and Hirschi claimed that once self-control is established in early childhood, it remains relatively stable throughout the rest of a person's life.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">controversial</span><span class="ci">/ˌkɒntrəˈvɜːrʃəl/</span><span class="ca">칸트러버셜</span></div><div class="cm">논쟁적인, 논란이 많은</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">stability</span><span class="ci">/stəˈbɪlɪti/</span><span class="ca">스터빌리티</span></div><div class="cm">안정성, 안정 / 변하지 않음</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">thesis</span><span class="ci">/ˈθiːsɪs/</span><span class="ca">씨시스</span></div><div class="cm">논제, 명제 / 학위 논문</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">relatively</span><span class="ci">/ˈrelətɪvli/</span><span class="ca">렐러티블리</span></div><div class="cm">비교적, 상대적으로</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이것은 이론에서 가장 논쟁적인 측면 중 하나인 <strong>안정성 명제(stability thesis)</strong>로 이어진다. 갓프레드슨과 허쉬는 자기통제력이 유아기에 일단 형성되면, 나머지 인생 동안 비교적 안정적으로 유지된다고 주장했다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>This leads us to ~</b> : 강의 전환 표현 — "이것이 우리를 ~로 이끈다"<br>
+    <b>once ~ is established</b> : <code>once</code> = "일단 ~하면" — 시간 부사절을 이끌며 1회성 전환을 강조<br>
+    <b>throughout the rest of one's life</b> : "남은 생애 내내" — 안정성의 범위를 극적으로 보여주는 표현
+  </div>
+</div>
+
+<!-- S13 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S13</span><p class="en-t">In other words, a child who has not developed adequate self-control by age ten will likely struggle with impulsive behavior for the rest of their life — whether they are fifteen or fifty.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">adequate</span><span class="ci">/ˈædɪkwət/</span><span class="ca">애디퀏</span></div><div class="cm">적절한, 충분한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">struggle</span><span class="ci">/ˈstrʌɡəl/</span><span class="ca">스트러글</span></div><div class="cm">고군분투하다 / 어려움을 겪다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">impulsive</span><span class="ci">/ɪmˈpʌlsɪv/</span><span class="ca">임펄시브</span></div><div class="cm">충동적인, 즉흥적인</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>다시 말해, 10세까지 적절한 자기통제력을 발달시키지 못한 아이는 열다섯 살이든 쉰 살이든 — 남은 인생 동안 충동적 행동으로 어려움을 겪을 가능성이 높다.</div>
+</div>
+
+<!-- S14 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S14</span><p class="en-t">Another important feature of the theory is the concept of <strong>analogous behaviors</strong>. Low self-control does not only lead to crime — it also leads to a range of reckless behaviors such as smoking, excessive drinking, risky sexual behavior, and a higher rate of accidents.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">analogous</span><span class="ci">/əˈnæləɡəs/</span><span class="ca">어낼러거스</span></div><div class="cm">유사한, 비슷한 / 상응하는</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">reckless</span><span class="ci">/ˈrekləs/</span><span class="ca">레클리스</span></div><div class="cm">무모한, 위험한 / 부주의한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">excessive</span><span class="ci">/ɪkˈsesɪv/</span><span class="ca">익세시브</span></div><div class="cm">과도한, 지나친</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이론의 또 다른 중요한 특징은 <strong>유사 행동(analogous behaviors)</strong> 개념이다. 낮은 자기통제력은 범죄만 초래하는 것이 아니라 — 흡연, 과도한 음주, 위험한 성적 행동, 높은 사고율과 같은 다양한 무모한 행동도 초래한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>not only A — but also B</b> : "A뿐만 아니라 B도" — 여기서는 대시(—)로 시각적 분리<br>
+    <b>a range of ~</b> : "다양한 ~, 일련의 ~" — 범위의 넓음을 나타내는 학술 표현
+  </div>
+</div>
+
+<!-- S15 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S15</span><p class="en-t">This is why the theory is called a <em>general</em> theory. Gottfredson and Hirschi claimed it applies to all types of crime — violent, property, white-collar — across all demographics: age, gender, race, and nationality.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">general</span><span class="ci">/ˈdʒenərəl/</span><span class="ca">제너럴</span></div><div class="cm">일반적인, 보편적인 / 전반적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">demographics</span><span class="ci">/ˌdeməˈɡræfɪks/</span><span class="ca">데머그래픽스</span></div><div class="cm">인구통계학적 범주 / 인구 특성</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">white-collar</span><span class="ci">/ˌwaɪt ˈkɒlər/</span><span class="ca">와이트 칼러</span></div><div class="cm">화이트칼라의 / 사무직의 (범죄: 기업·금융 범죄)</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이것이 이 이론이 <em>일반</em> 이론이라 불리는 이유이다. 갓프레드슨과 허쉬는 이 이론이 모든 유형의 범죄 — 폭력, 재산, 화이트칼라 범죄 — 에, 그리고 모든 인구통계적 범주 — 연령, 성별, 인종, 국적 — 에 걸쳐 적용된다고 주장했다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>This is why ~</b> : "이것이 ~인 이유이다" — 원인→결과를 설명하는 구문<br>
+    <b>applies to ~</b> : <code>apply to</code> — "~에 적용되다" — 이론의 범위를 설명할 때 핵심 동사
+  </div>
+</div>
+
+<!-- S16 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S16</span><p class="en-t">However, low self-control alone is not sufficient to produce crime. Opportunity still matters. The theory states that crime occurs when an individual with low self-control encounters an opportunity to offend.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">sufficient</span><span class="ci">/səˈfɪʃənt/</span><span class="ca">서피션트</span></div><div class="cm">충분한 / 족한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">opportunity</span><span class="ci">/ˌɒpərˈtjuːnɪti/</span><span class="ca">아퍼튜니티</span></div><div class="cm">기회 / (범죄) 범행의 기회</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">encounters</span><span class="ci">/ɪnˈkaʊntərz/</span><span class="ca">인카운터즈</span></div><div class="cm">마주치다, 직면하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">offend</span><span class="ci">/əˈfend/</span><span class="ca">어펜드</span></div><div class="cm">범죄를 저지르다 / 기분을 상하게 하다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>그러나 낮은 자기통제력만으로는 범죄를 일으키기에 충분하지 않다. 기회도 중요하다. 이론은 낮은 자기통제력을 가진 개인이 범행의 기회를 마주칠 때 범죄가 발생한다고 명시한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <div class="bond-box">
+      <div class="bond-title">범죄의 공식</div>
+      Low Self-Control + Opportunity = Crime<br>
+      낮은 자기통제력은 '필요조건'이지 '충분조건'이 아니다. 기회가 없으면 범죄도 없다.
+    </div>
+    <b>alone is not sufficient</b> : <code>alone</code> = "~만으로는" — 주어 뒤에 놓여 "그것만으로는"이라는 한정 의미
+  </div>
+</div>
+
+<!-- S17 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S17</span><p class="en-t">What about the empirical evidence? The theory has received remarkably strong support. Multiple meta-analyses have confirmed that self-control is one of the strongest predictors of criminal behavior across different studies and countries.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">empirical</span><span class="ci">/ɪmˈpɪrɪkəl/</span><span class="ca">임피리컬</span></div><div class="cm">경험적인, 실증적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">remarkably</span><span class="ci">/rɪˈmɑːrkəbli/</span><span class="ca">리마커블리</span></div><div class="cm">놀랍도록, 현저하게</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">meta-analyses</span><span class="ci">/ˌmetə əˈnælɪsiːz/</span><span class="ca">메타 어낼리시즈</span></div><div class="cm">메타분석들 (복수 연구 종합 분석)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">predictors</span><span class="ci">/prɪˈdɪktərz/</span><span class="ca">프리딕터즈</span></div><div class="cm">예측 변수, 예측 인자</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>실증적 증거는 어떠한가? 이 이론은 놀랍도록 강한 지지를 받아왔다. 여러 메타분석들은 자기통제력이 다양한 연구와 국가에 걸쳐 범죄 행동의 가장 강력한 예측 변수 중 하나임을 확인했다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>What about ~?</b> : 새로운 주제로 전환하는 강의 표현 — "~은 어떠한가?"<br>
+    <b>one of the strongest predictors</b> : <code>one of the + 최상급 + 복수명사</code> — "가장 ~한 것들 중 하나"
+  </div>
+</div>
+
+<!-- S18 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S18</span><p class="en-t">Now let's turn to the criticisms — and there are many. Perhaps the most fundamental criticism is that the theory is <strong>tautological</strong>. Critics say: you define low self-control as the tendency to commit crime, and then you say low self-control causes crime. That is circular reasoning.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">tautological</span><span class="ci">/ˌtɔːtəˈlɒdʒɪkəl/</span><span class="ca">토털로지컬</span></div><div class="cm">동어반복적인, 순환논리적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">tendency</span><span class="ci">/ˈtendənsi/</span><span class="ca">텐던시</span></div><div class="cm">경향, 추세 / 성향</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">circular reasoning</span><span class="ci">/ˈsɜːrkjələr ˈriːzənɪŋ/</span><span class="ca">서큘러 리즈닝</span></div><div class="cm">순환 논법, 순환 논리</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이제 비판으로 넘어가겠다 — 비판은 많다. 아마 가장 근본적인 비판은 이 이론이 <strong>동어반복적(tautological)</strong>이라는 것이다. 비판자들은 말한다: 낮은 자기통제력을 범죄를 저지르는 성향으로 정의해놓고, 그 다음에 낮은 자기통제력이 범죄를 유발한다고 말한다. 이것은 순환 논법이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>tautological</b> : 동어반복 — 설명하려는 것(crime)을 설명 자체에 사용하는 논리적 오류<br>
+    → 낮은 자기통제 = 범죄 성향 → 범죄 성향이 범죄를 일으킨다 → "X = Y, Y causes X" 구조<br>
+    <b>circular reasoning</b> : "순환 논법" — A를 B로 설명하고, B를 다시 A로 설명하는 것
+  </div>
+</div>
+
+<!-- S19 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S19</span><p class="en-t">Second, critics argue that the theory places too much blame on parents and ignores broader social structures. Poverty, inequality, and neighborhood disadvantage all shape parenting quality — yet the theory treats parenting as if it exists in a vacuum.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">blame</span><span class="ci">/bleɪm/</span><span class="ca">블레임</span></div><div class="cm">비난, 책임 / 탓하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">broader</span><span class="ci">/ˈbrɔːdər/</span><span class="ca">브로더</span></div><div class="cm">더 넓은 / 더 광범위한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">disadvantage</span><span class="ci">/ˌdɪsədˈvɑːntɪdʒ/</span><span class="ca">디서드밴티지</span></div><div class="cm">불리함, 약점 / 불이익</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">vacuum</span><span class="ci">/ˈvækjuːm/</span><span class="ca">배큠</span></div><div class="cm">진공 / 공백 / 진공청소기</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>둘째, 비판자들은 이 이론이 부모에게 지나치게 많은 책임을 전가하고 더 넓은 사회 구조를 무시한다고 주장한다. 빈곤, 불평등, 근린 환경의 불리함은 모두 양육의 질을 형성하는데 — 이 이론은 양육이 마치 진공 상태에 존재하는 것처럼 취급한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>as if it exists in a vacuum</b> : "마치 진공 상태에 존재하는 것처럼" — 외부 맥락을 무시한다는 비판을 표현하는 비유<br>
+    → <code>in a vacuum</code> = 현실 세계의 영향에서 분리된 상태
+  </div>
+</div>
+
+<!-- S20 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S20</span><p class="en-t">Third, the theory largely ignores the role of <strong>peer influence</strong>. Research consistently shows that delinquent peers are one of the strongest predictors of criminal behavior, yet Gottfredson and Hirschi dismissed this as a mere selection effect.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">peer influence</span><span class="ci">/pɪər ˈɪnfluəns/</span><span class="ca">피어 인플루언스</span></div><div class="cm">또래 영향, 동료 영향</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">delinquent</span><span class="ci">/dɪˈlɪŋkwənt/</span><span class="ca">딜링퀀트</span></div><div class="cm">비행의, 비행을 저지르는 / 비행 청소년</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">dismissed</span><span class="ci">/dɪsˈmɪst/</span><span class="ca">디스미스트</span></div><div class="cm">일축하다, 무시하다 / 해고하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">mere</span><span class="ci">/mɪər/</span><span class="ca">미어</span></div><div class="cm">단순한, 단지 ~에 불과한</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>셋째, 이 이론은 <strong>또래 영향</strong>의 역할을 크게 무시한다. 연구들은 비행 또래가 범죄 행동의 가장 강력한 예측 변수 중 하나임을 일관되게 보여주지만, 갓프레드슨과 허쉬는 이를 단순한 선택 효과에 불과하다고 일축했다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>dismissed this as ~</b> : <code>dismiss A as B</code> — "A를 B에 불과하다고 일축하다" — 상대 주장을 무시할 때 쓰는 학술 표현<br>
+    <b>selection effect</b> : "선택 효과" — 비행 청소년들이 서로 끌리는 것이지, 또래가 비행을 가르치는 것이 아니라는 주장
+  </div>
+</div>
+
+<!-- S21 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S21</span><p class="en-t">Fourth, and perhaps most damaging to the stability thesis, research in developmental criminology has shown that self-control <em>can</em> change over the life course. It is not fixed at age ten.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">damaging</span><span class="ci">/ˈdæmɪdʒɪŋ/</span><span class="ca">대미징</span></div><div class="cm">해로운, 손상시키는 / 치명적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">developmental</span><span class="ci">/dɪˌveləpˈmentəl/</span><span class="ca">디벨럽멘털</span></div><div class="cm">발달의, 발달과 관련된</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">life course</span><span class="ci">/laɪf kɔːrs/</span><span class="ca">라이프 코스</span></div><div class="cm">생애과정, 인생 경로</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>넷째, 그리고 안정성 명제에 아마 가장 치명적인 것은, 발달 범죄학의 연구가 자기통제력이 생애과정에서 <em>변할 수 있다</em>는 것을 보여주었다는 점이다. 그것은 10세에 고정되지 않는다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>perhaps most damaging to ~</b> : "~에 아마 가장 치명적인" — 비판의 강도를 순서대로 높이는 강의 기법<br>
+    <b><em>can</em> change</b> : <code>can</code>에 이탤릭 강조 — 가능성을 강하게 발음하여 "변할 수 <u>있다</u>"를 부각
+  </div>
+</div>
+
+<!-- S22 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S22</span><p class="en-t">It is worth pausing here to compare this theory with Hirschi's earlier Social Bond Theory. In 1969, Hirschi emphasized external social bonds — attachment, commitment, involvement, and belief. By 1990, he had moved the focus inward, to an internal trait: self-control.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">pausing</span><span class="ci">/ˈpɔːzɪŋ/</span><span class="ca">포징</span></div><div class="cm">멈추는, 잠시 쉬는</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">emphasized</span><span class="ci">/ˈemfəsaɪzd/</span><span class="ca">엠퍼사이즈드</span></div><div class="cm">강조했다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">inward</span><span class="ci">/ˈɪnwərd/</span><span class="ca">인워드</span></div><div class="cm">내부로, 안쪽으로 / 내면적인</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>여기서 잠시 멈추어 이 이론을 허쉬의 이전 사회유대이론과 비교해볼 만하다. 1969년, 허쉬는 외부적 사회유대 — 애착, 관여, 참여, 신념 — 를 강조했다. 1990년에 이르러, 그는 초점을 내면으로 옮겼다 — 내면적 특성인 자기통제력으로.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>It is worth pausing here to ~</b> : "여기서 잠시 ~할 만한 가치가 있다" — 강의 중간에 비교·성찰을 제안하는 표현<br>
+    <b>By 1990, he had moved</b> : <code>by + 시점</code> + <code>had + 과거분사</code> — 특정 시점까지 완료된 변화를 나타내는 과거완료
+  </div>
+</div>
+
+<!-- S23 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S23</span><p class="en-t">This evolution in Hirschi's thinking shows how a scholar's ideas can change dramatically over a career. Some see it as intellectual growth; others see it as a contradiction.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">evolution</span><span class="ci">/ˌevəˈluːʃən/</span><span class="ca">에벌루션</span></div><div class="cm">진화, 발전 / 변천</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">dramatically</span><span class="ci">/drəˈmætɪkli/</span><span class="ca">드러매티컬리</span></div><div class="cm">극적으로, 크게</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">intellectual</span><span class="ci">/ˌɪntəˈlektʃuəl/</span><span class="ca">인텔렉추얼</span></div><div class="cm">지적인, 지성의 / 지식인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">contradiction</span><span class="ci">/ˌkɒntrəˈdɪkʃən/</span><span class="ca">칸트러딕션</span></div><div class="cm">모순, 반대 / 부인</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>허쉬의 사고에서 이러한 진화는 한 학자의 아이디어가 경력 동안 얼마나 극적으로 변할 수 있는지를 보여준다. 어떤 이들은 이를 지적 성장으로 보고, 다른 이들은 모순으로 본다.</div>
+</div>
+
+<!-- S24 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S24</span><p class="en-t">What are the policy implications? If the theory is correct, then the most effective crime prevention strategy is <strong>early childhood intervention</strong> — parenting programs, preschool education, and family support services designed to build self-control before it is too late.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">implications</span><span class="ci">/ˌɪmplɪˈkeɪʃənz/</span><span class="ca">임플리케이션즈</span></div><div class="cm">함의, 시사점 / 영향</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">intervention</span><span class="ci">/ˌɪntərˈvenʃən/</span><span class="ca">인터벤션</span></div><div class="cm">개입, 중재 / 간섭</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">preschool</span><span class="ci">/ˈpriːskuːl/</span><span class="ca">프리스쿨</span></div><div class="cm">취학 전의, 유치원의</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>정책적 함의는 무엇인가? 이론이 올바르다면, 가장 효과적인 범죄 예방 전략은 <strong>조기 아동기 개입</strong> — 양육 프로그램, 취학 전 교육, 그리고 너무 늦기 전에 자기통제력을 구축하도록 설계된 가족 지원 서비스 — 이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>designed to build self-control</b> : 과거분사구 — "자기통제력을 구축하도록 설계된" (<code>services</code>를 수식)<br>
+    <b>before it is too late</b> : 관용표현 — "너무 늦기 전에" — 안정성 명제의 '8~10세 마감'을 암시
+  </div>
+</div>
+
+<!-- S25 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S25</span><p class="en-t">In conclusion, despite its many criticisms, Self-Control Theory remains one of the most tested and empirically supported theories in criminology. Its core message — that the ability to delay gratification and consider consequences is central to understanding crime — continues to shape both research and policy around the world.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">conclusion</span><span class="ci">/kənˈkluːʒən/</span><span class="ca">컨클루전</span></div><div class="cm">결론 / 마무리 / 종결</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">delay</span><span class="ci">/dɪˈleɪ/</span><span class="ca">딜레이</span></div><div class="cm">지연하다, 미루다 / 지체</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">gratification</span><span class="ci">/ˌɡrætɪfɪˈkeɪʃən/</span><span class="ca">그래티피케이션</span></div><div class="cm">만족, 충족</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">central</span><span class="ci">/ˈsentrəl/</span><span class="ca">센트럴</span></div><div class="cm">핵심적인, 중심의</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>결론적으로, 많은 비판에도 불구하고, 자기통제이론은 범죄학에서 가장 많이 검증되고 실증적으로 지지받는 이론 중 하나로 남아 있다. 만족을 지연하고 결과를 고려하는 능력이 범죄를 이해하는 데 핵심적이라는 그 핵심 메시지는 전 세계의 연구와 정책을 계속 형성하고 있다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>the ability to delay gratification</b> : "만족을 지연하는 능력" — 자기통제의 핵심 정의를 한 문장으로 요약<br>
+    <b>continues to shape both A and B</b> : "A와 B 모두를 계속 형성하고 있다" — 이론의 지속적 영향력을 강조하는 마무리 표현
+  </div>
+</div>
+
+<div class="slabel">📚 핵심 어휘 정리</div>
+
+<div class="vc"><div class="vl"><div class="vw">impulsivity</div><div class="vi">/ˌɪmpʌlˈsɪvɪti/</div><div class="va">임펄시비티</div></div><div class="vr"><div class="vm">충동성 / 충동적으로 행동하는 성향</div><div class="ve">Impulsivity is the first and most important element of low self-control.</div><div class="vk">충동성은 낮은 자기통제력의 첫 번째이자 가장 중요한 요소이다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">self-control</div><div class="vi">/ˌselfkənˈtroʊl/</div><div class="va">셀프컨트로울</div></div><div class="vr"><div class="vm">자기통제, 자제력 / 충동을 억제하는 능력</div><div class="ve">Low self-control is the primary individual-level cause of crime.</div><div class="vk">낮은 자기통제력은 범죄의 주된 개인 수준 원인이다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">gratification</div><div class="vi">/ˌɡrætɪfɪˈkeɪʃən/</div><div class="va">그래티피케이션</div></div><div class="vr"><div class="vm">만족, 충족 / 욕구 충족</div><div class="ve">People with low self-control seek immediate gratification.</div><div class="vk">자기통제력이 낮은 사람들은 즉각적인 만족을 추구한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">analogous</div><div class="vi">/əˈnæləɡəs/</div><div class="va">어낼러거스</div></div><div class="vr"><div class="vm">유사한, 비슷한 / 상응하는</div><div class="ve">Smoking and reckless driving are analogous behaviors linked to low self-control.</div><div class="vk">흡연과 무모한 운전은 낮은 자기통제력과 연결된 유사 행동이다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">tautological</div><div class="vi">/ˌtɔːtəˈlɒdʒɪkəl/</div><div class="va">토털로지컬</div></div><div class="vr"><div class="vm">동어반복적인, 순환논리적인</div><div class="ve">Critics say the theory is tautological because it defines low self-control by criminal behavior.</div><div class="vk">비판자들은 이 이론이 낮은 자기통제력을 범죄 행동으로 정의하기 때문에 동어반복적이라고 말한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">propensity</div><div class="vi">/prəˈpensɪti/</div><div class="va">프로펜시티</div></div><div class="vr"><div class="vm">성향, 경향 / ~하려는 기질</div><div class="ve">Low self-control reflects a propensity toward criminal behavior.</div><div class="vk">낮은 자기통제력은 범죄 행동에 대한 성향을 반영한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">parenting</div><div class="vi">/ˈpeərəntɪŋ/</div><div class="va">페어런팅</div></div><div class="vr"><div class="vm">양육, 육아 / 부모 역할</div><div class="ve">Effective parenting is the key to developing self-control in children.</div><div class="vk">효과적인 양육은 아이들의 자기통제력을 발달시키는 열쇠이다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">monitoring</div><div class="vi">/ˈmɒnɪtərɪŋ/</div><div class="va">모니터링</div></div><div class="vr"><div class="vm">감시, 관찰 / 지속적 확인</div><div class="ve">Parental monitoring is the first condition of effective child-rearing.</div><div class="vk">부모의 감시는 효과적인 양육의 첫 번째 조건이다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">stability</div><div class="vi">/stəˈbɪlɪti/</div><div class="va">스터빌리티</div></div><div class="vr"><div class="vm">안정성, 안정 / 변하지 않음</div><div class="ve">The stability thesis claims self-control remains constant throughout life.</div><div class="vk">안정성 명제는 자기통제력이 평생 일정하게 유지된다고 주장한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">predictor</div><div class="vi">/prɪˈdɪktər/</div><div class="va">프리딕터</div></div><div class="vr"><div class="vm">예측 변수, 예측 인자</div><div class="ve">Self-control is one of the strongest predictors of criminal behavior.</div><div class="vk">자기통제력은 범죄 행동의 가장 강력한 예측 변수 중 하나이다.</div></div></div>
+
+</div>
+</body>
+</html>

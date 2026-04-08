@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life-Course Theory · Sampson & Laub / Moffitt 1990s</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f3ee;--card:#fff;--en:#1b2a44;--en-t:#dce8f8;--pr-bg:#ece8f8;--pr-bd:#c5b8ef;--pr-t:#3d2b80;--ko-bg:#fdf6ec;--ko-t:#5a3820;--ko-bd:#f0dfc0;--gr-bg:#edf6ec;--gr-t:#1a4f1a;--gr-bd:#b8dab8;--ac:#c8a84b;--bd:#ddd8cc;--sh:0 2px 14px rgba(0,0,0,.07);--r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans','Noto Sans KR',sans-serif;background:var(--bg);color:#2a2a2a;line-height:1.75;font-size:15px}
+.hdr{background:var(--en);color:var(--en-t);padding:clamp(1.2rem,4vw,2rem) clamp(.8rem,3vw,1.5rem);text-align:center;border-bottom:4px solid var(--ac)}
+.badge{display:inline-block;background:var(--ac);color:var(--en);font-size:.65rem;font-weight:700;padding:.2rem .8rem;border-radius:20px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem}
+.hdr h1{font-family:'Lora',serif;font-size:clamp(1.1rem,3.5vw,1.5rem);font-weight:600;margin-bottom:.3rem}
+.hdr h2{font-size:clamp(.8rem,2.5vw,.95rem);opacity:.7}
+.wrap{max-width:860px;margin:0 auto;padding:clamp(1rem,3vw,2rem) clamp(.7rem,2.5vw,1.2rem) 4rem}
+.slabel{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#999;margin:clamp(1.2rem,3vw,2rem) 0 .8rem;padding-bottom:.4rem;border-bottom:1px solid var(--bd)}
+.blk{background:var(--card);border-radius:var(--r);margin-bottom:1.2rem;overflow:hidden;box-shadow:var(--sh);border:1px solid var(--bd)}
+.en-r{background:var(--en);color:var(--en-t);padding:clamp(.8rem,2.5vw,1rem) clamp(.8rem,2.5vw,1.2rem);display:flex;gap:.6rem;align-items:flex-start}
+.sn{background:var(--ac);color:#fff;font-size:.6rem;font-weight:700;padding:.15rem .45rem;border-radius:4px;white-space:nowrap;margin-top:.3rem;flex-shrink:0}
+.en-t{font-family:'Lora',serif;font-size:clamp(.9rem,2.3vw,1.05rem);line-height:1.85}
+.pr-r{background:var(--pr-bg);border-top:1px solid var(--pr-bd);border-bottom:1px solid var(--pr-bd);padding:clamp(.55rem,2vw,.7rem) clamp(.8rem,2.5vw,1.2rem)}
+.rl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.6;margin-bottom:.4rem}
+.pr-r .rl{color:var(--pr-t)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{background:#fff;border:1px solid var(--pr-bd);border-radius:5px;padding:.22rem clamp(.45rem,1.5vw,.65rem);font-size:clamp(.72rem,1.9vw,.8rem);display:flex;align-items:flex-start;gap:.3rem;flex-wrap:wrap;flex-direction:column}
+.chip-top{display:flex;align-items:center;gap:.3rem;flex-wrap:wrap}
+.cw{font-weight:700;color:var(--pr-t)}
+.ci{font-family:'DM Mono',monospace;color:#666;font-size:clamp(.67rem,1.7vw,.75rem)}
+.ca{color:#999;font-size:clamp(.67rem,1.7vw,.75rem)}
+.cm{color:#444;font-size:clamp(.67rem,1.7vw,.74rem);border-top:1px solid #e0d8f4;padding-top:.18rem;margin-top:.1rem;width:100%}
+.ko-r{background:var(--ko-bg);border-top:1px solid var(--ko-bd);padding:clamp(.65rem,2vw,.8rem) clamp(.8rem,2.5vw,1.2rem);color:var(--ko-t);font-family:'Noto Sans KR',sans-serif;font-size:clamp(.82rem,2.2vw,.9rem);line-height:1.85}
+.ko-r .rl{color:var(--ko-t)}
+.gr-r{background:var(--gr-bg);border-top:1px solid var(--gr-bd);padding:clamp(.65rem,2vw,.8rem) clamp(.8rem,2.5vw,1.2rem);color:var(--gr-t);font-size:clamp(.78rem,2vw,.85rem);line-height:1.8;overflow-x:auto}
+.gr-r .rl{color:var(--gr-t)}
+.gr-r code{font-family:'DM Mono',monospace;background:rgba(0,0,0,.08);padding:.1rem .32rem;border-radius:3px;font-size:clamp(.7rem,1.8vw,.78rem);word-break:break-all}
+.gr-r b{color:#0d3d0d}
+.mt{width:100%;border-collapse:collapse;margin:.6rem 0;font-size:clamp(.72rem,1.8vw,.8rem);display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mt table{width:100%;border-collapse:collapse}
+.mt th{background:rgba(0,0,0,.07);padding:.38rem .6rem;text-align:left;font-weight:600;border:1px solid #c8dac8;white-space:nowrap}
+.mt td{padding:.38rem .6rem;border:1px solid #c8dac8}
+.mt tr:nth-child(even) td{background:rgba(255,255,255,.5)}
+.vc{background:var(--card);border-radius:var(--r);margin-bottom:.8rem;overflow:hidden;box-shadow:var(--sh);border:1px solid var(--bd);display:grid;grid-template-columns:clamp(120px,28vw,190px) 1fr}
+.vl{background:var(--en);color:var(--en-t);padding:clamp(.7rem,2vw,1rem);display:flex;flex-direction:column;justify-content:center}
+.vw{font-family:'Lora',serif;font-size:clamp(.85rem,2.2vw,1rem);font-weight:600;margin-bottom:.2rem;word-break:break-word}
+.vi{font-family:'DM Mono',monospace;font-size:clamp(.62rem,1.6vw,.74rem);color:var(--ac);margin-bottom:.1rem;word-break:break-all}
+.va{font-size:clamp(.62rem,1.6vw,.74rem);opacity:.55}
+.vr{padding:clamp(.7rem,2vw,1rem) clamp(.8rem,2.5vw,1.2rem)}
+.vm{font-weight:600;font-size:clamp(.82rem,2.2vw,.92rem);margin-bottom:.35rem;color:#222}
+.ve{font-size:clamp(.75rem,1.9vw,.84rem);color:#555;font-style:italic;margin-bottom:.2rem}
+.vk{font-size:clamp(.72rem,1.8vw,.8rem);color:var(--ko-t);font-family:'Noto Sans KR',sans-serif}
+@media(max-width:480px){.vc{grid-template-columns:1fr}.vl{flex-direction:row;align-items:center;gap:.6rem;flex-wrap:wrap;padding:.7rem .9rem}.vw{margin-bottom:0}.vi{margin-bottom:0}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="badge">Lecture 11 · Developmental</div>
+  <h1>Life-Course / Developmental Criminology</h1>
+  <h2>Sampson & Laub; Terrie Moffitt (1990s)</h2>
+</div>
+<div class="wrap">
+<div class="slabel">📖 Script — Sentence by Sentence</div>
+
+<!-- S1 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S1</span><p class="en-t">Today we explore life-course criminology, a perspective that emerged in the 1990s and asks a deceptively simple question: how does criminal behavior change over a person's lifetime?</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">life-course</span><span class="ci">/ˈlaɪf kɔːrs/</span><span class="ca">라이프 코스</span></div><div class="cm">생애 과정, 일생의 경로</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">perspective</span><span class="ci">/pərˈspektɪv/</span><span class="ca">퍼스펙티브</span></div><div class="cm">관점, 시각 / 전망</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">emerged</span><span class="ci">/ɪˈmɜːrdʒd/</span><span class="ca">이머지드</span></div><div class="cm">등장했다, 나타났다 / 부상했다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">deceptively</span><span class="ci">/dɪˈseptɪvli/</span><span class="ca">디셉티블리</span></div><div class="cm">겉보기와 달리, 의외로</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>오늘은 생애과정 범죄학을 탐구한다. 이것은 1990년대에 등장한 관점으로, 겉보기에 단순한 질문을 던진다: 범죄 행동은 한 사람의 일생에 걸쳐 어떻게 변화하는가?</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>a deceptively simple question</b> : <code>deceptively</code>는 "겉보기와 달리" — 단순해 보이지만 실제로는 매우 복잡한 질문이라는 뜻<br>
+    <b>how does ~ change over ~</b> : <code>over</code>는 시간의 경과를 나타냄 — "~에 걸쳐 어떻게 변하는가"
+  </div>
+</div>
+
+<!-- S2 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S2</span><p class="en-t">Unlike static theories that treat criminality as a fixed trait, life-course theory focuses on change — on how people start offending, continue offending, and eventually stop.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">static</span><span class="ci">/ˈstætɪk/</span><span class="ca">스태틱</span></div><div class="cm">정적인, 고정된 / 정지 상태의</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">criminality</span><span class="ci">/ˌkrɪmɪˈnælɪti/</span><span class="ca">크리미낼리티</span></div><div class="cm">범죄성, 범죄 성향</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">trait</span><span class="ci">/treɪt/</span><span class="ca">트레이트</span></div><div class="cm">특성, 특질 / 성격적 특징</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">offending</span><span class="ci">/əˈfendɪŋ/</span><span class="ca">어펜딩</span></div><div class="cm">범죄를 저지르는 것, 범행</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>범죄성을 고정된 특성으로 취급하는 정적 이론과 달리, 생애과정이론은 변화에 초점을 맞춘다 — 사람들이 어떻게 범행을 시작하고, 계속하고, 결국 멈추는지에 관한 것이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>Unlike ~ that …</b> : <code>unlike</code>로 대조 시작 — "~와 달리"<br>
+    <b>start / continue / eventually stop</b> : 세 동사의 병렬 — 범죄 행동의 시간적 흐름을 한 문장에 압축
+  </div>
+</div>
+
+<!-- S3 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S3</span><p class="en-t">One of the most robust findings in all of criminology is the age-crime curve: crime rises sharply in the teenage years, peaks in late adolescence — around 17 or 18 — and then declines steadily through adulthood.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">robust</span><span class="ci">/roʊˈbʌst/</span><span class="ca">로우버스트</span></div><div class="cm">견고한, 강력한 / 탄탄한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">adolescence</span><span class="ci">/ˌædəˈlesəns/</span><span class="ca">애덜레선스</span></div><div class="cm">청소년기, 사춘기</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">peaks</span><span class="ci">/piːks/</span><span class="ca">피크스</span></div><div class="cm">정점에 달하다 / 최고점</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">declines</span><span class="ci">/dɪˈklaɪnz/</span><span class="ca">디클라인즈</span></div><div class="cm">감소하다, 하락하다 / 쇠퇴하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">steadily</span><span class="ci">/ˈstedɪli/</span><span class="ca">스테딜리</span></div><div class="cm">꾸준히, 점차적으로</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>범죄학 전체에서 가장 견고한 연구 결과 중 하나는 연령-범죄 곡선이다: 범죄는 10대에 급격히 증가하고, 후기 청소년기 — 17~18세 무렵 — 에 정점에 달한 후, 성인기를 거치며 꾸준히 감소한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>the age-crime curve</b> : 범죄학의 핵심 개념 — 하이픈으로 연결된 복합 명사<br>
+    <b>rises / peaks / declines</b> : 동사 세 개가 시간순으로 나열 — 곡선의 움직임을 그대로 묘사
+  </div>
+</div>
+
+<!-- S4 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S4</span><p class="en-t">This pattern is universal — it appears across cultures, historical periods, and types of crime. The question is: why?</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">universal</span><span class="ci">/ˌjuːnɪˈvɜːrsəl/</span><span class="ca">유니버설</span></div><div class="cm">보편적인, 전 세계적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">historical</span><span class="ci">/hɪˈstɒrɪkəl/</span><span class="ca">히스토리컬</span></div><div class="cm">역사적인, 역사상의</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이 패턴은 보편적이다 — 문화, 역사적 시대, 범죄 유형을 막론하고 나타난다. 질문은: 왜 그런가?</div>
+</div>
+
+<!-- S5 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S5</span><p class="en-t">Robert Sampson and John Laub developed an <strong>age-graded theory of informal social control</strong>, building on data originally collected by Sheldon and Eleanor Glueck in the 1940s and 1950s.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">age-graded</span><span class="ci">/ˈeɪdʒ ˌɡreɪdɪd/</span><span class="ca">에이지 그레이디드</span></div><div class="cm">연령별로 등급화된, 연령 단계별</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">informal</span><span class="ci">/ɪnˈfɔːrməl/</span><span class="ca">인포멀</span></div><div class="cm">비공식적인, 비형식적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">Glueck</span><span class="ci">/ɡluːk/</span><span class="ca">글루크</span></div><div class="cm">인명 고유명사</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>로버트 샘슨과 존 라웁은 1940~50년대에 셸던 및 엘리너 글루크가 원래 수집한 데이터를 기반으로 <strong>비공식 사회통제의 연령 단계 이론</strong>을 발전시켰다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>building on data originally collected by ~</b> : 분사 구문 — "~가 원래 수집한 데이터를 기반으로 하여"<br>
+    → <code>build on</code> = ~을 토대로 발전시키다 — 학술 맥락에서 선행 연구를 계승할 때 쓰는 표현
+  </div>
+</div>
+
+<!-- S6 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S6</span><p class="en-t">Their framework rests on three key concepts: <strong>trajectories</strong>, <strong>transitions</strong>, and <strong>turning points</strong>.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">trajectories</span><span class="ci">/trəˈdʒektəriz/</span><span class="ca">트러젝터리즈</span></div><div class="cm">궤적들, 경로들 / 발달 경로</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">transitions</span><span class="ci">/trænˈzɪʃənz/</span><span class="ca">트랜지션즈</span></div><div class="cm">전환들, 이행들 / 변화의 과정</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">turning points</span><span class="ci">/ˈtɜːrnɪŋ pɔɪnts/</span><span class="ca">터닝 포인츠</span></div><div class="cm">전환점들, 인생의 분기점</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>그들의 이론적 틀은 세 가지 핵심 개념에 기반한다: <strong>궤적</strong>, <strong>전환</strong>, 그리고 <strong>전환점</strong>.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>rests on</b> : <code>rest on ~</code> — "~에 기반하다, ~에 의존하다" (= is based on / relies on)<br>
+    <b>trajectory</b> = 장기적인 행동의 경로; <b>transition</b> = 삶의 역할 변화 (예: 학생→직장인); <b>turning point</b> = 궤적을 바꾸는 결정적 사건
+  </div>
+</div>
+
+<!-- S7 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S7</span><p class="en-t">A trajectory is a long-term pattern of behavior — for instance, a pathway of stable employment or a pathway of persistent offending. Transitions are short-term life events embedded in trajectories, such as getting married or losing a job.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">pathway</span><span class="ci">/ˈpæθweɪ/</span><span class="ca">패쓰웨이</span></div><div class="cm">경로, 길 / 진로</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">persistent</span><span class="ci">/pərˈsɪstənt/</span><span class="ca">퍼시스턴트</span></div><div class="cm">지속적인, 끈질긴 / 집요한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">embedded</span><span class="ci">/ɪmˈbedɪd/</span><span class="ca">임베디드</span></div><div class="cm">내재된, 포함된 / 박혀 있는</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>궤적이란 장기적인 행동 패턴이다 — 예를 들어, 안정적 고용의 경로 또는 지속적 범행의 경로. 전환은 궤적 안에 내재된 단기적 생애 사건으로, 결혼하거나 직장을 잃는 것과 같은 것이다.</div>
+</div>
+
+<!-- S8 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S8</span><p class="en-t">But the most important concept is the <strong>turning point</strong> — a life event that fundamentally redirects a person's trajectory, pushing them away from crime.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">fundamentally</span><span class="ci">/ˌfʌndəˈmentəli/</span><span class="ca">펀더멘탈리</span></div><div class="cm">근본적으로, 본질적으로</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">redirects</span><span class="ci">/ˌriːdəˈrekts/</span><span class="ca">리디렉츠</span></div><div class="cm">방향을 전환하다, 재지향하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">trajectory</span><span class="ci">/trəˈdʒektəri/</span><span class="ca">트러젝터리</span></div><div class="cm">궤적, 경로 / 발달 경로</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>그러나 가장 중요한 개념은 <strong>전환점</strong>이다 — 한 사람의 궤적을 근본적으로 재지향시켜 범죄로부터 멀어지게 하는 생애 사건이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>pushing them away from crime</b> : 분사 구문으로 결과를 설명 — "그들을 범죄로부터 밀어내면서"<br>
+    → <code>push ~ away from</code> = ~를 ~로부터 밀어내다, 멀어지게 하다
+  </div>
+</div>
+
+<!-- S9 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S9</span><p class="en-t">Sampson and Laub identified several turning points that promote <strong>desistance</strong> — the process of ceasing criminal behavior. These include marriage to a prosocial spouse, stable employment, and military service.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">desistance</span><span class="ci">/dɪˈzɪstəns/</span><span class="ca">디지스턴스</span></div><div class="cm">범죄 중단, 범행 포기 / 그만둠</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">ceasing</span><span class="ci">/ˈsiːsɪŋ/</span><span class="ca">시싱</span></div><div class="cm">중단하는, 그만두는</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">prosocial</span><span class="ci">/ˌproʊˈsoʊʃəl/</span><span class="ca">프로소우셜</span></div><div class="cm">친사회적인, 사회적으로 바람직한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">spouse</span><span class="ci">/spaʊs/</span><span class="ca">스파우스</span></div><div class="cm">배우자 (남편 또는 아내)</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>샘슨과 라웁은 <strong>범죄 중단(desistance)</strong> — 범죄 행동을 그만두는 과정 — 을 촉진하는 여러 전환점을 확인했다. 여기에는 친사회적 배우자와의 결혼, 안정적 고용, 군 복무가 포함된다.</div>
+</div>
+
+<!-- S10 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S10</span><p class="en-t">What makes these turning points effective is a concept Sampson and Laub called <strong>"knifing off"</strong> — the idea that certain life changes cut a person's ties to their criminal past, providing a fresh start.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">knifing off</span><span class="ci">/ˈnaɪfɪŋ ɒf/</span><span class="ca">나이핑 오프</span></div><div class="cm">잘라내기, (과거와의) 단절</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">ties</span><span class="ci">/taɪz/</span><span class="ca">타이즈</span></div><div class="cm">유대, 연결 / 넥타이 / 동점</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이 전환점들이 효과적인 이유는 샘슨과 라웁이 <strong>"잘라내기(knifing off)"</strong>라고 부른 개념 때문이다 — 특정 삶의 변화가 범죄적 과거와의 연결을 끊어내고 새로운 출발을 제공한다는 것이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>What makes these turning points effective is ~</b> : <code>What</code>절 강조 구문 — "이 전환점들을 효과적이게 만드는 것은 ~이다"<br>
+    <b>knifing off</b> : <code>knife</code>(칼)를 동사로 사용한 은유 — 과거와의 관계를 칼로 자르듯 끊는다는 이미지
+  </div>
+</div>
+
+<!-- S11 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S11</span><p class="en-t">For example, military service physically removes a young person from their old neighborhood and peer group, creating new routines, new social bonds, and new expectations.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">physically</span><span class="ci">/ˈfɪzɪkli/</span><span class="ca">피지클리</span></div><div class="cm">물리적으로, 신체적으로</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">neighborhood</span><span class="ci">/ˈneɪbərhʊd/</span><span class="ca">네이버후드</span></div><div class="cm">동네, 이웃, 근처</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">routines</span><span class="ci">/ruːˈtiːnz/</span><span class="ca">루틴즈</span></div><div class="cm">일과, 일상 / 정해진 절차</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>예를 들어, 군 복무는 젊은이를 기존의 동네와 또래 집단에서 물리적으로 제거하여, 새로운 일과, 새로운 사회적 유대, 새로운 기대를 만들어낸다.</div>
+</div>
+
+<!-- S12 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S12</span><p class="en-t">Crucially, Sampson and Laub also emphasized the role of <strong>human agency</strong>. People are not merely passive recipients of social forces — they actively make choices that shape their own life course.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">crucially</span><span class="ci">/ˈkruːʃəli/</span><span class="ca">크루셜리</span></div><div class="cm">결정적으로, 매우 중요하게</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">agency</span><span class="ci">/ˈeɪdʒənsi/</span><span class="ca">에이전시</span></div><div class="cm">행위 주체성, 자율적 행위 능력 / 기관</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">passive</span><span class="ci">/ˈpæsɪv/</span><span class="ca">패시브</span></div><div class="cm">수동적인, 소극적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">recipients</span><span class="ci">/rɪˈsɪpiənts/</span><span class="ca">리시피언츠</span></div><div class="cm">수령인, 받는 사람</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>결정적으로, 샘슨과 라웁은 <strong>인간 행위 주체성(human agency)</strong>의 역할도 강조했다. 사람들은 단순히 사회적 힘의 수동적 수령자가 아니다 — 자신의 생애 과정을 형성하는 선택을 능동적으로 한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>not merely ~ — they actively ~</b> : <code>not merely A — B</code> 구문으로 강한 대조 — "단순히 A가 아니라 B이다"<br>
+    <b>human agency</b> : 사회학 핵심 용어 — 구조(structure)에 대비되는 개인의 자율적 행위 능력
+  </div>
+</div>
+
+<!-- S13 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S13</span><p class="en-t">Now let us turn to Terrie Moffitt's influential <strong>dual taxonomy</strong>, which divides offenders into two fundamentally different groups.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">Terrie Moffitt</span><span class="ci">/ˈteri ˈmɒfɪt/</span><span class="ca">테리 모핏</span></div><div class="cm">인명 고유명사</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">taxonomy</span><span class="ci">/tækˈsɒnəmi/</span><span class="ca">택사너미</span></div><div class="cm">분류 체계, 분류법</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">fundamentally</span><span class="ci">/ˌfʌndəˈmentəli/</span><span class="ca">펀더멘탈리</span></div><div class="cm">근본적으로, 본질적으로</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이제 테리 모핏의 영향력 있는 <strong>이원적 분류 체계(dual taxonomy)</strong>로 넘어가자. 이것은 범죄자를 근본적으로 다른 두 집단으로 나눈다.</div>
+</div>
+
+<!-- S14 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S14</span><p class="en-t">The first group is <strong>adolescence-limited offenders</strong>. These are the majority — most young people who engage in crime during their teenage years. Their offending is temporary and driven by what Moffitt calls the <strong>"maturity gap."</strong></p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">adolescence-limited</span><span class="ci">/ˌædəˈlesəns ˈlɪmɪtɪd/</span><span class="ca">애덜레선스 리미티드</span></div><div class="cm">청소년기에 한정된</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">temporary</span><span class="ci">/ˈtempəreri/</span><span class="ca">템퍼레리</span></div><div class="cm">일시적인, 임시의</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">maturity gap</span><span class="ci">/məˈtjʊərɪti ɡæp/</span><span class="ca">머튜리티 갭</span></div><div class="cm">성숙도 격차, 성숙 간극</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>첫 번째 집단은 <strong>청소년기 한정 범죄자(adolescence-limited offenders)</strong>이다. 이들은 다수를 차지하며 — 10대 시기에 범죄에 관여하는 대부분의 청소년이다. 이들의 범행은 일시적이며, 모핏이 <strong>"성숙 간극(maturity gap)"</strong>이라고 부르는 것에 의해 추동된다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>driven by what Moffitt calls ~</b> : <code>driven by</code>(~에 의해 추동된) + <code>what ~ calls</code>(~가 ~라고 부르는 것) — 학술적 개념 도입 시 자주 쓰이는 구조
+  </div>
+</div>
+
+<!-- S15 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S15</span><p class="en-t">The maturity gap refers to the awkward period when teenagers are biologically mature but socially still denied adult privileges — such as autonomy, financial independence, and respect.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">awkward</span><span class="ci">/ˈɔːkwərd/</span><span class="ca">오크워드</span></div><div class="cm">어색한, 불편한 / 곤란한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">biologically</span><span class="ci">/ˌbaɪəˈlɒdʒɪkli/</span><span class="ca">바이올로지클리</span></div><div class="cm">생물학적으로</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">autonomy</span><span class="ci">/ɔːˈtɒnəmi/</span><span class="ca">오타너미</span></div><div class="cm">자율성, 자치 / 독립</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">privileges</span><span class="ci">/ˈprɪvɪlɪdʒɪz/</span><span class="ca">프리빌리지즈</span></div><div class="cm">특권들, 특혜들</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>성숙 간극은 10대가 생물학적으로는 성숙하지만 사회적으로는 여전히 성인의 특권 — 자율성, 경제적 독립, 존중 등 — 을 거부당하는 어색한 시기를 가리킨다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>biologically mature but socially still denied</b> : 부사(biologically / socially)로 대조를 강화 — 생물학적 vs. 사회적 성숙의 불일치<br>
+    <b>refers to</b> : <code>refer to ~</code> — "~를 가리키다, ~를 의미하다" — 학술 정의 시 자주 사용
+  </div>
+</div>
+
+<!-- S16 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S16</span><p class="en-t">Frustrated by this gap, teenagers engage in delinquency as a form of <strong>social mimicry</strong> — they imitate the antisocial behavior of life-course-persistent peers to claim a sense of adult status. Once they gain legitimate access to adult roles, they naturally desist.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">frustrated</span><span class="ci">/frʌˈstreɪtɪd/</span><span class="ca">프러스트레이티드</span></div><div class="cm">좌절한, 답답한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">mimicry</span><span class="ci">/ˈmɪmɪkri/</span><span class="ca">미미크리</span></div><div class="cm">모방, 흉내 / 의태</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">antisocial</span><span class="ci">/ˌæntɪˈsoʊʃəl/</span><span class="ca">앤티소우셜</span></div><div class="cm">반사회적인 / 비사교적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">legitimate</span><span class="ci">/lɪˈdʒɪtɪmət/</span><span class="ca">리지티멧</span></div><div class="cm">합법적인, 정당한 / 적법한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">desist</span><span class="ci">/dɪˈzɪst/</span><span class="ca">디지스트</span></div><div class="cm">그만두다, 중단하다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이 간극에 좌절한 10대들은 <strong>사회적 모방(social mimicry)</strong>의 형태로 비행에 관여한다 — 생애과정 지속 범죄자 또래의 반사회적 행동을 모방하여 성인 지위를 주장한다. 합법적으로 성인 역할에 접근할 수 있게 되면, 자연스럽게 범행을 중단한다.</div>
+</div>
+
+<!-- S17 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S17</span><p class="en-t">The second group — and the one that concerns criminologists most — is the <strong>life-course-persistent offender</strong>. This is a small group, roughly five to eight percent of the population, but they account for a vastly disproportionate share of all crime.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">life-course-persistent</span><span class="ci">/ˌlaɪf kɔːrs pərˈsɪstənt/</span><span class="ca">라이프 코스 퍼시스턴트</span></div><div class="cm">생애과정 지속적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">roughly</span><span class="ci">/ˈrʌfli/</span><span class="ca">러플리</span></div><div class="cm">대략, 약 / 거칠게</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">disproportionate</span><span class="ci">/ˌdɪsprəˈpɔːrʃənət/</span><span class="ca">디스프로포션넷</span></div><div class="cm">불균형적인, 비례하지 않는</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>두 번째 집단 — 그리고 범죄학자들이 가장 우려하는 집단 — 은 <strong>생애과정 지속 범죄자(life-course-persistent offender)</strong>이다. 이들은 인구의 약 5~8%에 불과한 소수 집단이지만, 전체 범죄에서 불균형적으로 큰 비중을 차지한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>the one that concerns ~ most</b> : <code>concern</code> = "우려를 주다, 걱정시키다" — "범죄학자들이 가장 우려하는 집단"<br>
+    <b>account for</b> : <code>account for ~</code> — "~을 차지하다, ~의 원인이 되다" — 통계적 비율을 말할 때 자주 사용
+  </div>
+</div>
+
+<!-- S18 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S18</span><p class="en-t">According to Moffitt, life-course-persistent offending originates from the interaction between <strong>neuropsychological deficits</strong> — such as impulsivity, low verbal ability, or poor executive function — and <strong>disadvantaged environments</strong> like poverty, abuse, or inconsistent parenting.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">neuropsychological</span><span class="ci">/ˌnjʊəroʊˌsaɪkəˈlɒdʒɪkəl/</span><span class="ca">뉴로사이콜로지컬</span></div><div class="cm">신경심리학적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">deficits</span><span class="ci">/ˈdefɪsɪts/</span><span class="ca">데피싯츠</span></div><div class="cm">결함들, 결핍들 / 적자</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">impulsivity</span><span class="ci">/ˌɪmpʌlˈsɪvɪti/</span><span class="ca">임펄시비티</span></div><div class="cm">충동성</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">executive function</span><span class="ci">/ɪɡˈzekjʊtɪv ˈfʌŋkʃən/</span><span class="ca">이그제큐티브 펑션</span></div><div class="cm">실행 기능 (계획·억제·조절 능력)</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>모핏에 따르면, 생애과정 지속 범행은 <strong>신경심리학적 결함</strong> — 충동성, 낮은 언어 능력, 열악한 실행 기능 등 — 과 빈곤, 학대, 비일관적 양육과 같은 <strong>불우한 환경</strong> 사이의 상호작용에서 비롯된다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>originates from the interaction between A and B</b> : <code>originate from</code> = "~에서 비롯되다" + <code>interaction between A and B</code> = "A와 B 사이의 상호작용"<br>
+    → 생물학적 요인과 환경적 요인의 결합을 강조하는 구조
+  </div>
+</div>
+
+<!-- S19 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S19</span><p class="en-t">These individuals begin exhibiting antisocial behavior very early — often in childhood — and their problems compound over time. This brings us to the concept of <strong>"snares"</strong> and <strong>cumulative disadvantage</strong>.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">exhibiting</span><span class="ci">/ɪɡˈzɪbɪtɪŋ/</span><span class="ca">이그지비팅</span></div><div class="cm">보이는, 나타내는 / 전시하는</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">compound</span><span class="ci">/kəmˈpaʊnd/</span><span class="ca">컴파운드</span></div><div class="cm">복합하다, 악화시키다 / 합성물</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">snares</span><span class="ci">/sneərz/</span><span class="ca">스네어즈</span></div><div class="cm">덫, 올가미 / 함정</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">cumulative</span><span class="ci">/ˈkjuːmjʊlətɪv/</span><span class="ca">큐뮬러티브</span></div><div class="cm">누적적인, 누적되는</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이 개인들은 매우 일찍 — 종종 아동기에 — 반사회적 행동을 보이기 시작하며, 문제는 시간이 지남에 따라 복합적으로 악화된다. 이것은 <strong>"덫(snares)"</strong>과 <strong>누적적 불이익(cumulative disadvantage)</strong>의 개념으로 이어진다.</div>
+</div>
+
+<!-- S20 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S20</span><p class="en-t">Snares are factors that trap individuals in criminal pathways and make desistance harder. Drug addiction, a criminal record, and incarceration are all powerful snares — each one closes doors and narrows future options.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">trap</span><span class="ci">/træp/</span><span class="ca">트랩</span></div><div class="cm">가두다, 덫에 빠뜨리다 / 함정</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">incarceration</span><span class="ci">/ɪnˌkɑːrsəˈreɪʃən/</span><span class="ca">인카서레이션</span></div><div class="cm">투옥, 수감 / 감금</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">narrows</span><span class="ci">/ˈnæroʊz/</span><span class="ca">내로우즈</span></div><div class="cm">좁히다, 축소하다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>덫은 개인을 범죄 경로에 가두고 범죄 중단을 어렵게 만드는 요인이다. 약물 중독, 전과 기록, 투옥은 모두 강력한 덫이다 — 각각이 문을 닫고 미래의 선택지를 좁힌다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>closes doors and narrows future options</b> : 은유적 표현 — "문을 닫다"는 기회의 차단을 의미<br>
+    → <code>close doors</code> ↔ <code>open doors</code> : 기회를 차단하다 ↔ 기회를 열다
+  </div>
+</div>
+
+<!-- S21 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S21</span><p class="en-t">Cumulative disadvantage describes how early deviance triggers a snowball effect: a child who misbehaves gets expelled from school, which limits job prospects, which increases contact with criminal peers, which leads to further offending — and the cycle deepens.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">deviance</span><span class="ci">/ˈdiːviəns/</span><span class="ca">디비언스</span></div><div class="cm">일탈, 이탈 / 편차</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">snowball effect</span><span class="ci">/ˈsnoʊbɔːl ɪˈfekt/</span><span class="ca">스노우볼 이펙트</span></div><div class="cm">눈덩이 효과, 연쇄적 확대</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">expelled</span><span class="ci">/ɪkˈspeld/</span><span class="ca">익스펠드</span></div><div class="cm">퇴학당한, 추방된</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">prospects</span><span class="ci">/ˈprɒspekts/</span><span class="ca">프로스펙츠</span></div><div class="cm">전망, 가능성 / 장래</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>누적적 불이익은 초기의 일탈이 어떻게 눈덩이 효과를 촉발하는지를 설명한다: 비행을 저지른 아이가 퇴학당하고, 이것이 취업 전망을 제한하고, 범죄적 또래와의 접촉을 늘리고, 추가 범행으로 이어진다 — 그리고 그 순환은 깊어진다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>which limits ~ which increases ~ which leads to ~</b> : 연쇄적 <code>which</code> 관계절 — 인과 관계의 연쇄를 강조하는 수사 기법<br>
+    → 각 <code>which</code>가 앞 절의 결과를 받아 다음 원인으로 이어짐 — "눈덩이"의 이미지를 문장 구조로 구현
+  </div>
+</div>
+
+<!-- S22 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S22</span><p class="en-t">Both Sampson and Laub's theory and Moffitt's taxonomy enjoy strong empirical support. Sampson and Laub famously reanalyzed the Glueck longitudinal data, tracking 500 delinquent boys from adolescence into their seventies. Moffitt's work draws heavily on the Dunedin Multidisciplinary Health and Development Study from New Zealand.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">longitudinal</span><span class="ci">/ˌlɒndʒɪˈtjuːdɪnəl/</span><span class="ca">론지튜디널</span></div><div class="cm">종단적인, 장기 추적의</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">reanalyzed</span><span class="ci">/ˌriːˈænəlaɪzd/</span><span class="ca">리애널라이즈드</span></div><div class="cm">재분석했다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">Dunedin</span><span class="ci">/dʌˈniːdɪn/</span><span class="ca">더니딘</span></div><div class="cm">지명 (뉴질랜드)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">multidisciplinary</span><span class="ci">/ˌmʌltiˈdɪsɪplɪnəri/</span><span class="ca">멀티디시플리너리</span></div><div class="cm">다학제적인, 여러 분야에 걸친</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>샘슨과 라웁의 이론과 모핏의 분류 체계 모두 강한 실증적 지지를 받고 있다. 샘슨과 라웁은 글루크의 종단 데이터를 유명하게 재분석하여, 500명의 비행 소년을 청소년기부터 70대까지 추적했다. 모핏의 연구는 뉴질랜드의 더니딘 다학제 건강 발달 연구에 크게 의존한다.</div>
+</div>
+
+<!-- S23 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S23</span><p class="en-t">However, life-course theory is not without criticism. Desistance itself is difficult to define and measure — when exactly has someone "stopped" offending? Early studies focused almost exclusively on males, raising questions about gender bias. And some scholars argue that these findings may not generalize well across different cultural contexts.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">desistance</span><span class="ci">/dɪˈzɪstəns/</span><span class="ca">디지스턴스</span></div><div class="cm">범죄 중단, 범행 포기</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">exclusively</span><span class="ci">/ɪkˈskluːsɪvli/</span><span class="ca">익스클루시블리</span></div><div class="cm">독점적으로, 오직 ~만</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">generalize</span><span class="ci">/ˈdʒenərəlaɪz/</span><span class="ca">제너럴라이즈</span></div><div class="cm">일반화하다 / 보편적으로 적용되다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>그러나 생애과정이론에 비판이 없는 것은 아니다. 범죄 중단 자체가 정의하고 측정하기 어렵다 — 누군가가 정확히 언제 범행을 "멈춘" 것인가? 초기 연구들은 거의 전적으로 남성에게만 초점을 맞추어, 성별 편향에 대한 의문을 제기했다. 그리고 일부 학자들은 이러한 결과가 다른 문화적 맥락에 잘 일반화되지 않을 수 있다고 주장한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>is not without criticism</b> : 이중 부정 — "비판이 없는 것은 아니다" = 비판이 있다 (완곡한 표현)<br>
+    <b>raising questions about ~</b> : 분사 구문 — "~에 대한 의문을 제기하면서"
+  </div>
+</div>
+
+<!-- S24 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S24</span><p class="en-t">In terms of policy, life-course theory has profound implications. It supports early intervention programs for at-risk children, reentry programs for former prisoners, and second-chance employment initiatives — because if turning points matter, then society has a responsibility to create them.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">profound</span><span class="ci">/prəˈfaʊnd/</span><span class="ca">프로파운드</span></div><div class="cm">심오한, 깊은 / 지대한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">implications</span><span class="ci">/ˌɪmplɪˈkeɪʃənz/</span><span class="ca">임플리케이션즈</span></div><div class="cm">함의, 영향 / 암시</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">intervention</span><span class="ci">/ˌɪntərˈvenʃən/</span><span class="ca">인터벤션</span></div><div class="cm">개입, 중재 / 간섭</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">reentry</span><span class="ci">/ˌriːˈentri/</span><span class="ca">리엔트리</span></div><div class="cm">재진입, 사회 복귀</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">initiatives</span><span class="ci">/ɪˈnɪʃətɪvz/</span><span class="ca">이니셔티브즈</span></div><div class="cm">주도적 계획, 정책 / 이니셔티브</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>정책 측면에서, 생애과정이론은 심오한 함의를 가진다. 위험군 아동을 위한 조기 개입 프로그램, 전과자를 위한 사회 복귀 프로그램, 재취업 기회 제도를 지지한다 — 전환점이 중요하다면, 사회에는 그것을 만들어낼 책임이 있기 때문이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>In terms of policy</b> : <code>in terms of ~</code> — "~의 측면에서, ~에 관해서" — 주제 전환 시 자주 사용<br>
+    <b>if turning points matter, then society has a responsibility to create them</b> : <code>if ~ then ~</code> 조건문 — 이론에서 정책적 당위성을 이끌어내는 논리 구조
+  </div>
+</div>
+
+<!-- S25 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S25</span><p class="en-t">Let me close with the most hopeful message of life-course criminology: change is always possible. No matter how long someone has been involved in crime, the right turning point — a supportive relationship, a stable job, a moment of personal resolve — can redirect their trajectory. People can desist at any age.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">hopeful</span><span class="ci">/ˈhoʊpfəl/</span><span class="ca">호우프풀</span></div><div class="cm">희망적인, 희망을 주는</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">supportive</span><span class="ci">/səˈpɔːrtɪv/</span><span class="ca">서포티브</span></div><div class="cm">지지하는, 도움이 되는</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">resolve</span><span class="ci">/rɪˈzɒlv/</span><span class="ca">리졸브</span></div><div class="cm">결심, 결의 / 해결하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">redirect</span><span class="ci">/ˌriːdəˈrekt/</span><span class="ca">리디렉트</span></div><div class="cm">방향을 전환하다, 재지향하다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>생애과정 범죄학의 가장 희망적인 메시지로 마무리하겠다: 변화는 언제나 가능하다. 누군가가 얼마나 오랫동안 범죄에 관여해왔든, 적절한 전환점 — 지지적인 관계, 안정적인 직업, 개인적 결의의 순간 — 이 그들의 궤적을 바꿀 수 있다. 사람은 어떤 나이에서든 범행을 중단할 수 있다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>No matter how long ~</b> : <code>no matter how + 형/부</code> — "아무리 ~하더라도" — 양보 부사절<br>
+    <b>People can desist at any age.</b> : 짧고 강렬한 마무리 문장 — 강의의 핵심 메시지를 한 줄로 압축하는 기법
+  </div>
+</div>
+
+<div class="slabel">📚 핵심 어휘 정리</div>
+
+<div class="vc"><div class="vl"><div class="vw">trajectory</div><div class="vi">/trəˈdʒektəri/</div><div class="va">트러젝터리</div></div><div class="vr"><div class="vm">궤적, 경로 / 발달 경로</div><div class="ve">A turning point can fundamentally alter a person's criminal trajectory.</div><div class="vk">전환점은 한 사람의 범죄 궤적을 근본적으로 바꿀 수 있다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">desistance</div><div class="vi">/dɪˈzɪstəns/</div><div class="va">디지스턴스</div></div><div class="vr"><div class="vm">범죄 중단, 범행 포기 / 그만둠</div><div class="ve">Marriage and stable employment are key factors in promoting desistance.</div><div class="vk">결혼과 안정적 고용은 범죄 중단을 촉진하는 핵심 요인이다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">turning point</div><div class="vi">/ˈtɜːrnɪŋ pɔɪnt/</div><div class="va">터닝 포인트</div></div><div class="vr"><div class="vm">전환점, 인생의 분기점</div><div class="ve">Military service served as a turning point for many young offenders in the Glueck sample.</div><div class="vk">군 복무는 글루크 표본의 많은 젊은 범죄자에게 전환점이 되었다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">persistent</div><div class="vi">/pərˈsɪstənt/</div><div class="va">퍼시스턴트</div></div><div class="vr"><div class="vm">지속적인, 끈질긴 / 집요한</div><div class="ve">Life-course-persistent offenders account for a disproportionate share of all crime.</div><div class="vk">생애과정 지속 범죄자는 전체 범죄에서 불균형적으로 큰 비중을 차지한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">adolescence-limited</div><div class="vi">/ˌædəˈlesəns ˈlɪmɪtɪd/</div><div class="va">애덜레선스 리미티드</div></div><div class="vr"><div class="vm">청소년기에 한정된</div><div class="ve">Adolescence-limited offenders naturally desist once they gain access to adult roles.</div><div class="vk">청소년기 한정 범죄자는 성인 역할에 접근할 수 있게 되면 자연스럽게 범행을 중단한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">taxonomy</div><div class="vi">/tækˈsɒnəmi/</div><div class="va">택사너미</div></div><div class="vr"><div class="vm">분류 체계, 분류법</div><div class="ve">Moffitt's dual taxonomy divides offenders into two fundamentally different types.</div><div class="vk">모핏의 이원적 분류 체계는 범죄자를 근본적으로 다른 두 유형으로 나눈다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">cumulative</div><div class="vi">/ˈkjuːmjʊlətɪv/</div><div class="va">큐뮬러티브</div></div><div class="vr"><div class="vm">누적적인, 누적되는</div><div class="ve">Cumulative disadvantage explains how early deviance snowballs into a lifetime of problems.</div><div class="vk">누적적 불이익은 초기의 일탈이 어떻게 일생의 문제로 눈덩이처럼 불어나는지를 설명한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">longitudinal</div><div class="vi">/ˌlɒndʒɪˈtjuːdɪnəl/</div><div class="va">론지튜디널</div></div><div class="vr"><div class="vm">종단적인, 장기 추적의</div><div class="ve">Longitudinal studies track the same individuals over many years or even decades.</div><div class="vk">종단 연구는 동일한 개인을 수년 또는 수십 년에 걸쳐 추적한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">agency</div><div class="vi">/ˈeɪdʒənsi/</div><div class="va">에이전시</div></div><div class="vr"><div class="vm">행위 주체성, 자율적 행위 능력 / 기관</div><div class="ve">Sampson and Laub emphasize human agency — people actively choose to change.</div><div class="vk">샘슨과 라웁은 인간의 행위 주체성을 강조한다 — 사람들은 능동적으로 변화를 선택한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">snare</div><div class="vi">/sneər/</div><div class="va">스네어</div></div><div class="vr"><div class="vm">덫, 올가미 / 함정</div><div class="ve">Drug addiction is a powerful snare that traps individuals in criminal pathways.</div><div class="vk">약물 중독은 개인을 범죄 경로에 가두는 강력한 덫이다.</div></div></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Bond Theory · Hirschi 1969</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f3ee;--card:#fff;--en:#1b2a44;--en-t:#dce8f8;--pr-bg:#ece8f8;--pr-bd:#c5b8ef;--pr-t:#3d2b80;--ko-bg:#fdf6ec;--ko-t:#5a3820;--ko-bd:#f0dfc0;--gr-bg:#edf6ec;--gr-t:#1a4f1a;--gr-bd:#b8dab8;--ac:#c8a84b;--bd:#ddd8cc;--sh:0 2px 14px rgba(0,0,0,.07);--r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans','Noto Sans KR',sans-serif;background:var(--bg);color:#2a2a2a;line-height:1.75;font-size:15px}
+.hdr{background:var(--en);color:var(--en-t);padding:clamp(1.2rem,4vw,2rem) clamp(.8rem,3vw,1.5rem);text-align:center;border-bottom:4px solid var(--ac)}
+.badge{display:inline-block;background:var(--ac);color:var(--en);font-size:.65rem;font-weight:700;padding:.2rem .8rem;border-radius:20px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem}
+.hdr h1{font-family:'Lora',serif;font-size:clamp(1.1rem,3.5vw,1.5rem);font-weight:600;margin-bottom:.3rem}
+.hdr h2{font-size:clamp(.8rem,2.5vw,.95rem);opacity:.7}
+.wrap{max-width:860px;margin:0 auto;padding:clamp(1rem,3vw,2rem) clamp(.7rem,2.5vw,1.2rem) 4rem}
+.slabel{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#999;margin:clamp(1.2rem,3vw,2rem) 0 .8rem;padding-bottom:.4rem;border-bottom:1px solid var(--bd)}
+.blk{background:var(--card);border-radius:var(--r);margin-bottom:1.2rem;overflow:hidden;box-shadow:var(--sh);border:1px solid var(--bd)}
+.en-r{background:var(--en);color:var(--en-t);padding:clamp(.8rem,2.5vw,1rem) clamp(.8rem,2.5vw,1.2rem);display:flex;gap:.6rem;align-items:flex-start}
+.sn{background:var(--ac);color:#fff;font-size:.6rem;font-weight:700;padding:.15rem .45rem;border-radius:4px;white-space:nowrap;margin-top:.3rem;flex-shrink:0}
+.en-t{font-family:'Lora',serif;font-size:clamp(.9rem,2.3vw,1.05rem);line-height:1.85}
+.pr-r{background:var(--pr-bg);border-top:1px solid var(--pr-bd);border-bottom:1px solid var(--pr-bd);padding:clamp(.55rem,2vw,.7rem) clamp(.8rem,2.5vw,1.2rem)}
+.rl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.6;margin-bottom:.4rem}
+.pr-r .rl{color:var(--pr-t)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{background:#fff;border:1px solid var(--pr-bd);border-radius:5px;padding:.22rem clamp(.45rem,1.5vw,.65rem);font-size:clamp(.72rem,1.9vw,.8rem);display:flex;align-items:flex-start;gap:.3rem;flex-wrap:wrap;flex-direction:column}
+.chip-top{display:flex;align-items:center;gap:.3rem;flex-wrap:wrap}
+.cw{font-weight:700;color:var(--pr-t)}
+.ci{font-family:'DM Mono',monospace;color:#666;font-size:clamp(.67rem,1.7vw,.75rem)}
+.ca{color:#999;font-size:clamp(.67rem,1.7vw,.75rem)}
+.cm{color:#444;font-size:clamp(.67rem,1.7vw,.74rem);border-top:1px solid #e0d8f4;padding-top:.18rem;margin-top:.1rem;width:100%}
+.ko-r{background:var(--ko-bg);border-top:1px solid var(--ko-bd);padding:clamp(.65rem,2vw,.8rem) clamp(.8rem,2.5vw,1.2rem);color:var(--ko-t);font-family:'Noto Sans KR',sans-serif;font-size:clamp(.82rem,2.2vw,.9rem);line-height:1.85}
+.ko-r .rl{color:var(--ko-t)}
+.gr-r{background:var(--gr-bg);border-top:1px solid var(--gr-bd);padding:clamp(.65rem,2vw,.8rem) clamp(.8rem,2.5vw,1.2rem);color:var(--gr-t);font-size:clamp(.78rem,2vw,.85rem);line-height:1.8;overflow-x:auto}
+.gr-r .rl{color:var(--gr-t)}
+.gr-r code{font-family:'DM Mono',monospace;background:rgba(0,0,0,.08);padding:.1rem .32rem;border-radius:3px;font-size:clamp(.7rem,1.8vw,.78rem);word-break:break-all}
+.gr-r b{color:#0d3d0d}
+.mt{width:100%;border-collapse:collapse;margin:.6rem 0;font-size:clamp(.72rem,1.8vw,.8rem);display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mt table{width:100%;border-collapse:collapse}
+.mt th{background:rgba(0,0,0,.07);padding:.38rem .6rem;text-align:left;font-weight:600;border:1px solid #c8dac8;white-space:nowrap}
+.mt td{padding:.38rem .6rem;border:1px solid #c8dac8}
+.mt tr:nth-child(even) td{background:rgba(255,255,255,.5)}
+/* bond element highlight boxes */
+.bond-box{background:#1b2a44;color:#dce8f8;border-radius:8px;padding:.7rem 1rem;margin:.5rem 0;font-size:clamp(.8rem,2vw,.88rem)}
+.bond-box .bond-title{color:var(--ac);font-weight:700;font-size:clamp(.85rem,2.2vw,.95rem);margin-bottom:.25rem}
+.vc{background:var(--card);border-radius:var(--r);margin-bottom:.8rem;overflow:hidden;box-shadow:var(--sh);border:1px solid var(--bd);display:grid;grid-template-columns:clamp(120px,28vw,190px) 1fr}
+.vl{background:var(--en);color:var(--en-t);padding:clamp(.7rem,2vw,1rem);display:flex;flex-direction:column;justify-content:center}
+.vw{font-family:'Lora',serif;font-size:clamp(.85rem,2.2vw,1rem);font-weight:600;margin-bottom:.2rem;word-break:break-word}
+.vi{font-family:'DM Mono',monospace;font-size:clamp(.62rem,1.6vw,.74rem);color:var(--ac);margin-bottom:.1rem;word-break:break-all}
+.va{font-size:clamp(.62rem,1.6vw,.74rem);opacity:.55}
+.vr{padding:clamp(.7rem,2vw,1rem) clamp(.8rem,2.5vw,1.2rem)}
+.vm{font-weight:600;font-size:clamp(.82rem,2.2vw,.92rem);margin-bottom:.35rem;color:#222}
+.ve{font-size:clamp(.75rem,1.9vw,.84rem);color:#555;font-style:italic;margin-bottom:.2rem}
+.vk{font-size:clamp(.72rem,1.8vw,.8rem);color:var(--ko-t);font-family:'Noto Sans KR',sans-serif}
+@media(max-width:480px){.vc{grid-template-columns:1fr}.vl{flex-direction:row;align-items:center;gap:.6rem;flex-wrap:wrap;padding:.7rem .9rem}.vw{margin-bottom:0}.vi{margin-bottom:0}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="badge">Lecture 7 · Social Control</div>
+  <h1>Social Bond Theory</h1>
+  <h2>Travis Hirschi (1969)</h2>
+</div>
+<div class="wrap">
+<div class="slabel">📖 Script — Sentence by Sentence</div>
+
+<!-- S1 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S1</span><p class="en-t">Today we turn to one of the most influential theories in the history of criminology — Travis Hirschi's Social Bond Theory, introduced in his 1969 book, <em>Causes of Delinquency</em>.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">influential</span><span class="ci">/ˌɪnfluˈenʃəl/</span><span class="ca">인플루엔셜</span></div><div class="cm">영향력 있는, 영향을 미치는</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">Travis Hirschi</span><span class="ci">/ˈtreɪvɪs ˈhɜːrʃi/</span><span class="ca">트레이비스 허쉬</span></div><div class="cm">인명 고유명사</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">introduced</span><span class="ci">/ˌɪntrəˈdjuːst/</span><span class="ca">인트러듀스트</span></div><div class="cm">소개된, 도입된 / 처음 제시된</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">Delinquency</span><span class="ci">/dɪˈlɪŋkwənsi/</span><span class="ca">딜링퀀시</span></div><div class="cm">비행(非行), 청소년 범죄 / 의무 불이행</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>오늘은 범죄학 역사에서 가장 영향력 있는 이론 중 하나로 넘어간다 — 트래비스 허쉬의 사회유대이론으로, 1969년 그의 저서 『비행의 원인』에서 제시되었다.</div>
+</div>
+
+<!-- S2 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S2</span><p class="en-t">Most criminological theories ask: why do people commit crime? Hirschi flipped the question.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">criminological</span><span class="ci">/ˌkrɪmɪnəˈlɒdʒɪkəl/</span><span class="ca">크리미너로지컬</span></div><div class="cm">범죄학의, 범죄학적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">commit</span><span class="ci">/kəˈmɪt/</span><span class="ca">커밋</span></div><div class="cm">저지르다 / 헌신하다 / 약속하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">flipped</span><span class="ci">/flɪpt/</span><span class="ca">플립트</span></div><div class="cm">뒤집다, 반전시키다 / 홱 돌리다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>대부분의 범죄학 이론은 묻는다: 왜 사람들은 범죄를 저지르는가? 허쉬는 그 질문을 뒤집었다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>flipped the question</b> : <code>flip</code>의 비유적 사용 — "질문을 뒤집다, 반전시키다"<br>
+    짧은 문장을 단독으로 배치하는 것은 강의에서 극적 효과를 위한 기법이다. 청중이 잠깐 멈추게 만든다.
+  </div>
+</div>
+
+<!-- S3 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S3</span><p class="en-t">He asked instead: why do most people <em>not</em> commit crime? Why do we conform?</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">instead</span><span class="ci">/ɪnˈsted/</span><span class="ca">인스테드</span></div><div class="cm">대신에, 그 대신</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">conform</span><span class="ci">/kənˈfɔːrm/</span><span class="ca">컨폼</span></div><div class="cm">순응하다, 따르다 / 규범에 맞다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>그는 대신 이렇게 물었다: 왜 대부분의 사람들은 범죄를 저지르지 <em>않는가</em>? 왜 우리는 순응하는가?</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>not</b>의 이탤릭체 강조 : 강의에서 말할 때 이 단어를 강하게 발음해야 한다 — "왜 <u>안</u> 저지르는가"<br>
+    <b>Why do we conform?</b> : 앞 질문을 더 간결하게 바꿔 반복 — 청중이 핵심을 기억하도록 돕는 기법
+  </div>
+</div>
+
+<!-- S4 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S4</span><p class="en-t">His answer was simple: people do not commit crime because they have strong bonds to conventional society.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">bonds</span><span class="ci">/bɒndz/</span><span class="ca">반즈</span></div><div class="cm">유대, 결속 / 채권 / (복수) 족쇄, 구속</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">conventional</span><span class="ci">/kənˈvenʃənəl/</span><span class="ca">컨벤셔널</span></div><div class="cm">관습적인, 전통적인 / 인습적인 / 일반적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">society</span><span class="ci">/səˈsaɪəti/</span><span class="ca">소사이어티</span></div><div class="cm">사회 / 단체, 협회 / 사교계</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>그의 답은 단순했다: 사람들이 범죄를 저지르지 않는 것은 관습적 사회에 강한 유대를 가지고 있기 때문이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>bonds to conventional society</b> : <code>bond to ~</code> — "~에 대한 유대". 전치사 <code>to</code>가 유대의 대상을 이끈다<br>
+    → cf. <code>bond with ~</code> = ~와의 유대 (상호적 뉘앙스)
+  </div>
+</div>
+
+<!-- S5 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S5</span><p class="en-t">When those bonds are weak or broken, the individual is free to deviate.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">weak</span><span class="ci">/wiːk/</span><span class="ca">위크</span></div><div class="cm">약한, 허약한 / 설득력 없는</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">broken</span><span class="ci">/ˈbroʊkən/</span><span class="ca">브로우큰</span></div><div class="cm">부서진, 깨진 / (관계가) 끊어진 / 고장난</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">individual</span><span class="ci">/ˌɪndɪˈvɪdʒuəl/</span><span class="ca">인디비주얼</span></div><div class="cm">개인 / 개인의, 개별적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">deviate</span><span class="ci">/ˈdiːvieɪt/</span><span class="ca">디비에이트</span></div><div class="cm">일탈하다, 벗어나다 / 편차를 보이다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>그 유대가 약하거나 끊어졌을 때, 개인은 자유롭게 일탈할 수 있게 된다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>is free to deviate</b> : <code>be free to + 동사원형</code> — "자유롭게 ~할 수 있다"<br>
+    → 여기서 "자유"는 긍정적 의미가 아니라 <b>통제의 부재</b>를 뜻한다 — 강의에서 강조할 포인트
+  </div>
+</div>
+
+<!-- S6 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S6</span><p class="en-t">Notice that Hirschi is not asking why people are motivated to commit crime. He assumes that the motivation is always there — what varies is the level of control.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">motivated</span><span class="ci">/ˈmoʊtɪveɪtɪd/</span><span class="ca">모우티베이티드</span></div><div class="cm">동기가 부여된 / 의욕적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">assumes</span><span class="ci">/əˈsjuːmz/</span><span class="ca">어슈움즈</span></div><div class="cm">가정하다, 전제하다 / 떠맡다 / (태도를) 취하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">motivation</span><span class="ci">/ˌmoʊtɪˈveɪʃən/</span><span class="ca">모우티베이션</span></div><div class="cm">동기, 동기 부여 / 의욕</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">varies</span><span class="ci">/ˈveəriz/</span><span class="ca">베어리즈</span></div><div class="cm">다양하다, 달라지다 / 변화하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">control</span><span class="ci">/kənˈtroʊl/</span><span class="ca">컨트로울</span></div><div class="cm">통제, 제어 / 억제 / 지배하다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>주목할 점은, 허쉬는 왜 사람들이 범죄를 저지르도록 동기가 부여되는지를 묻지 않는다는 것이다. 그는 동기는 항상 존재한다고 전제한다 — 달라지는 것은 통제의 수준이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>Notice that ~</b> : 청중의 주의를 특정 포인트로 끌 때 쓰는 강의 표현 — "~에 주목하라"<br>
+    <b>what varies is ~</b> : <code>what</code>절이 주어 — "달라지는 것은 ~이다" (강조 분열문)<br>
+    → 일반형: <code>The level of control varies.</code><br>
+    → 강조형: <code>What varies is the level of control.</code>
+  </div>
+</div>
+
+<!-- S7 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S7</span><p class="en-t">Hirschi identified four elements of the social bond. Let's go through each one.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">identified</span><span class="ci">/aɪˈdentɪfaɪd/</span><span class="ca">아이덴티파이드</span></div><div class="cm">확인했다, 파악했다 / 규명했다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">elements</span><span class="ci">/ˈelɪmənts/</span><span class="ca">엘리먼츠</span></div><div class="cm">요소, 구성요소 / 원소 / 기초</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>허쉬는 사회유대의 네 가지 요소를 규명했다. 각각을 살펴보겠다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>go through each one</b> : <code>go through</code> = "하나씩 살펴보다, 검토하다" — 강의에서 항목을 순서대로 다룰 때 쓰는 표현
+  </div>
+</div>
+
+<!-- S8 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S8</span><p class="en-t">The first element is <strong>Attachment</strong> — the emotional bonds we have with other people, such as parents, teachers, and peers.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">Attachment</span><span class="ci">/əˈtætʃmənt/</span><span class="ca">어태치먼트</span></div><div class="cm">애착, 유대감 / 부착 / 첨부 파일</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">emotional</span><span class="ci">/ɪˈmoʊʃənəl/</span><span class="ca">이모우셔널</span></div><div class="cm">감정적인, 정서적인 / 감동적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">peers</span><span class="ci">/pɪərz/</span><span class="ca">피어즈</span></div><div class="cm">또래, 동료 / 동등한 사람 / 귀족</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>첫 번째 요소는 <strong>애착(Attachment)</strong>이다 — 부모, 교사, 또래 등 다른 사람들과 우리가 맺는 정서적 유대이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <div class="bond-box">
+      <div class="bond-title">① Attachment (애착)</div>
+      다른 사람들과의 정서적 유대. 부모·교사·또래를 실망시키지 않으려는 마음이 범죄를 억제한다.<br>
+      → "If you care about what others think of you, you will not risk their disapproval."
+    </div>
+    <b>such as ~</b> : 예시를 나열할 때 — "~과 같은" (= for example / like)
+  </div>
+</div>
+
+<!-- S9 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S9</span><p class="en-t">If you care deeply about your parents or teachers, you are less likely to do something that would disappoint or shame them.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">deeply</span><span class="ci">/ˈdiːpli/</span><span class="ca">디플리</span></div><div class="cm">깊이, 심하게 / 진심으로</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">disappoint</span><span class="ci">/ˌdɪsəˈpɔɪnt/</span><span class="ca">디서포인트</span></div><div class="cm">실망시키다 / 기대를 저버리다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">shame</span><span class="ci">/ʃeɪm/</span><span class="ca">쉐임</span></div><div class="cm">수치심 / 부끄럽게 하다 / 망신시키다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>부모나 교사를 깊이 신경 쓴다면, 그들을 실망시키거나 부끄럽게 할 무언가를 할 가능성이 더 낮다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>something that would disappoint</b> : <code>would</code>는 가정적 상황 — "실망시킬 만한 무언가"<br>
+    <b>disappoint or shame them</b> : 동사 두 개 병렬 — "실망시키다 또는 부끄럽게 하다"
+  </div>
+</div>
+
+<!-- S10 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S10</span><p class="en-t">The second element is <strong>Commitment</strong> — the investment a person has made in conventional goals, such as education, career, and reputation.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">Commitment</span><span class="ci">/kəˈmɪtmənt/</span><span class="ca">커밋먼트</span></div><div class="cm">헌신, 전념 / 약속 / (범죄학) 관습적 목표에 대한 투자</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">investment</span><span class="ci">/ɪnˈvestmənt/</span><span class="ca">인베스트먼트</span></div><div class="cm">투자 / 헌신한 시간·노력</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">conventional</span><span class="ci">/kənˈvenʃənəl/</span><span class="ca">컨벤셔널</span></div><div class="cm">관습적인, 전통적인 / 일반적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">reputation</span><span class="ci">/ˌrepjʊˈteɪʃən/</span><span class="ca">레퓨테이션</span></div><div class="cm">평판, 명성 / 신망</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>두 번째 요소는 <strong>관여(Commitment)</strong>이다 — 교육, 직업, 평판과 같은 관습적 목표에 한 사람이 투자한 것이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <div class="bond-box">
+      <div class="bond-title">② Commitment (관여)</div>
+      관습적 목표(학업·직업)에 투자한 것이 많을수록, 범죄로 잃을 것이 많다.<br>
+      → "Stakes in conformity" — 순응을 유지해야 할 이해관계
+    </div>
+  </div>
+</div>
+
+<!-- S11 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S11</span><p class="en-t">Think about it this way: if you have spent years building a career and a good reputation, you have a lot to lose by committing a crime.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">spent</span><span class="ci">/spent/</span><span class="ca">스펜트</span></div><div class="cm">보냈다, 소비했다 (spend의 과거형)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">career</span><span class="ci">/kəˈrɪər/</span><span class="ca">커리어</span></div><div class="cm">직업, 경력 / 진로</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">committing</span><span class="ci">/kəˈmɪtɪŋ/</span><span class="ca">커미팅</span></div><div class="cm">저지르는 것 (commit의 동명사)</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이렇게 생각해보자: 직업과 좋은 평판을 쌓는 데 수년을 보냈다면, 범죄를 저지름으로써 잃을 것이 많다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>have a lot to lose</b> : 관용표현 — "잃을 것이 많다" (↔ <code>have nothing to lose</code> = 잃을 것이 없다)<br>
+    <b>by committing a crime</b> : <code>by + 동명사</code> — "~함으로써" (수단·방법)
+  </div>
+</div>
+
+<!-- S12 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S12</span><p class="en-t">The third element is <strong>Involvement</strong> — the amount of time a person spends in conventional activities.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">Involvement</span><span class="ci">/ɪnˈvɒlvmənt/</span><span class="ca">인볼브먼트</span></div><div class="cm">참여, 관여 / 몰두 / 연루</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">amount</span><span class="ci">/əˈmaʊnt/</span><span class="ca">어마운트</span></div><div class="cm">양, 총액 / 총계가 ~이 되다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">conventional</span><span class="ci">/kənˈvenʃənəl/</span><span class="ca">컨벤셔널</span></div><div class="cm">관습적인 / 일반적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">activities</span><span class="ci">/ækˈtɪvɪtiz/</span><span class="ca">액티비티즈</span></div><div class="cm">활동들 / 행위들</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>세 번째 요소는 <strong>참여(Involvement)</strong>이다 — 한 사람이 관습적 활동에 쏟는 시간의 양이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <div class="bond-box">
+      <div class="bond-title">③ Involvement (참여)</div>
+      학교, 스포츠, 직장 등 관습적 활동에 시간을 많이 쓸수록, 범죄를 저지를 시간이 줄어든다.<br>
+      → "Idle hands are the devil's workshop" — 빈 손이 악마의 놀이터
+    </div>
+  </div>
+</div>
+
+<!-- S13 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S13</span><p class="en-t">The logic is straightforward: if you are busy with school, sports, or work, you simply do not have the time to get into trouble.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">logic</span><span class="ci">/ˈlɒdʒɪk/</span><span class="ca">로직</span></div><div class="cm">논리 / 이치 / 논리학</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">straightforward</span><span class="ci">/ˌstreɪtˈfɔːrwərd/</span><span class="ca">스트레이트포워드</span></div><div class="cm">간단한, 단순명쾌한 / 솔직한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">get into trouble</span><span class="ci">/ɡet ˈɪntə ˈtrʌbəl/</span><span class="ca">겟 인투 트러블</span></div><div class="cm">말썽을 피우다, 문제에 빠지다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>논리는 단순명쾌하다: 학교, 스포츠, 또는 일로 바쁘다면, 말썽을 피울 시간이 없다.</div>
+</div>
+
+<!-- S14 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S14</span><p class="en-t">The fourth and final element is <strong>Belief</strong> — the degree to which a person accepts the moral validity of the law.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">Belief</span><span class="ci">/bɪˈliːf/</span><span class="ca">빌리프</span></div><div class="cm">신념, 믿음 / 확신 / 신앙</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">degree</span><span class="ci">/dɪˈɡriː/</span><span class="ca">디그리</span></div><div class="cm">정도, 수준 / 학위 / 도(온도·각도 단위)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">accepts</span><span class="ci">/əkˈsepts/</span><span class="ca">억셉츠</span></div><div class="cm">받아들이다, 수용하다 / 인정하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">moral validity</span><span class="ci">/ˈmɒrəl vəˈlɪdɪti/</span><span class="ca">모럴 버리디티</span></div><div class="cm">도덕적 타당성, 도덕적 정당성</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>네 번째이자 마지막 요소는 <strong>신념(Belief)</strong>이다 — 한 사람이 법의 도덕적 타당성을 받아들이는 정도이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <div class="bond-box">
+      <div class="bond-title">④ Belief (신념)</div>
+      법이 정당하고 옳다고 믿을수록, 법을 어길 가능성이 낮아진다.<br>
+      → 법을 "규칙"이 아닌 "옳은 것"으로 내면화했는가의 차이
+    </div>
+    <b>the degree to which ~</b> : "~하는 정도" — <code>to which</code>는 격식체 관계절<br>
+    → 일반형: <code>how much a person accepts</code>
+  </div>
+</div>
+
+<!-- S15 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S15</span><p class="en-t">If a person genuinely believes that the law is fair and just, they will be less inclined to break it. But if they see the law as arbitrary or unjust, that internal restraint disappears.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">genuinely</span><span class="ci">/ˈdʒenjuɪnli/</span><span class="ca">제뉴인리</span></div><div class="cm">진심으로, 진정으로 / 진짜로</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">fair</span><span class="ci">/feər/</span><span class="ca">페어</span></div><div class="cm">공정한 / 상당한 / 박람회 / (날씨가) 맑은</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">inclined</span><span class="ci">/ɪnˈklaɪnd/</span><span class="ca">인클라인드</span></div><div class="cm">~하는 경향이 있는 / ~하고 싶은</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">arbitrary</span><span class="ci">/ˈɑːrbɪtreri/</span><span class="ca">아비트레리</span></div><div class="cm">자의적인, 임의적인 / 독단적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">restraint</span><span class="ci">/rɪˈstreɪnt/</span><span class="ca">리스트레인트</span></div><div class="cm">억제, 자제 / 구속 / 제한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">disappears</span><span class="ci">/ˌdɪsəˈpɪərz/</span><span class="ca">디서피어즈</span></div><div class="cm">사라지다, 없어지다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>법이 공정하고 정당하다고 진심으로 믿는다면, 그것을 어길 가능성이 낮아진다. 하지만 법을 자의적이거나 부당한 것으로 본다면, 그 내면의 억제력은 사라진다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>be less inclined to ~</b> : "~할 마음이 덜 생기다, ~할 가능성이 낮다"<br>
+    → cf. <code>be more inclined to</code> = ~할 가능성이 높다<br>
+    <b>internal restraint</b> : "내면의 억제력" — 외부 처벌이 아닌 <b>스스로의 통제</b>를 강조하는 핵심 개념
+  </div>
+</div>
+
+<!-- S16 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S16</span><p class="en-t">So to summarize: Hirschi argues that crime occurs when social bonds — attachment, commitment, involvement, and belief — are weakened or absent.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">summarize</span><span class="ci">/ˈsʌməraɪz/</span><span class="ca">써머라이즈</span></div><div class="cm">요약하다, 정리하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">occurs</span><span class="ci">/əˈkɜːrz/</span><span class="ca">어커즈</span></div><div class="cm">발생하다, 일어나다 / (생각이) 떠오르다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">weakened</span><span class="ci">/ˈwiːkənd/</span><span class="ca">위크언드</span></div><div class="cm">약해진, 약화된</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">absent</span><span class="ci">/ˈæbsənt/</span><span class="ca">앱선트</span></div><div class="cm">없는, 부재한 / 결석한 / 멍한</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>요약하자면: 허쉬는 사회유대 — 애착, 관여, 참여, 신념 — 가 약화되거나 없을 때 범죄가 발생한다고 주장한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>So to summarize</b> : 강의 요약 전환 표현 — "그러므로 정리하자면"<br>
+    <b>weakened or absent</b> : 형용사 두 개 병렬 — "약화되거나 없을 때"
+  </div>
+</div>
+
+<!-- S17 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S17</span><p class="en-t">Now, what are the strengths of this theory? First, it is highly intuitive. Most of us can recognize the logic from our own lives.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">strengths</span><span class="ci">/streŋkθs/</span><span class="ca">스트렝쓰스</span></div><div class="cm">강점들, 장점들 / 강도들</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">highly</span><span class="ci">/ˈhaɪli/</span><span class="ca">하이리</span></div><div class="cm">매우, 고도로 / 높이 평가하여</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">intuitive</span><span class="ci">/ɪnˈtjuːɪtɪv/</span><span class="ca">인튜이티브</span></div><div class="cm">직관적인 / 직관에 의한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">recognize</span><span class="ci">/ˈrekəɡnaɪz/</span><span class="ca">레커그나이즈</span></div><div class="cm">인식하다, 알아보다 / 인정하다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이제, 이 이론의 강점은 무엇인가? 첫째, 이 이론은 매우 직관적이다. 우리 대부분은 우리 자신의 삶에서 그 논리를 알아볼 수 있다.</div>
+</div>
+
+<!-- S18 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S18</span><p class="en-t">Second, it has received strong empirical support. Studies consistently show that weak family bonds, poor school performance, and low community involvement are all associated with higher rates of delinquency.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">empirical</span><span class="ci">/ɪmˈpɪrɪkəl/</span><span class="ca">임피리컬</span></div><div class="cm">경험적인, 실증적인 / 실험에 근거한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">consistently</span><span class="ci">/kənˈsɪstəntli/</span><span class="ca">컨시스턴틀리</span></div><div class="cm">일관되게, 지속적으로 / 꾸준히</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">associated with</span><span class="ci">/əˈsoʊsieɪtɪd wɪð/</span><span class="ca">어소우시에이티드 위드</span></div><div class="cm">~와 관련된, ~와 연관된</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">delinquency</span><span class="ci">/dɪˈlɪŋkwənsi/</span><span class="ca">딜링퀀시</span></div><div class="cm">비행, 청소년 범죄</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>둘째, 이 이론은 강한 실증적 지지를 받아왔다. 연구들은 약한 가족 유대, 낮은 학업 성취도, 낮은 지역사회 참여가 모두 높은 비행률과 관련되어 있음을 일관되게 보여준다.</div>
+</div>
+
+<!-- S19 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S19</span><p class="en-t">However, the theory also has significant limitations. Critics argue that Hirschi ignores the role of structural factors — poverty, inequality, and discrimination — in shaping crime rates.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">significant</span><span class="ci">/sɪɡˈnɪfɪkənt/</span><span class="ca">시그니피컨트</span></div><div class="cm">중요한, 상당한 / 의미 있는</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">limitations</span><span class="ci">/ˌlɪmɪˈteɪʃənz/</span><span class="ca">리미테이션즈</span></div><div class="cm">한계들, 제한들 / 약점들</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">structural</span><span class="ci">/ˈstrʌktʃərəl/</span><span class="ca">스트럭처럴</span></div><div class="cm">구조적인 / 구조상의</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">inequality</span><span class="ci">/ˌɪnɪˈkwɒlɪti/</span><span class="ca">이니퀄리티</span></div><div class="cm">불평등 / 격차</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">discrimination</span><span class="ci">/dɪˌskrɪmɪˈneɪʃən/</span><span class="ca">디스크리미네이션</span></div><div class="cm">차별 / 식별, 구분</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">shaping</span><span class="ci">/ˈʃeɪpɪŋ/</span><span class="ca">쉐이핑</span></div><div class="cm">형성하는, 만들어가는</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>그러나 이 이론에는 중요한 한계도 있다. 비판론자들은 허쉬가 빈곤, 불평등, 차별과 같은 구조적 요인들이 범죄율을 형성하는 데 미치는 역할을 무시한다고 주장한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>in shaping crime rates</b> : <code>in + 동명사</code> — "~하는 데 있어서, ~함에 있어"<br>
+    → <code>play a role in shaping ~</code> = ~을 형성하는 데 역할을 한다 — 사회과학 논문에서 자주 나오는 패턴
+  </div>
+</div>
+
+<!-- S20 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S20</span><p class="en-t">A person living in poverty may have weak bonds not because of personal failure, but because the system has failed them.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">poverty</span><span class="ci">/ˈpɒvəti/</span><span class="ca">포버티</span></div><div class="cm">빈곤, 가난 / 결핍</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">personal failure</span><span class="ci">/ˈpɜːrsənəl ˈfeɪljər/</span><span class="ca">퍼스널 페일리어</span></div><div class="cm">개인적 실패 / 개인의 잘못</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">failed</span><span class="ci">/feɪld/</span><span class="ca">페일드</span></div><div class="cm">실패했다 / 저버렸다 / 낙제했다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>빈곤 속에 사는 사람이 약한 유대를 가질 수 있는 것은 개인적 실패 때문이 아니라, 시스템이 그 사람을 저버렸기 때문일 수 있다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>not because of A, but because B</b> : "A 때문이 아니라 B 때문에" — 원인 대조 구문<br>
+    <b>the system has failed them</b> : <code>fail + 사람</code> — "~를 저버리다, ~를 실망시키다" (사람이 주어가 아닌 시스템이 주어)
+  </div>
+</div>
+
+<!-- S21 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S21</span><p class="en-t">Despite these criticisms, Social Bond Theory remains one of the most tested and cited theories in criminology, and its core insight — that social connections prevent crime — continues to influence policy to this day.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">Despite</span><span class="ci">/dɪˈspaɪt/</span><span class="ca">디스파이트</span></div><div class="cm">~에도 불구하고</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">criticisms</span><span class="ci">/ˈkrɪtɪsɪzəmz/</span><span class="ca">크리티시즘즈</span></div><div class="cm">비판들, 비평들</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">remains</span><span class="ci">/rɪˈmeɪnz/</span><span class="ca">리메인즈</span></div><div class="cm">여전히 ~이다 / 남다 / 유해(遺骸)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">cited</span><span class="ci">/ˈsaɪtɪd/</span><span class="ca">사이티드</span></div><div class="cm">인용된 / 언급된</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">insight</span><span class="ci">/ˈɪnsaɪt/</span><span class="ca">인사이트</span></div><div class="cm">통찰, 인사이트 / 이해</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">influence</span><span class="ci">/ˈɪnfluəns/</span><span class="ca">인플루언스</span></div><div class="cm">영향을 미치다 / 영향력</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">policy</span><span class="ci">/ˈpɒlɪsi/</span><span class="ca">폴리시</span></div><div class="cm">정책 / 방침 / 보험증서</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이러한 비판에도 불구하고, 사회유대이론은 범죄학에서 가장 많이 검증되고 인용되는 이론 중 하나로 남아 있으며, 사회적 연결이 범죄를 예방한다는 그 핵심 통찰은 오늘날까지 정책에 영향을 미치고 있다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>Despite these criticisms</b> : <code>despite + 명사</code> — "~에도 불구하고" (= Although there are these criticisms)<br>
+    <b>— that social connections prevent crime —</b> : 대시로 감싼 동격절 — <code>core insight</code>의 내용을 구체적으로 설명<br>
+    <b>to this day</b> : 관용표현 — "오늘날까지도, 지금도"
+  </div>
+</div>
+
+<div class="slabel">📚 핵심 어휘 정리</div>
+
+<div class="vc"><div class="vl"><div class="vw">delinquency</div><div class="vi">/dɪˈlɪŋkwənsi/</div><div class="va">딜링퀀시</div></div><div class="vr"><div class="vm">비행(非行), 청소년 범죄 / 의무 불이행</div><div class="ve">Weak bonds are strongly associated with juvenile delinquency.</div><div class="vk">약한 유대는 청소년 비행과 강하게 연관되어 있다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">conform</div><div class="vi">/kənˈfɔːrm/</div><div class="va">컨폼</div></div><div class="vr"><div class="vm">순응하다, 따르다 / 규범에 맞다</div><div class="ve">Most people conform to social norms most of the time.</div><div class="vk">대부분의 사람들은 대부분의 시간 동안 사회 규범에 순응한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">deviate</div><div class="vi">/ˈdiːvieɪt/</div><div class="va">디비에이트</div></div><div class="vr"><div class="vm">일탈하다, 벗어나다 / 편차를 보이다</div><div class="ve">When bonds weaken, individuals are free to deviate from norms.</div><div class="vk">유대가 약해지면, 개인은 자유롭게 규범에서 일탈할 수 있게 된다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">attachment</div><div class="vi">/əˈtætʃmənt/</div><div class="va">어태치먼트</div></div><div class="vr"><div class="vm">애착, 유대감 / 부착 / 이메일 첨부</div><div class="ve">Strong attachment to parents reduces the risk of delinquency.</div><div class="vk">부모에 대한 강한 애착은 비행의 위험을 줄인다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">commitment</div><div class="vi">/kəˈmɪtmənt/</div><div class="va">커밋먼트</div></div><div class="vr"><div class="vm">헌신, 전념 / 약속 / 관습적 목표에 대한 투자</div><div class="ve">High commitment to education gives people a stake in conformity.</div><div class="vk">교육에 대한 높은 관여는 사람들에게 순응을 유지해야 할 이해관계를 부여한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">empirical</div><div class="vi">/ɪmˈpɪrɪkəl/</div><div class="va">임피리컬</div></div><div class="vr"><div class="vm">경험적인, 실증적인 / 실험에 근거한</div><div class="ve">Social Bond Theory has strong empirical support across many studies.</div><div class="vk">사회유대이론은 많은 연구들에 걸쳐 강한 실증적 지지를 받고 있다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">structural</div><div class="vi">/ˈstrʌktʃərəl/</div><div class="va">스트럭처럴</div></div><div class="vr"><div class="vm">구조적인 / 구조상의</div><div class="ve">Critics say Hirschi ignores structural factors like poverty and inequality.</div><div class="vk">비판론자들은 허쉬가 빈곤과 불평등 같은 구조적 요인들을 무시한다고 말한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">insight</div><div class="vi">/ˈɪnsaɪt/</div><div class="va">인사이트</div></div><div class="vr"><div class="vm">통찰, 깊은 이해 / 안목</div><div class="ve">Hirschi's core insight is that social connection prevents crime.</div><div class="vk">허쉬의 핵심 통찰은 사회적 연결이 범죄를 예방한다는 것이다.</div></div></div>
+
+</div>
+</body>
+</html>

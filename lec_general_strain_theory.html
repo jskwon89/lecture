@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General Strain Theory · Agnew 1992</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f3ee;--card:#fff;--en:#1b2a44;--en-t:#dce8f8;--pr-bg:#ece8f8;--pr-bd:#c5b8ef;--pr-t:#3d2b80;--ko-bg:#fdf6ec;--ko-t:#5a3820;--ko-bd:#f0dfc0;--gr-bg:#edf6ec;--gr-t:#1a4f1a;--gr-bd:#b8dab8;--ac:#c8a84b;--bd:#ddd8cc;--sh:0 2px 14px rgba(0,0,0,.07);--r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans','Noto Sans KR',sans-serif;background:var(--bg);color:#2a2a2a;line-height:1.75;font-size:15px}
+.hdr{background:var(--en);color:var(--en-t);padding:clamp(1.2rem,4vw,2rem) clamp(.8rem,3vw,1.5rem);text-align:center;border-bottom:4px solid var(--ac)}
+.badge{display:inline-block;background:var(--ac);color:var(--en);font-size:.65rem;font-weight:700;padding:.2rem .8rem;border-radius:20px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem}
+.hdr h1{font-family:'Lora',serif;font-size:clamp(1.1rem,3.5vw,1.5rem);font-weight:600;margin-bottom:.3rem}
+.hdr h2{font-size:clamp(.8rem,2.5vw,.95rem);opacity:.7}
+.wrap{max-width:860px;margin:0 auto;padding:clamp(1rem,3vw,2rem) clamp(.7rem,2.5vw,1.2rem) 4rem}
+.slabel{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#999;margin:clamp(1.2rem,3vw,2rem) 0 .8rem;padding-bottom:.4rem;border-bottom:1px solid var(--bd)}
+.blk{background:var(--card);border-radius:var(--r);margin-bottom:1.2rem;overflow:hidden;box-shadow:var(--sh);border:1px solid var(--bd)}
+.en-r{background:var(--en);color:var(--en-t);padding:clamp(.8rem,2.5vw,1rem) clamp(.8rem,2.5vw,1.2rem);display:flex;gap:.6rem;align-items:flex-start}
+.sn{background:var(--ac);color:#fff;font-size:.6rem;font-weight:700;padding:.15rem .45rem;border-radius:4px;white-space:nowrap;margin-top:.3rem;flex-shrink:0}
+.en-t{font-family:'Lora',serif;font-size:clamp(.9rem,2.3vw,1.05rem);line-height:1.85}
+.pr-r{background:var(--pr-bg);border-top:1px solid var(--pr-bd);border-bottom:1px solid var(--pr-bd);padding:clamp(.55rem,2vw,.7rem) clamp(.8rem,2.5vw,1.2rem)}
+.rl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.6;margin-bottom:.4rem}
+.pr-r .rl{color:var(--pr-t)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{background:#fff;border:1px solid var(--pr-bd);border-radius:5px;padding:.22rem clamp(.45rem,1.5vw,.65rem);font-size:clamp(.72rem,1.9vw,.8rem);display:flex;align-items:flex-start;gap:.3rem;flex-wrap:wrap;flex-direction:column}
+.chip-top{display:flex;align-items:center;gap:.3rem;flex-wrap:wrap}
+.cw{font-weight:700;color:var(--pr-t)}
+.ci{font-family:'DM Mono',monospace;color:#666;font-size:clamp(.67rem,1.7vw,.75rem)}
+.ca{color:#999;font-size:clamp(.67rem,1.7vw,.75rem)}
+.cm{color:#444;font-size:clamp(.67rem,1.7vw,.74rem);border-top:1px solid #e0d8f4;padding-top:.18rem;margin-top:.1rem;width:100%}
+.ko-r{background:var(--ko-bg);border-top:1px solid var(--ko-bd);padding:clamp(.65rem,2vw,.8rem) clamp(.8rem,2.5vw,1.2rem);color:var(--ko-t);font-family:'Noto Sans KR',sans-serif;font-size:clamp(.82rem,2.2vw,.9rem);line-height:1.85}
+.ko-r .rl{color:var(--ko-t)}
+.gr-r{background:var(--gr-bg);border-top:1px solid var(--gr-bd);padding:clamp(.65rem,2vw,.8rem) clamp(.8rem,2.5vw,1.2rem);color:var(--gr-t);font-size:clamp(.78rem,2vw,.85rem);line-height:1.8;overflow-x:auto}
+.gr-r .rl{color:var(--gr-t)}
+.gr-r code{font-family:'DM Mono',monospace;background:rgba(0,0,0,.08);padding:.1rem .32rem;border-radius:3px;font-size:clamp(.7rem,1.8vw,.78rem);word-break:break-all}
+.gr-r b{color:#0d3d0d}
+.mt{width:100%;border-collapse:collapse;margin:.6rem 0;font-size:clamp(.72rem,1.8vw,.8rem);display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mt table{width:100%;border-collapse:collapse}
+.mt th{background:rgba(0,0,0,.07);padding:.38rem .6rem;text-align:left;font-weight:600;border:1px solid #c8dac8;white-space:nowrap}
+.mt td{padding:.38rem .6rem;border:1px solid #c8dac8}
+.mt tr:nth-child(even) td{background:rgba(255,255,255,.5)}
+.vc{background:var(--card);border-radius:var(--r);margin-bottom:.8rem;overflow:hidden;box-shadow:var(--sh);border:1px solid var(--bd);display:grid;grid-template-columns:clamp(120px,28vw,190px) 1fr}
+.vl{background:var(--en);color:var(--en-t);padding:clamp(.7rem,2vw,1rem);display:flex;flex-direction:column;justify-content:center}
+.vw{font-family:'Lora',serif;font-size:clamp(.85rem,2.2vw,1rem);font-weight:600;margin-bottom:.2rem;word-break:break-word}
+.vi{font-family:'DM Mono',monospace;font-size:clamp(.62rem,1.6vw,.74rem);color:var(--ac);margin-bottom:.1rem;word-break:break-all}
+.va{font-size:clamp(.62rem,1.6vw,.74rem);opacity:.55}
+.vr{padding:clamp(.7rem,2vw,1rem) clamp(.8rem,2.5vw,1.2rem)}
+.vm{font-weight:600;font-size:clamp(.82rem,2.2vw,.92rem);margin-bottom:.35rem;color:#222}
+.ve{font-size:clamp(.75rem,1.9vw,.84rem);color:#555;font-style:italic;margin-bottom:.2rem}
+.vk{font-size:clamp(.72rem,1.8vw,.8rem);color:var(--ko-t);font-family:'Noto Sans KR',sans-serif}
+@media(max-width:480px){.vc{grid-template-columns:1fr}.vl{flex-direction:row;align-items:center;gap:.6rem;flex-wrap:wrap;padding:.7rem .9rem}.vw{margin-bottom:0}.vi{margin-bottom:0}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="badge">Lecture 9 · Strain / Pressure</div>
+  <h1>General Strain Theory</h1>
+  <h2>Robert Agnew (1992)</h2>
+</div>
+<div class="wrap">
+<div class="slabel">📖 Script — Sentence by Sentence</div>
+
+<!-- S1 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S1</span><p class="en-t">Today we examine Robert Agnew's General Strain Theory, or GST, which he introduced in 1992 as a major revision and expansion of the classic strain tradition in criminology.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">examine</span><span class="ci">/ɪɡˈzæmɪn/</span><span class="ca">이그재민</span></div><div class="cm">검토하다, 조사하다 / 시험하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">revision</span><span class="ci">/rɪˈvɪʒən/</span><span class="ca">리비전</span></div><div class="cm">수정, 개정 / 복습</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">expansion</span><span class="ci">/ɪkˈspænʃən/</span><span class="ca">익스팬션</span></div><div class="cm">확장, 확대 / 팽창</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">tradition</span><span class="ci">/trəˈdɪʃən/</span><span class="ca">트러디션</span></div><div class="cm">전통, 관례 / 학문적 계보</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>오늘은 로버트 애그뉴의 일반긴장이론(General Strain Theory, GST)을 살펴본다. 그는 1992년에 범죄학의 고전적 긴장 전통을 대폭 수정·확장하여 이 이론을 제시하였다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>which he introduced</b> : 관계대명사 <code>which</code>가 GST 전체를 선행사로 받는 비제한적 용법<br>
+    <b>as a major revision and expansion of ~</b> : <code>as</code> = "~로서" — GST의 성격을 규정하는 표현
+  </div>
+</div>
+
+<!-- S2 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S2</span><p class="en-t">To understand what Agnew was building on, let us briefly review Merton's classic anomie and strain theory from 1938.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">Agnew</span><span class="ci">/ˈæɡnjuː/</span><span class="ca">애그뉴</span></div><div class="cm">인명 고유명사</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">anomie</span><span class="ci">/ˈænəmiː/</span><span class="ca">애너미</span></div><div class="cm">아노미, 무규범 상태</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">Merton</span><span class="ci">/ˈmɜːrtən/</span><span class="ca">머턴</span></div><div class="cm">인명 고유명사</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>애그뉴가 무엇을 기반으로 삼았는지 이해하기 위해, 먼저 머턴의 1938년 고전적 아노미·긴장이론을 간략히 복습해 보자.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>what Agnew was building on</b> : <code>build on ~</code> = "~을 기반으로 삼다, ~위에 구축하다" — 전치사 <code>on</code>이 뒤에서 <code>what</code>과 연결된다<br>
+    <b>let us briefly review</b> : 강의에서 복습 전환 시 쓰는 표현 — "간략히 복습해 보겠다"
+  </div>
+</div>
+
+<!-- S3 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S3</span><p class="en-t">Merton argued that strain arises from a gap between culturally defined goals — especially financial success — and the legitimate institutional means available to achieve them.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">strain</span><span class="ci">/streɪn/</span><span class="ca">스트레인</span></div><div class="cm">긴장, 압박 / 부담 / 변형</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">arises</span><span class="ci">/əˈraɪzɪz/</span><span class="ca">어라이지즈</span></div><div class="cm">발생하다, 생기다 / 일어나다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">legitimate</span><span class="ci">/lɪˈdʒɪtɪmət/</span><span class="ca">리지티밋</span></div><div class="cm">합법적인, 정당한 / 적법한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">institutional</span><span class="ci">/ˌɪnstɪˈtjuːʃənəl/</span><span class="ca">인스티튜셔널</span></div><div class="cm">제도적인 / 기관의</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>머턴은 긴장이 문화적으로 규정된 목표 — 특히 경제적 성공 — 와 그것을 달성할 수 있는 합법적 제도적 수단 사이의 괴리에서 발생한다고 주장했다.</div>
+</div>
+
+<!-- S4 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S4</span><p class="en-t">When people cannot achieve success through legitimate channels, they may resort to crime, rebellion, or retreatism as alternative adaptations.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">resort to</span><span class="ci">/rɪˈzɔːrt tuː/</span><span class="ca">리조트 투</span></div><div class="cm">~에 의지하다, ~에 호소하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">rebellion</span><span class="ci">/rɪˈbeljən/</span><span class="ca">리벨리언</span></div><div class="cm">반란, 반역 / 저항</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">retreatism</span><span class="ci">/rɪˈtriːtɪzəm/</span><span class="ca">리트리티즘</span></div><div class="cm">퇴각주의 (목표와 수단 모두 포기)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">adaptations</span><span class="ci">/ˌædæpˈteɪʃənz/</span><span class="ca">애댑테이션즈</span></div><div class="cm">적응, 적응 방식들</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>사람들이 합법적 경로를 통해 성공을 달성할 수 없을 때, 그들은 대안적 적응 방식으로 범죄, 반란, 또는 퇴각주의에 의지할 수 있다.</div>
+</div>
+
+<!-- S5 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S5</span><p class="en-t">However, Merton's original framework had a significant limitation: it focused almost exclusively on one type of strain — the failure to achieve positively valued goals, particularly monetary success.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">framework</span><span class="ci">/ˈfreɪmwɜːrk/</span><span class="ca">프레임워크</span></div><div class="cm">틀, 체계 / 골격 / 이론적 구조</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">exclusively</span><span class="ci">/ɪkˈskluːsɪvli/</span><span class="ca">익스클루시블리</span></div><div class="cm">오직, 배타적으로 / 독점적으로</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">monetary</span><span class="ci">/ˈmʌnɪteri/</span><span class="ca">머니테리</span></div><div class="cm">금전적인, 화폐의</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>그러나 머턴의 원래 이론적 틀에는 중요한 한계가 있었다: 그것은 거의 전적으로 한 가지 유형의 긴장 — 긍정적으로 가치 부여된 목표, 특히 금전적 성공의 달성 실패 — 에만 초점을 맞추었다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>focused almost exclusively on ~</b> : "거의 전적으로 ~에만 초점을 맞추다" — <code>exclusively</code>가 범위의 제한을 강조<br>
+    <b>positively valued goals</b> : "긍정적으로 가치 부여된 목표" — GST의 핵심 개념으로 자주 등장하는 표현
+  </div>
+</div>
+
+<!-- S6 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S6</span><p class="en-t">Agnew recognized that people experience many different kinds of strain in their everyday lives, not just blocked economic ambitions. This insight became the foundation of General Strain Theory.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">recognized</span><span class="ci">/ˈrekəɡnaɪzd/</span><span class="ca">레커그나이즈드</span></div><div class="cm">인식했다, 깨달았다 / 인정했다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">ambitions</span><span class="ci">/æmˈbɪʃənz/</span><span class="ca">앰비션즈</span></div><div class="cm">야망, 포부 / 열망</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">foundation</span><span class="ci">/faʊnˈdeɪʃən/</span><span class="ca">파운데이션</span></div><div class="cm">기반, 토대 / 재단 / 기초</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>애그뉴는 사람들이 일상생활에서 차단된 경제적 야망만이 아닌, 많은 다양한 종류의 긴장을 경험한다는 것을 인식했다. 이 통찰이 일반긴장이론의 토대가 되었다.</div>
+</div>
+
+<!-- S7 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S7</span><p class="en-t">Agnew proposed three broad categories of strain. The first is the <strong>failure to achieve positively valued goals</strong> — this is the category closest to Merton's original idea.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">proposed</span><span class="ci">/prəˈpoʊzd/</span><span class="ca">프러포우즈드</span></div><div class="cm">제안했다, 제시했다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">categories</span><span class="ci">/ˈkætəɡəriz/</span><span class="ca">캐터고리즈</span></div><div class="cm">범주, 유형들</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>애그뉴는 세 가지 넓은 범주의 긴장을 제시했다. 첫 번째는 <strong>긍정적으로 가치 부여된 목표의 달성 실패</strong>이다 — 이것은 머턴의 원래 개념에 가장 가까운 범주이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>closest to ~</b> : <code>close to</code>의 최상급 — "~에 가장 가까운"<br>
+    → 머턴의 아이디어와 유사성을 강조하면서도, 애그뉴가 이를 넘어섰음을 함축
+  </div>
+</div>
+
+<!-- S8 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S8</span><p class="en-t">Goal blockage includes not only the gap between aspirations and actual achievements, but also the gap between what people believe they deserve and what they actually receive — a sense of injustice.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">blockage</span><span class="ci">/ˈblɒkɪdʒ/</span><span class="ca">블로키지</span></div><div class="cm">차단, 막힘 / 방해</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">aspirations</span><span class="ci">/ˌæspəˈreɪʃənz/</span><span class="ca">애스퍼레이션즈</span></div><div class="cm">열망, 포부 / 흡인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">deserve</span><span class="ci">/dɪˈzɜːrv/</span><span class="ca">디저브</span></div><div class="cm">~할 자격이 있다, ~을 받을 만하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">injustice</span><span class="ci">/ɪnˈdʒʌstɪs/</span><span class="ca">인저스티스</span></div><div class="cm">불공정, 부정의 / 부당함</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>목표 차단에는 열망과 실제 성취 사이의 괴리뿐만 아니라, 사람들이 자신이 받아 마땅하다고 믿는 것과 실제로 받는 것 사이의 괴리 — 즉 불공정의 감각 — 도 포함된다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>not only A, but also B</b> : "A뿐만 아니라 B도" — 두 종류의 괴리를 병렬하는 상관접속사 구문<br>
+    <b>what people believe they deserve</b> : <code>what</code>절 안에 또 다른 절(<code>they deserve</code>)이 내포 — "사람들이 자신이 받을 자격이 있다고 믿는 것"
+  </div>
+</div>
+
+<!-- S9 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S9</span><p class="en-t">The second source of strain is the <strong>removal of positively valued stimuli</strong> — when something a person values is taken away from them.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">removal</span><span class="ci">/rɪˈmuːvəl/</span><span class="ca">리무벌</span></div><div class="cm">제거, 박탈 / 이동</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">stimuli</span><span class="ci">/ˈstɪmjəlaɪ/</span><span class="ca">스티뮬라이</span></div><div class="cm">자극들 (stimulus의 복수형)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">values</span><span class="ci">/ˈvæljuːz/</span><span class="ca">밸류즈</span></div><div class="cm">가치 있게 여기다 / 가치들</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>두 번째 긴장의 원천은 <strong>긍정적으로 가치 부여된 자극의 제거</strong>이다 — 한 사람이 가치 있게 여기는 무언가가 빼앗길 때이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>stimuli</b> : 라틴어 복수형. 단수는 <code>stimulus</code> — 학술 영어에서 자주 나오는 라틴어 복수 패턴<br>
+    → cf. <code>datum → data</code>, <code>criterion → criteria</code>, <code>phenomenon → phenomena</code>
+  </div>
+</div>
+
+<!-- S10 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S10</span><p class="en-t">Examples include the death of a close friend or family member, the breakup of a romantic relationship, moving away from one's neighborhood, or being expelled from school.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">breakup</span><span class="ci">/ˈbreɪkʌp/</span><span class="ca">브레이컵</span></div><div class="cm">이별, 결별 / 해체</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">romantic</span><span class="ci">/roʊˈmæntɪk/</span><span class="ca">로맨틱</span></div><div class="cm">연애의, 낭만적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">expelled</span><span class="ci">/ɪkˈspeld/</span><span class="ca">익스펠드</span></div><div class="cm">퇴학당한, 추방된</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>예시로는 가까운 친구나 가족의 죽음, 연인 관계의 이별, 자신의 동네를 떠나는 것, 또는 학교에서 퇴학당하는 것 등이 있다.</div>
+</div>
+
+<!-- S11 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S11</span><p class="en-t">The third source is the <strong>presentation of negatively valued stimuli</strong> — being exposed to noxious or unwanted experiences.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">presentation</span><span class="ci">/ˌprezənˈteɪʃən/</span><span class="ca">프레젠테이션</span></div><div class="cm">제시, 출현 / 발표</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">negatively</span><span class="ci">/ˈneɡətɪvli/</span><span class="ca">네거티블리</span></div><div class="cm">부정적으로 / 나쁘게</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">noxious</span><span class="ci">/ˈnɒkʃəs/</span><span class="ca">녹셔스</span></div><div class="cm">유해한, 유독한 / 불쾌한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">exposed</span><span class="ci">/ɪkˈspoʊzd/</span><span class="ca">익스포우즈드</span></div><div class="cm">노출된 / 드러난</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>세 번째 원천은 <strong>부정적으로 가치 부여된 자극의 제시</strong>이다 — 유해하거나 원치 않는 경험에 노출되는 것이다.</div>
+</div>
+
+<!-- S12 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S12</span><p class="en-t">This category covers child abuse, neglect, bullying, criminal victimization, verbal humiliation, and other adverse life events that an individual does not choose but is forced to endure.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">neglect</span><span class="ci">/nɪˈɡlekt/</span><span class="ca">니글렉트</span></div><div class="cm">방임, 무시 / 태만</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">bullying</span><span class="ci">/ˈbʊliɪŋ/</span><span class="ca">불리잉</span></div><div class="cm">괴롭힘, 왕따 / 집단따돌림</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">victimization</span><span class="ci">/ˌvɪktɪmaɪˈzeɪʃən/</span><span class="ca">빅티마이제이션</span></div><div class="cm">피해, 희생화</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">humiliation</span><span class="ci">/hjuːˌmɪliˈeɪʃən/</span><span class="ca">휴밀리에이션</span></div><div class="cm">굴욕, 모욕 / 수치</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">adverse</span><span class="ci">/ˈædvɜːrs/</span><span class="ca">애드버스</span></div><div class="cm">불리한, 부정적인 / 역(逆)의</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">endure</span><span class="ci">/ɪnˈdjʊər/</span><span class="ca">인듀어</span></div><div class="cm">견디다, 인내하다 / 지속하다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이 범주에는 아동 학대, 방임, 괴롭힘, 범죄 피해, 언어적 모욕, 그리고 개인이 선택하지 않았지만 견뎌야 하는 기타 부정적 생애 사건들이 포함된다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>that an individual does not choose but is forced to endure</b> : 관계절 안에서 <code>does not choose</code>와 <code>is forced to endure</code>가 <code>but</code>으로 대조됨 — "선택하지 않았지만 견뎌야 하는"<br>
+    <b>is forced to endure</b> : <code>be forced to + 동사원형</code> — "~하도록 강요받다" — 수동 피해의 뉘앙스
+  </div>
+</div>
+
+<!-- S13 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S13</span><p class="en-t">Now here is the critical link: Agnew argued that strain does not lead directly to crime. Instead, it first produces <strong>negative emotions</strong> — especially anger, frustration, and depression — and these emotions serve as the key mediating variable between strain and criminal behavior.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">critical</span><span class="ci">/ˈkrɪtɪkəl/</span><span class="ca">크리티컬</span></div><div class="cm">결정적인, 핵심적인 / 비판적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">frustration</span><span class="ci">/frʌˈstreɪʃən/</span><span class="ca">프러스트레이션</span></div><div class="cm">좌절감, 불만 / 좌절</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">mediating</span><span class="ci">/ˈmiːdieɪtɪŋ/</span><span class="ca">미디에이팅</span></div><div class="cm">매개하는, 중재하는</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>여기서 핵심적 연결고리가 나온다: 애그뉴는 긴장이 범죄로 직접 이어지지 않는다고 주장했다. 대신 긴장은 먼저 <strong>부정적 감정</strong> — 특히 분노, 좌절감, 우울 — 을 생산하며, 이러한 감정들이 긴장과 범죄 행동 사이의 핵심 매개 변수 역할을 한다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>serve as ~</b> : "~의 역할을 하다" — <code>serve as the key mediating variable</code> = "핵심 매개 변수 역할을 하다"<br>
+    <b>mediating variable</b> : 통계·사회과학 용어 — 독립변수(긴장)와 종속변수(범죄) 사이를 연결하는 변수
+  </div>
+</div>
+
+<!-- S14 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S14</span><p class="en-t">Among these emotions, Agnew singled out <strong>anger</strong> as particularly criminogenic. Why? Because anger creates a desire for revenge, lowers inhibitions, and energizes the individual toward action.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">singled out</span><span class="ci">/ˈsɪŋɡəld aʊt/</span><span class="ca">싱글드 아웃</span></div><div class="cm">특별히 지목하다, 구별하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">criminogenic</span><span class="ci">/ˌkrɪmɪnoʊˈdʒenɪk/</span><span class="ca">크리미노제닉</span></div><div class="cm">범죄 유발적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">revenge</span><span class="ci">/rɪˈvendʒ/</span><span class="ca">리벤지</span></div><div class="cm">복수, 보복</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">inhibitions</span><span class="ci">/ˌɪnhɪˈbɪʃənz/</span><span class="ca">인히비션즈</span></div><div class="cm">억제, 자제심 / 금기</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">energizes</span><span class="ci">/ˈenərdʒaɪzɪz/</span><span class="ca">에너자이지즈</span></div><div class="cm">활력을 불어넣다, 자극하다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이러한 감정들 가운데 애그뉴는 <strong>분노</strong>를 특히 범죄 유발적인 것으로 지목했다. 왜인가? 분노가 복수에 대한 욕구를 만들고, 억제력을 낮추며, 개인을 행동으로 이끄는 에너지를 부여하기 때문이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>singled out X as Y</b> : <code>single out A as B</code> — "A를 B로서 특별히 지목하다"<br>
+    <b>creates / lowers / energizes</b> : 세 동사를 병렬하여 분노의 세 가지 효과를 제시 — 강의에서 리듬감 있는 열거 기법
+  </div>
+</div>
+
+<!-- S15 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S15</span><p class="en-t">Depression and frustration, by contrast, are more likely to lead to inward-directed behavior — substance abuse, withdrawal, or self-harm — rather than outward aggression.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">inward-directed</span><span class="ci">/ˈɪnwərd dɪˈrektɪd/</span><span class="ca">인워드 디렉티드</span></div><div class="cm">내면을 향한, 내적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">substance abuse</span><span class="ci">/ˈsʌbstəns əˈbjuːs/</span><span class="ca">섭스턴스 어뷰스</span></div><div class="cm">약물 남용</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">withdrawal</span><span class="ci">/wɪðˈdrɔːəl/</span><span class="ca">위드드로얼</span></div><div class="cm">철수, 은둔 / 금단 증상</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">aggression</span><span class="ci">/əˈɡreʃən/</span><span class="ca">어그레션</span></div><div class="cm">공격성, 공격 행위</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>반면에 우울과 좌절감은 외적 공격보다는 내면을 향한 행동 — 약물 남용, 은둔, 자해 — 으로 이어질 가능성이 더 높다.</div>
+</div>
+
+<!-- S16 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S16</span><p class="en-t">A crucial question then arises: if strain is so common, why doesn't everyone who experiences it turn to crime? Agnew addressed this through what he called <strong>conditioning factors</strong>.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">crucial</span><span class="ci">/ˈkruːʃəl/</span><span class="ca">크루셜</span></div><div class="cm">결정적인, 매우 중요한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">conditioning</span><span class="ci">/kənˈdɪʃənɪŋ/</span><span class="ca">컨디셔닝</span></div><div class="cm">조건화하는, 조절하는 / 조건부 요인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">addressed</span><span class="ci">/əˈdrest/</span><span class="ca">어드레스트</span></div><div class="cm">다루었다, 처리했다 / 연설했다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>그러면 결정적인 질문이 제기된다: 긴장이 그렇게 흔하다면, 왜 긴장을 경험하는 모든 사람이 범죄로 전환하지 않는가? 애그뉴는 자신이 <strong>조건화 요인</strong>이라고 부른 것을 통해 이 문제를 다루었다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>what he called conditioning factors</b> : <code>what + S + call + O</code> — "~가 ~라고 부르는 것" — 학자의 고유 용어를 소개할 때 쓰는 표현<br>
+    <b>turn to crime</b> : <code>turn to ~</code> = "~로 전환하다, ~에 의지하다"
+  </div>
+</div>
+
+<!-- S17 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S17</span><p class="en-t">These conditioning factors include coping resources such as intelligence, problem-solving skills, self-efficacy, and self-esteem. Individuals with strong coping resources are better equipped to deal with strain without resorting to crime.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">coping</span><span class="ci">/ˈkoʊpɪŋ/</span><span class="ca">코우핑</span></div><div class="cm">대처, 대응 / 극복</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">self-efficacy</span><span class="ci">/ˌself ˈefɪkəsi/</span><span class="ca">셀프 에피커시</span></div><div class="cm">자기효능감</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">self-esteem</span><span class="ci">/ˌself ɪˈstiːm/</span><span class="ca">셀프 이스팀</span></div><div class="cm">자존감, 자기존중</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">equipped</span><span class="ci">/ɪˈkwɪpt/</span><span class="ca">이퀴프트</span></div><div class="cm">갖추어진, 준비된</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>이러한 조건화 요인에는 지능, 문제 해결 능력, 자기효능감, 자존감과 같은 대처 자원이 포함된다. 강한 대처 자원을 가진 개인은 범죄에 의지하지 않고 긴장에 대응할 준비가 더 잘 되어 있다.</div>
+</div>
+
+<!-- S18 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S18</span><p class="en-t">Conventional social support also matters enormously. A person with strong family ties, supportive friends, or access to counseling is far less likely to channel their anger into criminal behavior.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">enormously</span><span class="ci">/ɪˈnɔːrməsli/</span><span class="ca">이노머슬리</span></div><div class="cm">엄청나게, 막대하게</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">counseling</span><span class="ci">/ˈkaʊnsəlɪŋ/</span><span class="ca">카운슬링</span></div><div class="cm">상담 / 조언</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">channel</span><span class="ci">/ˈtʃænəl/</span><span class="ca">채널</span></div><div class="cm">~로 향하게 하다, 전달하다 / 경로</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>관습적 사회적 지지도 대단히 중요하다. 강한 가족 유대, 지지적인 친구들, 또는 상담에 대한 접근성을 가진 사람은 분노를 범죄 행동으로 전환할 가능성이 훨씬 낮다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>channel their anger into ~</b> : <code>channel A into B</code> — "A를 B로 돌리다/전환하다" — 감정의 방향 전환을 뜻하는 비유적 표현<br>
+    <b>far less likely to ~</b> : <code>far</code>가 비교급 <code>less likely</code>를 강조 — "훨씬 ~할 가능성이 낮은"
+  </div>
+</div>
+
+<!-- S19 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S19</span><p class="en-t">Agnew also distinguished three types of coping strategies. <strong>Cognitive coping</strong> involves reinterpreting the strain — for example, telling yourself that the situation is not that bad or that it will improve over time.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">distinguished</span><span class="ci">/dɪˈstɪŋɡwɪʃt/</span><span class="ca">디스팅귀쉬트</span></div><div class="cm">구별했다 / 저명한</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">cognitive</span><span class="ci">/ˈkɒɡnɪtɪv/</span><span class="ca">코그니티브</span></div><div class="cm">인지적인, 인식의</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">reinterpreting</span><span class="ci">/ˌriːɪnˈtɜːrprɪtɪŋ/</span><span class="ca">리인터프리팅</span></div><div class="cm">재해석하는</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>애그뉴는 또한 세 가지 유형의 대처 전략을 구별했다. <strong>인지적 대처</strong>는 긴장을 재해석하는 것을 포함한다 — 예를 들어, 상황이 그렇게 나쁘지 않다거나 시간이 지나면 나아질 것이라고 스스로에게 말하는 것이다.</div>
+</div>
+
+<!-- S20 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S20</span><p class="en-t"><strong>Emotional coping</strong> means managing the negative feelings directly — through meditation, exercise, or even venting to a friend. <strong>Behavioral coping</strong> means taking concrete action to remove the source of strain or to find an alternative path.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">meditation</span><span class="ci">/ˌmedɪˈteɪʃən/</span><span class="ca">메디테이션</span></div><div class="cm">명상 / 묵상</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">venting</span><span class="ci">/ˈventɪŋ/</span><span class="ca">벤팅</span></div><div class="cm">감정을 분출하는 것, 털어놓기</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">behavioral</span><span class="ci">/bɪˈheɪvjərəl/</span><span class="ca">비헤이비어럴</span></div><div class="cm">행동의, 행동적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">concrete</span><span class="ci">/ˈkɒŋkriːt/</span><span class="ca">콩크리트</span></div><div class="cm">구체적인 / 콘크리트</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div><strong>감정적 대처</strong>는 부정적 감정을 직접 관리하는 것이다 — 명상, 운동, 또는 친구에게 감정을 분출하는 것을 통해서. <strong>행동적 대처</strong>는 긴장의 원천을 제거하거나 대안적 경로를 찾기 위해 구체적 행동을 취하는 것이다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <div class="mt"><table>
+      <tr><th>대처 유형</th><th>영어</th><th>의미</th><th>예시</th></tr>
+      <tr><td>인지적</td><td>Cognitive coping</td><td>생각을 바꾸어 긴장 재해석</td><td>"그렇게 나쁘지 않아"</td></tr>
+      <tr><td>감정적</td><td>Emotional coping</td><td>감정 자체를 직접 관리</td><td>명상, 운동, 대화</td></tr>
+      <tr><td>행동적</td><td>Behavioral coping</td><td>구체적 행동으로 원인 제거</td><td>전학, 이직, 도움 요청</td></tr>
+    </table></div>
+  </div>
+</div>
+
+<!-- S21 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S21</span><p class="en-t">What about empirical support? Numerous studies have confirmed the strain–crime link, particularly when anger is included as a mediating variable. Research by Agnew and others has shown that individuals reporting high levels of strain are significantly more likely to engage in both violent and property crime.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">numerous</span><span class="ci">/ˈnjuːmərəs/</span><span class="ca">뉴머러스</span></div><div class="cm">수많은, 다수의</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">confirmed</span><span class="ci">/kənˈfɜːrmd/</span><span class="ca">컨펌드</span></div><div class="cm">확인했다, 입증했다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">significantly</span><span class="ci">/sɪɡˈnɪfɪkəntli/</span><span class="ca">시그니피컨틀리</span></div><div class="cm">상당히, 유의미하게</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">engage in</span><span class="ci">/ɪnˈɡeɪdʒ ɪn/</span><span class="ca">인게이지 인</span></div><div class="cm">~에 참여하다, ~에 관여하다</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>실증적 지지는 어떠한가? 수많은 연구들이 긴장-범죄 연결고리를 확인했으며, 특히 분노가 매개 변수로 포함될 때 그러하다. 애그뉴 및 다른 학자들의 연구는 높은 수준의 긴장을 보고하는 개인들이 폭력 범죄와 재산 범죄 모두에 참여할 가능성이 유의미하게 더 높다는 것을 보여주었다.</div>
+</div>
+
+<!-- S22 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S22</span><p class="en-t">How does GST compare with classic strain theory? The key advance is scope. While Merton limited strain to blocked economic goals at the macro level, Agnew broadened it to include any negative relationship at the individual level — making the theory applicable to people of all social classes.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">advance</span><span class="ci">/ədˈvæns/</span><span class="ca">어드밴스</span></div><div class="cm">진전, 발전 / 전진하다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">scope</span><span class="ci">/skoʊp/</span><span class="ca">스코우프</span></div><div class="cm">범위, 영역 / 여지</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">broadened</span><span class="ci">/ˈbrɔːdənd/</span><span class="ca">브로든드</span></div><div class="cm">넓혔다, 확장했다</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">applicable</span><span class="ci">/ˈæplɪkəbəl/</span><span class="ca">애플리커블</span></div><div class="cm">적용 가능한, 해당하는</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>GST는 고전적 긴장이론과 어떻게 비교되는가? 핵심적 진전은 범위이다. 머턴이 긴장을 거시적 수준에서 차단된 경제적 목표로 제한한 반면, 애그뉴는 이를 개인 수준에서의 모든 부정적 관계를 포함하도록 넓혔다 — 이 이론을 모든 사회 계층의 사람들에게 적용 가능하게 만들었다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>While Merton limited ~, Agnew broadened ~</b> : <code>While</code>을 사용한 대조 구문 — 두 이론의 차이를 한 문장에서 선명하게 보여주는 기법<br>
+    <b>making the theory applicable to ~</b> : 분사구문 — 결과를 나타냄 ("그래서 ~을 적용 가능하게 만들었다")
+  </div>
+</div>
+
+<!-- S23 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S23</span><p class="en-t">Of course, GST is not without its critics. Some argue the theory is too broad and potentially tautological — if strain is defined as anything that causes negative emotions, and negative emotions lead to crime, the reasoning becomes circular.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">tautological</span><span class="ci">/ˌtɔːtəˈlɒdʒɪkəl/</span><span class="ca">토톨로지컬</span></div><div class="cm">동어반복적인, 순환논리적인</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">potentially</span><span class="ci">/pəˈtenʃəli/</span><span class="ca">퍼텐셜리</span></div><div class="cm">잠재적으로, 어쩌면</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">circular</span><span class="ci">/ˈsɜːrkjʊlər/</span><span class="ca">서큘러</span></div><div class="cm">순환적인 / 원형의</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>물론, GST에 비판이 없는 것은 아니다. 일부는 이 이론이 너무 광범위하고 잠재적으로 동어반복적이라고 주장한다 — 긴장이 부정적 감정을 유발하는 모든 것으로 정의되고, 부정적 감정이 범죄로 이어진다면, 논리가 순환적이 된다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>is not without its critics</b> : 이중 부정 — "비판자가 없지 않다" = "비판이 존재한다" — 완곡한 학술적 표현<br>
+    <b>tautological</b> : 논리학 용어 — 결론이 전제를 반복하는 것. 순환논법(circular reasoning)과 유사
+  </div>
+</div>
+
+<!-- S24 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S24</span><p class="en-t">Others point out that measuring strain is methodologically challenging — different people interpret the same event differently, and what counts as strain is highly subjective. Despite these concerns, GST has generated valuable policy implications.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">methodologically</span><span class="ci">/ˌmeθədəˈlɒdʒɪkli/</span><span class="ca">메서돌로지컬리</span></div><div class="cm">방법론적으로</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">subjective</span><span class="ci">/səbˈdʒektɪv/</span><span class="ca">섭젝티브</span></div><div class="cm">주관적인 (↔ objective 객관적인)</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">implications</span><span class="ci">/ˌɪmplɪˈkeɪʃənz/</span><span class="ca">임플리케이션즈</span></div><div class="cm">함의, 시사점 / 영향</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>다른 비판론자들은 긴장을 측정하는 것이 방법론적으로 어렵다고 지적한다 — 다른 사람들은 같은 사건을 다르게 해석하며, 무엇이 긴장으로 인정되는지는 매우 주관적이다. 이러한 우려에도 불구하고, GST는 가치 있는 정책적 함의를 생성해 왔다.</div>
+</div>
+
+<!-- S25 -->
+<div class="blk">
+  <div class="en-r"><span class="sn">S25</span><p class="en-t">If strain and negative emotions are at the root of crime, then effective interventions should include emotional support programs for at-risk youth, anti-bullying initiatives in schools, restorative justice practices that address victims' and offenders' emotions, and community-based counseling services. In short, GST brings emotions back into the center of criminological theory — reminding us that crime is often not a cold, rational calculation, but a hot, emotional reaction to pain, loss, and injustice.</p></div>
+  <div class="pr-r"><div class="rl">🔤 Pronunciation</div><div class="chips">
+    <div class="chip"><div class="chip-top"><span class="cw">interventions</span><span class="ci">/ˌɪntərˈvenʃənz/</span><span class="ca">인터벤션즈</span></div><div class="cm">개입, 중재 / 조치들</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">initiatives</span><span class="ci">/ɪˈnɪʃətɪvz/</span><span class="ca">이니셔티브즈</span></div><div class="cm">계획, 이니셔티브 / 주도권</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">restorative</span><span class="ci">/rɪˈstɔːrətɪv/</span><span class="ca">리스토러티브</span></div><div class="cm">회복적인 / 회복시키는</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">offenders</span><span class="ci">/əˈfendərz/</span><span class="ca">어펜더즈</span></div><div class="cm">범죄자들, 가해자들</div></div>
+    <div class="chip"><div class="chip-top"><span class="cw">rational</span><span class="ci">/ˈræʃənəl/</span><span class="ca">래셔널</span></div><div class="cm">합리적인, 이성적인</div></div>
+  </div></div>
+  <div class="ko-r"><div class="rl">🇰🇷 한국어</div>긴장과 부정적 감정이 범죄의 근원에 있다면, 효과적인 개입에는 위험군 청소년을 위한 정서적 지원 프로그램, 학교에서의 반(反)괴롭힘 계획, 피해자와 가해자의 감정을 다루는 회복적 사법 관행, 그리고 지역사회 기반 상담 서비스가 포함되어야 한다. 요컨대, GST는 감정을 범죄학 이론의 중심으로 되돌려 놓는다 — 범죄가 종종 차갑고 합리적인 계산이 아니라, 고통, 상실, 불공정에 대한 뜨겁고 감정적인 반응이라는 것을 우리에게 상기시켜 준다.</div>
+  <div class="gr-r"><div class="rl">📝 구조 분석</div>
+    <b>not A, but B</b> : "A가 아니라 B" — <code>not a cold, rational calculation, but a hot, emotional reaction</code><br>
+    → <b>cold/hot</b>, <b>rational/emotional</b>, <b>calculation/reaction</b> — 세 쌍의 대조로 핵심 메시지를 극적으로 전달<br>
+    <b>In short</b> : 결론 전환 표현 — "요컨대, 한마디로"
+  </div>
+</div>
+
+<div class="slabel">📚 핵심 어휘 정리</div>
+
+<div class="vc"><div class="vl"><div class="vw">strain</div><div class="vi">/streɪn/</div><div class="va">스트레인</div></div><div class="vr"><div class="vm">긴장, 압박 / 부담 / (범죄학) 목표 차단이나 부정적 경험으로 인한 스트레스</div><div class="ve">Agnew identified three major sources of strain that lead to crime.</div><div class="vk">애그뉴는 범죄로 이어지는 세 가지 주요 긴장의 원천을 규명했다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">stimulus / stimuli</div><div class="vi">/ˈstɪmjələs/ · /ˈstɪmjəlaɪ/</div><div class="va">스티뮬러스 · 스티뮬라이</div></div><div class="vr"><div class="vm">자극(단수) / 자극들(복수) — 라틴어 복수형</div><div class="ve">The presentation of negatively valued stimuli is one of Agnew's three sources of strain.</div><div class="vk">부정적으로 가치 부여된 자극의 제시는 애그뉴의 세 가지 긴장 원천 중 하나이다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">coping</div><div class="vi">/ˈkoʊpɪŋ/</div><div class="va">코우핑</div></div><div class="vr"><div class="vm">대처, 대응 / (스트레스 등에 대한) 극복 방식</div><div class="ve">Effective coping strategies can prevent strain from leading to criminal behavior.</div><div class="vk">효과적인 대처 전략은 긴장이 범죄 행동으로 이어지는 것을 막을 수 있다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">frustration</div><div class="vi">/frʌˈstreɪʃən/</div><div class="va">프러스트레이션</div></div><div class="vr"><div class="vm">좌절감, 불만 / 좌절 / 실패감</div><div class="ve">Frustration from repeated failure can accumulate and eventually trigger deviant behavior.</div><div class="vk">반복적 실패로 인한 좌절감은 축적되어 결국 일탈 행동을 유발할 수 있다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">mediating</div><div class="vi">/ˈmiːdieɪtɪŋ/</div><div class="va">미디에이팅</div></div><div class="vr"><div class="vm">매개하는, 중재하는 / 두 변수 사이를 연결하는</div><div class="ve">Anger functions as a mediating variable between strain and crime.</div><div class="vk">분노는 긴장과 범죄 사이의 매개 변수로 기능한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">conditioning</div><div class="vi">/kənˈdɪʃənɪŋ/</div><div class="va">컨디셔닝</div></div><div class="vr"><div class="vm">조건화하는 / 결과에 영향을 미치는 조건적 요인</div><div class="ve">Conditioning factors determine whether strain leads to crime or to legitimate coping.</div><div class="vk">조건화 요인은 긴장이 범죄로 이어지는지 합법적 대처로 이어지는지를 결정한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">tautological</div><div class="vi">/ˌtɔːtəˈlɒdʒɪkəl/</div><div class="va">토톨로지컬</div></div><div class="vr"><div class="vm">동어반복적인, 순환논리적인 / 결론이 전제를 반복하는</div><div class="ve">Critics say GST is tautological because strain is defined by the very emotions it is supposed to produce.</div><div class="vk">비판론자들은 GST가 동어반복적이라고 말하는데, 긴장이 바로 그것이 생산해야 할 감정에 의해 정의되기 때문이다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">restorative</div><div class="vi">/rɪˈstɔːrətɪv/</div><div class="va">리스토러티브</div></div><div class="vr"><div class="vm">회복적인, 회복시키는 / 원래 상태로 돌리는</div><div class="ve">Restorative justice programs aim to repair the emotional harm caused by crime.</div><div class="vk">회복적 사법 프로그램은 범죄로 인한 정서적 피해를 회복하는 것을 목표로 한다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">self-efficacy</div><div class="vi">/ˌself ˈefɪkəsi/</div><div class="va">셀프 에피커시</div></div><div class="vr"><div class="vm">자기효능감 / 자신이 과제를 성공적으로 수행할 수 있다는 믿음</div><div class="ve">High self-efficacy helps individuals cope with strain in prosocial ways.</div><div class="vk">높은 자기효능감은 개인이 친사회적 방식으로 긴장에 대처하도록 돕는다.</div></div></div>
+
+<div class="vc"><div class="vl"><div class="vw">criminogenic</div><div class="vi">/ˌkrɪmɪnoʊˈdʒenɪk/</div><div class="va">크리미노제닉</div></div><div class="vr"><div class="vm">범죄 유발적인 / 범죄를 일으키는 성질의</div><div class="ve">Anger is considered the most criminogenic of all negative emotions in GST.</div><div class="vk">분노는 GST에서 모든 부정적 감정 중 가장 범죄 유발적인 것으로 간주된다.</div></div></div>
+
+</div>
+</body>
+</html>
