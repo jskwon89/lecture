@@ -10,8 +10,9 @@ PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로
 2. `ppt/PPT_WORKFLOW.md` — 자료조사 → 구성안 → 제작 → 검수 절차
 3. `ppt/RULE_SOURCE_MAP.md` — 원문 소스와 supersede 관계
 4. `ppt/references/REFERENCE_INDEX.md` — 해당 작업에 가장 가까운 최종·성숙 참조본
-5. 해당 주차의 최신 논제·목차·사용자 지시
-6. 실제 원자료·법령·논문·보고서
+5. **새 주차 콘텐츠 설계 시** `ppt/references/COMPLETED_DECK_PATTERN_W2_W3_20260919.md`
+6. 해당 주차의 최신 논제·목차·사용자 지시
+7. 실제 원자료·법령·논문·보고서
 
 현재 대화에서 사용자가 명시적으로 지시한 사항이 Canonical과 충돌하면 **현재 사용자 지시가 우선**한다. 반복되는 변경은 `PPT_RULES.md`와 `CHANGELOG.md`에 반영한다.
 
@@ -35,7 +36,7 @@ PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로
 - `source_rules/` — 기존 프로젝트 소스 원문 보존
 - `tools/` — PPT 생성·정렬·QA 코드
 - `templates/` — 승인된 골격 PPT
-- `references/` — 참조 덱·인덱스
+- `references/` — 참조 덱·인덱스·**완성본 콘텐츠 패턴**
 - `finals/` — 사용자 확정 최종본
 - `CLAUDE_REVIEW_PROMPT.md` — 실제 PPT 제작 담당자에게 규칙 감사를 요청할 때 쓰는 프롬프트
 - `CHANGELOG.md` — 규칙 변경 이력
