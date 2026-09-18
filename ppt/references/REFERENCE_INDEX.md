@@ -15,6 +15,7 @@
 | 문서 | 상태 | 주로 볼 것 |
 |---|---|---|
 | `COMPLETED_DECK_PATTERN_W2_W3_20260919.md` | **PRIMARY CONTENT REFERENCE** | 2·3주차 완성본에서 추출한 목차·내러티브·제목 문법·자료유형별 채우기·종합·보충자료 패턴. **새 주차 콘텐츠 설계 시 먼저 읽는다.** |
+| `COMPARATIVE_EFFECT_SLIDE_DESIGN_LESSONS_20260919.md` | **PRIMARY CONTENT REFERENCE — comparative/effect sections** | 비교정책·효과자료에서 논제 선택지→처우유형→결과축 순으로 구조화하는 법, 한 장 한 논리, 최소근거 선택, 결합형 처우 분리, 최종 비교표의 근거수준 대칭화. |
 
 ## 현재 프로젝트형 참조
 
