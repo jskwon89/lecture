@@ -18,8 +18,8 @@ Scope: `ppt/`
 8. `ppt/source_rules/courseplan_reconciliation_20260901-2.md`
 9. `ppt/tools/README.md`
 10. `ppt/tools/pptlib.py`, `rowfit.py`, `layout.py`, `check_spacing.py`
-11. `ppt/templates/skeleton_types.pptx`
-12. `ppt/references/REFERENCE_INDEX.md`와 등록된 참조 덱
+11. `ppt/templates/skeleton_types_parsed.md`
+12. `ppt/references/REFERENCE_INDEX.md`와 등록된 참조 덱(특히 `legacy/*.pptx`, `examples/w2_death_penalty_v28_6_parsed.md`)
 
 ## 2. 감사 목표
 
@@ -39,7 +39,7 @@ Scope: `ppt/`
 
 ### C. 실제 제작 가능성
 - `PPT_RULES.md`의 디자인 숫자가 `pptlib.py`, `rowfit.py`, `layout.py`, `check_spacing.py`와 실제로 맞는가.
-- skeleton을 복제해 규칙대로 만들 수 있는가.
+- `skeleton_types_parsed.md`의 유형 구조와 `ppt/tools/`의 좌표·색·행 규칙을 조합해 실제 덱을 만들 수 있는가. 원본 `skeleton_types.pptx`가 작업환경에 따로 있으면 추가 대조한다.
 - 폰트 파일은 저장소에 없어도 되며, Pretendard Regular/Bold 설치가 전제임을 확인한다.
 
 ### D. 콘텐츠 품질
