@@ -1,5 +1,11 @@
 # PPT 규칙 변경 이력
 
+## 2026-09-18 · Git Canonical v1.1 — Claude delta review PASS
+
+- 직전 독립감사의 9개 핵심 지적은 모두 반영 확인.
+- 경미 잔여 2건까지 추가 반영: ① workflow에 레거시 참조 덱의 좌표·색·글자크기·각주 위치 참조 금지 문구 추가 ② `guideline_v11_1`의 폰트 배포 규칙 supersede를 `RULE_SOURCE_MAP`에 영구 기록.
+- 제작·QA 동작과 문서 규칙 사이의 알려진 충돌은 현재 없음.
+
 ## 2026-09-18 · Git Canonical v1.1 — Claude 독립감사 반영
 
 독립감사에서 확인된 도구·문서 충돌을 대조 후 수정했다.
