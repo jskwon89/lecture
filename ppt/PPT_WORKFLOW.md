@@ -75,7 +75,7 @@
 
 구성안 승인 후 실제 PPT를 만든다.
 
-- `ppt/templates/skeleton_types.pptx`에서 가장 가까운 골격을 우선 사용한다.
+- 원본 `skeleton_types.pptx`가 작업환경에 있으면 가장 가까운 골격을 우선 사용한다. Git에서는 `ppt/templates/skeleton_types_parsed.md`와 `ppt/tools/`를 구조 기준으로 둔다.
 - `ppt/tools/`의 생성·배치 도구를 사용한다.
 - 가장 가까운 참조 덱의 디자인 언어를 확인한다.
 - 글자를 임의로 줄여 한 장에 우겨 넣지 말고 장을 나눈다.
