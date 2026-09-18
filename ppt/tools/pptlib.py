@@ -35,7 +35,7 @@ NAVYBAND = (1.23, 6.29, 10.84, 0.50)
 FOOTNOTE = (0.80, 7.02, 11.73, 0.33)
 COL2 = ((0.80, 5.66), (6.87, 5.66))          # (x, w) 두 열 — 간격 0.41
 COL3 = ((0.80, 3.71), (4.81, 3.71), (8.82, 3.71))   # 세 열 — 간격 0.30
-SIZES = (27.5, 22.5, 13.0, 12.5, 12.0, 11.5, 10.5)  # 본문 영역 허용 크기
+SIZES = (27.5, 22.5, 13.0, 12.5, 12.0, 11.5, 10.5)  # 표준 생성 요소 기본 크기. 표지·구분 장·도식·큰 수치는 승인 예외 가능
 FONT = ('<a:latin typeface="Pretendard" pitchFamily="34" charset="0"/>'
         '<a:ea typeface="Pretendard" pitchFamily="34" charset="-122"/>'
         '<a:cs typeface="Pretendard" pitchFamily="34" charset="-120"/>')
@@ -308,14 +308,19 @@ def slide_frame(next_id, kicker, title, cue=None, chip=None,
                            [para([run(band, 12.5, WHITE, bold=True)], align='ctr')])); sid += 1
         body_bot = ny - 0.19
     else:
-        body_bot = 6.85
+        body_bot = 6.72
     return out, sid, body_top, body_bot
 
 
 def row(next_id, y, head, conclusion, supplements=(), limit=None,
         result=False, head_x=None, head_w=None, body_x=None, body_w=None,
         rule=True):
-    """한 행 = 행머리글 + 결론 줄 + 보충 줄 (+ 금색 한정 줄).
+    """레거시 행 함수. 신규 제작에 사용하지 않는다.
+
+    문자 수로 줄 수를 어림하므로 §7-4 ①의 실측 규칙과 맞지 않는다.
+    신규 제작은 layout.layout_rows()를 사용한다.
+
+    한 행 = 행머리글 + 결론 줄 + 보충 줄 (+ 금색 한정 줄).
 
     head        2~12자 명사구. 날짜·사건번호·표본 수는 여기 두지 않는다.
     conclusion  한 문장 40자 이내. 결과·판단 행이면 result=True로 한 급 올린다.
@@ -361,8 +366,11 @@ def audit(root, n_slides):
     bad_color, sizes, spc, geoms, oob, pagenum = collections.Counter(), set(), set(), collections.Counter(), [], 0
     for i in range(1, n_slides + 1):
         s = open(f'{root}/ppt/slides/slide{i}.xml', encoding='utf-8').read()
-        for c in re.findall(r'srgbClr val="([0-9A-Fa-f]{6})"', s):
-            if c.upper() not in PALETTE and c != '000000':
+        # 빈 단락의 endParaRPr에는 PowerPoint가 비가시 기본 검정(000000)을 넣을 수 있다.
+        # 그 기본값만 제외하고, 실제 가시 텍스트/도형의 000000은 팔레트 밖 색으로 잡는다.
+        visible = re.sub(r'<a:endParaRPr\\b.*?</a:endParaRPr>|<a:endParaRPr\\b[^>]*/>', '', s, flags=re.S)
+        for c in re.findall(r'srgbClr val="([0-9A-Fa-f]{6})"', visible):
+            if c.upper() not in PALETTE:
                 bad_color[c.upper()] += 1
         sizes.update(int(v) / 100 for v in re.findall(r'sz="(\d+)"', s))
         spc.update(re.findall(r'spcPct val="(\d+)"', s))
