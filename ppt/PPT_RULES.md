@@ -1,4 +1,4 @@
-# 강의 PPT 제작 통합 규칙 — Git Canonical v1.1 · 2026-09-18
+# 강의 PPT 제작 통합 규칙 — Git Canonical v1.2 · 2026-09-19
 
 기준일: 2026-09-18
 성격: 기존 `guideline_v11.1`, `standard_structure_v4`, 운영·정합성 문서와 2026-09-18 대화에서 확정된 추가 규칙 및 독립감사 패치를 통합한 **Git 현행 Canonical**이다. PPT 구성안·대본·실제 PPT 제작자는 이 파일을 먼저 따른다.
