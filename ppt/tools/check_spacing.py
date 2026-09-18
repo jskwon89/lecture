@@ -27,7 +27,7 @@ FOOT_GAP = 0.41        # 마지막 구분선(6.72)과 각주 글자 사이
 TOL = 0.05
 
 
-def rules_of(im):
+def rule_groups(im):
     h, w = im.shape
     hit = [y for y in range(h) if (im[y] < 235).sum() > w * 0.7]
     merged = []
@@ -36,17 +36,34 @@ def rules_of(im):
             merged[-1].append(y)
         else:
             merged.append([y])
-    return [int(np.mean(m)) for m in merged]
+    return merged
+
+
+def rules_of(im):
+    return [int(np.mean(m)) for m in rule_groups(im)]
+
+
+def bottom_band_group(im):
+    """하단 남색 밴드 후보: 하단부의 넓고 두꺼운 어두운 면."""
+    candidates = [
+        g for g in rule_groups(im)
+        if g[0] / DPI > 5.8 and len(g) / DPI >= 0.20
+    ]
+    return max(candidates, key=lambda g: g[-1]) if candidates else None
 
 
 def check(path, cols=False):
     im = np.array(Image.open(path).convert('L'))
     h, w = im.shape
     ink = [y for y in range(h) if im[y].min() < 200]
-    rs = rules_of(im)
+    groups = rule_groups(im)
+    band = bottom_band_group(im)
+    if band is not None:
+        groups = [g for g in groups if g is not band]
+    rs = [int(np.mean(g)) for g in groups]
     bad = []
     print(f'\n[{path}]')
-    if not rs:
+    if not rs and band is None:
         print('  구분선을 찾지 못했다. 열 구성 장이면 이 점검은 건너뛴다.')
         return []
 
@@ -75,6 +92,16 @@ def check(path, cols=False):
             if m2:
                 bad.append(f'{path}: 행머리글 좌우차 {abs(lpad-rpad):.3f} 세로차 {dc:.3f}')
             print(f'    행머리글 좌 {lpad:.2f} / 우 {rpad:.2f} · 세로 중심차 {dc:+.3f}{m2}')
+
+    if band is not None:
+        band_top = band[0] / DPI
+        mark = '' if abs(band_top - 6.29) <= TOL else '  ← 하단 남색 밴드 위치'
+        if mark:
+            bad.append(f'{path}: 하단 남색 밴드 상단 {band_top:.2f} (기준 6.29)')
+        print(f'  하단 남색 밴드 상단 {band_top:.2f}{mark}')
+        if cols:
+            print('  선 위치(in):', ', '.join(f'{y/DPI:.2f}' for y in rs))
+        return bad
 
     if cols:   # 열 구성 장은 마지막 구분선이 없을 수 있어 위치 판정을 하지 않는다
         print('  선 위치(in):', ', '.join(f'{y/DPI:.2f}' for y in rs))
