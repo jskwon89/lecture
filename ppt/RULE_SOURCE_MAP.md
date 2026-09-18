@@ -50,7 +50,7 @@
 | `tools/rowfit.py` | Pretendard 실제 폭 기반 줄 수·높이 계산 | §7-4 |
 | `tools/layout.py` | 행 내용 높이 고정 + 동일 위·아래 여백 배치 | §7-4 |
 | `tools/check_spacing.py` | 150dpi 렌더의 행 여백·마지막선·각주 간격·행머리글 중심 실측 | §8-2 |
-| `templates/skeleton_types.pptx` | 승인된 화면 유형 골격 | §6-5·디자인 시스템 |
+| `templates/skeleton_types_parsed.md` | 승인 골격 27장의 텍스트·노트 파싱 참조 | §6-5·디자인 시스템 |
 
 **폰트 파일은 Git에 넣지 않는다.** 검수 환경에 Pretendard Regular/Bold가 별도로 설치되어 있어야 한다.
 
