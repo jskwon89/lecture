@@ -18,7 +18,7 @@
 
 | 파일 | 역할 | Canonical 반영 상태 |
 |---|---|---|
-| `source_rules/guideline_v11_1_20260918.md` | 11.1판까지의 강의자료 제작 지침·디자인·QA·부록 | 전체 보존. **제목의 '주체를 반드시 맨 앞' 규칙은 이후 사용자 지시로 superseded** |
+| `source_rules/guideline_v11_1_20260918.md` | 11.1판까지의 강의자료 제작 지침·디자인·QA·부록 | 전체 보존. **① 제목의 '주체를 반드시 맨 앞' 규칙 ② §7-1 '배포본에 v1.3.9 TTF와 SIL 라이선스 파일 동봉' 규칙은 이후 사용자 지시로 superseded** |
 | `source_rules/guideline_v10_20260918.md` | 10판 역사본 | 이력 보존 |
 | `source_rules/standard_structure_v4_20260918.md` | 강사자료 8기능 블록, 학생 발표·토론문 표준구조 | 구조 규칙 반영 |
 | `source_rules/ops_handbook_v4.md` | 과목 운영·평가·논증 용어·비례성·발표/질의 규칙 | PPT의 수업 맥락·용어·운영과 연결할 때 참조 |
