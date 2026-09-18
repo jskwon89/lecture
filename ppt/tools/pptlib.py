@@ -368,7 +368,7 @@ def audit(root, n_slides):
         s = open(f'{root}/ppt/slides/slide{i}.xml', encoding='utf-8').read()
         # 빈 단락의 endParaRPr에는 PowerPoint가 비가시 기본 검정(000000)을 넣을 수 있다.
         # 그 기본값만 제외하고, 실제 가시 텍스트/도형의 000000은 팔레트 밖 색으로 잡는다.
-        visible = re.sub(r'<a:endParaRPr\\b.*?</a:endParaRPr>|<a:endParaRPr\\b[^>]*/>', '', s, flags=re.S)
+        visible = re.sub(r'<a:endParaRPr\b.*?</a:endParaRPr>|<a:endParaRPr\b[^>]*/>', '', s, flags=re.S)
         for c in re.findall(r'srgbClr val="([0-9A-Fa-f]{6})"', visible):
             if c.upper() not in PALETTE:
                 bad_color[c.upper()] += 1
