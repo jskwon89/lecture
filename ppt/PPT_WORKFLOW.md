@@ -10,8 +10,9 @@
 2. `ppt/PPT_RULES.md`
 3. `ppt/RULE_SOURCE_MAP.md`
 4. `ppt/references/REFERENCE_INDEX.md`
-5. 해당 주차의 최신 논제·목차·직전 확정사항
-6. **평가·제출물·OT·마무리 안내 화면을 만드는 경우** `ppt/source_rules/courseplan_reconciliation_20260901-2.md`
+5. **새 주차의 목차·제목·본문구조를 설계할 때** `ppt/references/COMPLETED_DECK_PATTERN_W2_W3_20260919.md`
+6. 해당 주차의 최신 논제·목차·직전 확정사항
+7. **평가·제출물·OT·마무리 안내 화면을 만드는 경우** `ppt/source_rules/courseplan_reconciliation_20260901-2.md`
 
 과거 원문이 필요할 때만 `ppt/source_rules/`로 내려간다. Canonical과 원문이 충돌하면 조용히 섞지 말고 `RULE_SOURCE_MAP.md`의 우선순위를 따른다.
 
