@@ -35,7 +35,12 @@ NAVYBAND = (1.23, 6.29, 10.84, 0.50)
 FOOTNOTE = (0.80, 7.02, 11.73, 0.33)
 COL2 = ((0.80, 5.66), (6.87, 5.66))          # (x, w) 두 열 — 간격 0.41
 COL3 = ((0.80, 3.71), (4.81, 3.71), (8.82, 3.71))   # 세 열 — 간격 0.30
-SIZES = (27.5, 22.5, 13.0, 12.5, 12.0, 11.5, 10.5)  # 표준 생성 요소 기본 크기. 표지·구분 장·도식·큰 수치는 승인 예외 가능
+COL4 = ((0.8000, 2.7075), (3.8075, 2.7075), (6.8150, 2.7075), (9.8225, 2.7075))
+COL5 = ((0.800, 2.106), (3.206, 2.106), (5.612, 2.106), (8.018, 2.106), (10.424, 2.106))
+SIZES = (27.5, 22.5, 13.0, 12.5, 12.0, 11.5, 10.5)  # 기본 생성 역할
+TYPE_SIZES = (9.5, 10.0, 11.0, 14.0, 15.0, 16.0, 18.0)  # 승인 골격 유형 보조 크기
+LARGE_TYPE_SIZES = (34.0, 40.0)  # 표지·보충자료 구분 장 전용
+APPROVED_SIZES = tuple(sorted(set(SIZES + TYPE_SIZES + LARGE_TYPE_SIZES)))
 FONT = ('<a:latin typeface="Pretendard" pitchFamily="34" charset="0"/>'
         '<a:ea typeface="Pretendard" pitchFamily="34" charset="-122"/>'
         '<a:cs typeface="Pretendard" pitchFamily="34" charset="-120"/>')
@@ -364,6 +369,7 @@ def audit(root, n_slides):
     """§7 점검표 가운데 파일에서 셀 수 있는 항목을 한 번에 확인한다."""
     import collections
     bad_color, sizes, spc, geoms, oob, pagenum = collections.Counter(), set(), set(), collections.Counter(), [], 0
+    missing_spc, unapproved_sizes = collections.Counter(), collections.Counter()
     for i in range(1, n_slides + 1):
         s = open(f'{root}/ppt/slides/slide{i}.xml', encoding='utf-8').read()
         # 빈 단락의 endParaRPr에는 PowerPoint가 비가시 기본 검정(000000)을 넣을 수 있다.
@@ -372,8 +378,15 @@ def audit(root, n_slides):
         for c in re.findall(r'srgbClr val="([0-9A-Fa-f]{6})"', visible):
             if c.upper() not in PALETTE:
                 bad_color[c.upper()] += 1
-        sizes.update(int(v) / 100 for v in re.findall(r'sz="(\d+)"', s))
+        slide_sizes = [int(v) / 100 for v in re.findall(r'sz="(\d+)"', s)]
+        sizes.update(slide_sizes)
+        for sz in slide_sizes:
+            if sz not in APPROVED_SIZES:
+                unapproved_sizes[sz] += 1
         spc.update(re.findall(r'spcPct val="(\d+)"', s))
+        for p in re.findall(r'<a:p>(.*?)</a:p>', s, re.S):
+            if re.search(r'<a:t>.*?</a:t>', p, re.S) and 'spcPct' not in p:
+                missing_spc[i] += 1
         geoms.update(re.findall(r'prstGeom prst="(\w+)"', s))
         if 'normAutofit' in s:
             pagenum += 1
@@ -384,7 +397,9 @@ def audit(root, n_slides):
     return {
         '팔레트 밖 색': dict(bad_color),
         '글자 크기': sorted(sizes),
+        '비승인 글자 크기': dict(sorted(unapproved_sizes.items())),
         '줄간격': sorted(spc),
+        '줄간격 미지정 텍스트 단락': dict(sorted(missing_spc.items())),
         '도형': dict(geoms),
         '경계 이탈 장': sorted(set(oob)),
         'normAutofit 장수': pagenum,
