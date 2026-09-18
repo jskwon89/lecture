@@ -14,7 +14,7 @@
 
 | 주제 | 경로 | 상태 | 주로 볼 것 |
 |---|---|---|---|
-| 2주차 사형제 v28(6) | `examples/w2_death_penalty_v28_6_parsed.md` | MATURE_REFERENCE (PARSED) | 현재 세미나의 제목·밴드·행머리글·출처·대본 구조와 장 간 연결 |
+| 2주차 사형제 v28(6) | `examples/w2_death_penalty_v28_6_parsed.md` | MATURE_REFERENCE (PRE-V8 GEOMETRY) | 제목·밴드의 역할·행머리글·출처·대본 구조·장 간 연결만 참고. **좌표·여백·색상값·각주 y·제목 pt는 참고 금지** |
 
 ## Git 바이너리 참조 덱
 
