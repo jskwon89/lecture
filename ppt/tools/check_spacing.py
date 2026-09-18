@@ -43,10 +43,10 @@ def rules_of(im):
     return [int(np.mean(m)) for m in rule_groups(im)]
 
 
-def bottom_band_group(im):
+def bottom_band_group(groups):
     """하단 남색 밴드 후보: 하단부의 넓고 두꺼운 어두운 면."""
     candidates = [
-        g for g in rule_groups(im)
+        g for g in groups
         if g[0] / DPI > 5.8 and len(g) / DPI >= 0.20
     ]
     return max(candidates, key=lambda g: g[-1]) if candidates else None
@@ -57,9 +57,9 @@ def check(path, cols=False):
     h, w = im.shape
     ink = [y for y in range(h) if im[y].min() < 200]
     groups = rule_groups(im)
-    band = bottom_band_group(im)
+    band = bottom_band_group(groups)
     if band is not None:
-        groups = [g for g in groups if g is not band]
+        groups = [g for g in groups if g != band]
     rs = [int(np.mean(g)) for g in groups]
     bad = []
     print(f'\n[{path}]')
