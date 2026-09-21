@@ -3,7 +3,8 @@
 작성일: 2026-09-22  
 논제: **성매매가 우려되는 가출 청소년을 우범소년으로 송치하여야 하는가?**  
 상태: **PASS — 목차 설계 단계로 이동 가능 / 개별 수치·원표 DATA-QA는 별도 유지**  
-직전본: `W5_RESEARCH_COVERAGE_v0_1.md`
+직전본: `W5_RESEARCH_COVERAGE_v0_1.md`  
+출처 패키지: `sources/README.md` / `sources/SOURCE_MANIFEST_v1.md` / `sources/CHAPTER_SOURCE_MAP.md`
 
 > PASS는 모든 후보 수치를 PPT에 바로 써도 된다는 뜻이 아니다.  
 > 12개 자료영역과 통계 5축을 실제로 전수검색했고, 찾지 못한 자료도 검색범위와 공백을 기록했다는 뜻이다.  
