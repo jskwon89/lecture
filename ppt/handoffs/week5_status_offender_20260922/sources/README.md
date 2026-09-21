@@ -8,11 +8,12 @@
 ## 먼저 볼 파일
 
 1. `CHAPTER_COVERAGE_MATRIX.md` — 8개 단원별 자료 충분성·남은 공백
-2. `SOURCE_MANIFEST_v1.md` — 출처 전체 대장, 공식 원문 URL, 사용범위, 재배포 상태
-3. `ORIGINAL_SOURCE_LINKS.md` — 원문/원표를 받을 수 있는 공식 링크만 모은 목록
-4. `statistics/support_center_2021_2025.csv` — 지원센터 공식 수치 재구성
-5. `statistics/status_offender_series_working.csv` — 우범소년 통계 작업표와 DATA-QA 상태
-6. `legal/LEGAL_SOURCE_NOTES.md` — 소년법·청소년성보호법·대법원 2025트6의 공식 원문 위치
+2. `CHAPTER_SOURCE_MAP.md` — 단원별 실제 자료·가능한 화면·DATA-QA
+3. `SOURCE_MANIFEST_v1.md` — 출처 전체 대장, 공식 원문 URL, 사용범위, 재배포 상태
+4. `ORIGINAL_SOURCE_LINKS.md` — 원문/원표를 받을 수 있는 공식 링크만 모은 목록
+5. `statistics/support_center_2021_2025.csv` — 지원센터 공식 수치 재구성
+6. `statistics/status_offender_series_working.csv` — 우범소년 통계 작업표와 DATA-QA 상태
+7. `legal/LEGAL_SOURCE_NOTES.md` — 소년법·청소년성보호법·대법원 2025트6의 공식 원문 위치
 
 ## 원문 보존 원칙
 
