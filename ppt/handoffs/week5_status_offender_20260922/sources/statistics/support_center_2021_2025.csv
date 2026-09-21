@@ -1,10 +1,11 @@
-year,youth_supported,total_services,emergency,counseling,psychological,medical,legal,education,self_reliance,linkage,aftercare,guardian_counsel_psych,age_basis,source_status
-2021,727,12520,406,9608,578,1274,57,277,272,48,, ,연나이,OFFICIAL_MOGEF
-2022,862,26450,696,14576,1399,1253,2586,247,311,254,49,5079,연나이,OFFICIAL_MOGEF
-2023,952,26498,709,13990,1404,1402,2759,174,222,254,88,5496,연나이,OFFICIAL_MOGEF
-2024,1187,35485,676,17245,1817,1614,3865,209,332,250,57,9420,연나이,OFFICIAL_MOGEF
-2025,1226,39632,730,16991,1726,2054,4114,374,954,379,97,12213,만나이,OFFICIAL_MOGEF
+year,youth_supported,total_service_count,age_basis,source_status
+2021,727,12520,연나이,OFFICIAL_MOGEF
+2022,862,26450,연나이,OFFICIAL_MOGEF
+2023,952,26498,연나이,OFFICIAL_MOGEF
+2024,1187,35485,연나이,OFFICIAL_MOGEF
+2025,1226,39632,만나이,OFFICIAL_MOGEF
 
 # Source: https://www.mogef.go.kr/nw/enw/nw_enw_s001d.do?bbtSn=713671&mid=mda700
-# Caution: total_services includes guardian-related service column; youth-only 2025 integrated services = 27,419. youth_supported is service users, not estimated total victims.
-# Age statistics changed from Korean age-by-year categories to full-age categories in 2025; do not draw a naive age trend across the break.
+# total_service_count is the annual report's total service count. It includes services to guardians where the annual table includes that category; it is not a person count and is not an effect measure.
+# 2025 youth-only integrated services reported separately in the same official release: 27,419 services to 1,226 youth.
+# Age classification changes in 2025 from 연 나이 to 만 나이; do not draw a naive age-category trend across this break.
