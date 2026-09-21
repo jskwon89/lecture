@@ -34,7 +34,7 @@
 - `examples/component_catalog_overview.jpg`
 - `examples/layout_examples_overview.jpg`
 
-이 네 파일은 **생성물**로 관리한다. 현재 Git의 기준본은 코드이며, `catalog.py`와 `examples.py`를 실행하면 두 PPTX를 다시 생성한다. 원본 묶음의 SHA-256은 `examples/README.md`에 기록했다.
+이 네 파일은 **생성물**이면서 동시에 사람이 바로 확인하는 시각 참조본이므로 Git에 바이너리로 함께 등록했다. `catalog.py`와 `examples.py`를 실행하면 두 PPTX를 다시 생성할 수 있고, 원본 묶음의 SHA-256은 `examples/README.md`에 기록했다.
 
 ## 로컬 실행 검증
 
@@ -51,3 +51,8 @@
 2. `ppt/templates/layout_kit/README.md`
 3. `ppt/templates/layout_kit/CANONICAL_COMPATIBILITY.md`
 4. `ppt/templates/layout_kit/COMPONENTS.md`
+
+## Git binary commit
+
+- `component_catalog.pptx`, `layout_examples.pptx`, 두 overview JPG를 `ppt/templates/layout_kit/examples/`에 실제 바이너리로 등록했다.
+- binary commit: `3c91ce71a5351c165dcf575ce8be64b000f3b322`
