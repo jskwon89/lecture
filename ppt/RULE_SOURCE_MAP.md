@@ -140,3 +140,17 @@
 - `ppt/source_rules/`에는 현재 보조적으로 적용되는 `standard_structure_v4`, `ops_handbook_v4`, `courseplan_reconciliation`만 남긴다.
 - archive 파일 내부의 ‘유일한 현행 지침’ 자기선언은 현재 효력이 없다.
 - 향후 새 Canonical이 생기면 `current/README.md`를 먼저 갱신하고, superseded 문서는 `archive/`로 이동한다.
+
+## 12. layout_kit 구현 부품 라이브러리
+
+| 항목 | 적용 |
+|---|---|
+| 위치 | `ppt/templates/layout_kit/` |
+| 역할 | 글·표·그래프·흐름 부품, 영역분할, 자동배치, 예시 조합을 재사용하는 구현 라이브러리 |
+| 효력 | **Canonical보다 아래.** `PPT_RULES.md`·`PPT_CONTENT_RULES.md`·`PPT_WORKFLOW.md`를 대체하지 않음 |
+| 부품 수 | 사용자 호출 부품 26종 = 글11 + 표3 + 그래프7 + 흐름5. 골격 도구까지 포함한 handoff 표기에서는 27종 |
+| 예시 | 기본 예시 19종 + 혼합 예시 M1~M3 |
+| 알려진 충돌 | 일부 색·글자크기, fit.py의 최후 0.5pt 축소, 행 본문 중앙정렬, 인용표기 위치. `CANONICAL_COMPATIBILITY.md`에서 관리 |
+| QA | 키트 생성 후에도 기존 `ppt/tools/`·렌더 QA·논제 정합성 감사를 그대로 수행 |
+
+키트 코드는 사용자 제공 묶음 그대로 보존하고, 현재 규칙과의 충돌을 이유로 커밋 단계에서 조용히 고치지 않는다. 실제 강의덱 제작 시 Canonical에 맞춰 결과물을 보정한다.
