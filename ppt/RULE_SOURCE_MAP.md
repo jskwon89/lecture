@@ -6,12 +6,16 @@
 
 ## 1. 적용 우선순위
 
+0. `ppt/current/README.md` — 현재 규칙 진입점
 1. 현재 사용자의 명시적 지시
-2. `ppt/PPT_CONTENT_RULES.md` — 2026-09-21까지의 사용자 지시를 반영한 콘텐츠·조사 추가규칙. 기존 규칙 변경은 해당 파일 §12의 범위에 한정한다.
-3. `ppt/PPT_RULES.md` — 기존 Git Canonical 전문·디자인·QA
-4. `ppt/source_rules/standard_structure_v4_20260918.md`
-5. `ppt/source_rules/guideline_v11_1_20260918.md` 및 그 밖의 원문 소스
-6. `ppt/references/`의 최종·성숙 참조 덱과 구성 분석
+2. `ppt/PPT_CONTENT_RULES.md` — 최신 콘텐츠·조사 추가규칙
+3. `ppt/PPT_RULES.md` — Git Canonical 전문·디자인·QA
+4. `ppt/PPT_WORKFLOW.md` — 실제 작업절차·하드게이트
+5. `ppt/source_rules/standard_structure_v4_20260918.md` — 보조 구조규칙
+6. `ppt/source_rules/ops_handbook_v4.md`, `courseplan_reconciliation_20260901-2.md` — 해당 범위에서만 보조 적용
+7. `ppt/references/`의 최종·성숙 참조 덱과 구성 분석
+
+`ppt/archive/` 아래 파일은 **적용 우선순위에 포함되지 않는다.** 역사·감사·변경이력 확인용이다.
 
 원문 소스와 현재 규칙이 충돌하면 조용히 섞지 말고 충돌을 기록한다. 디자인 좌표·색·폰트·도구 구현은 이번 추가규칙에서 변경하지 않는다. 강의계획서와 사용자가 확정한 실제 운영의 관계는 기본 Canonical §1을 유지한다.
 
@@ -19,12 +23,12 @@
 
 | 파일 | 역할 | 반영 상태 |
 |---|---|---|
-| `source_rules/guideline_v11_1_20260918.md` | 11.1판까지의 강의자료 제작 지침·디자인·QA·부록 | 전체 보존. ① 제목의 '주체를 반드시 맨 앞' 규칙 ② §7-1 '배포본에 v1.3.9 TTF와 SIL 라이선스 파일 동봉' 규칙은 이후 사용자 지시로 superseded |
-| `source_rules/guideline_v10_20260918.md` | 10판 역사본 | 이력 보존 |
+| `archive/source_rules/guideline_v11_1_20260918.md` | 11.1판 역사 원문 | **ARCHIVED — 현재 작업에 적용하지 않음.** Canonical이 필요한 내용을 이미 흡수 |
+| `archive/source_rules/guideline_v10_20260918.md` | 10판 역사 원문 | **ARCHIVED — 현재 작업에 적용하지 않음** |
 | `source_rules/standard_structure_v4_20260918.md` | 강사자료 8기능 블록, 학생 발표·토론문 표준구조 | 구조 규칙 반영 |
 | `source_rules/ops_handbook_v4.md` | 과목 운영·평가·논증 용어·비례성·발표/질의 규칙 | PPT의 수업 맥락·용어·운영과 연결할 때 참조 |
 | `source_rules/courseplan_reconciliation_20260901-2.md` | 강의계획서와 실제 운영의 충돌 조정 | 평가·제출물 관련 화면 제작 시 참조 |
-| `source_rules/gpt_source_replacement_20260918.md` | 과거 소스 교체 이력 | 이력·출처 확인용 |
+| `archive/source_rules/gpt_source_replacement_20260918.md` | 과거 소스 교체 이력 | **ARCHIVED — 이력·출처 확인용** |
 
 ## 3. 2026-09-18 대화에서 Canonical에 추가된 규칙
 
@@ -128,3 +132,11 @@
 | 관련성만 있으면 본편에 남는 문제 | DIRECT / NECESSARY BASELINE / INDIRECT / OUT OF SCOPE로 판정 | 같은 문서 |
 | 위험·보호필요 자료가 특정 개입의 우선성으로 자동 연결될 수 있음 | 문제의 존재와 정책수단의 정당성·효과를 분리 | `PPT_CONTENT_RULES.md` §2-2 |
 | 제작 중 대상·행위·비교대안·결과·시점이 변형될 수 있음 | 변형 발생 시 즉시 HOLD, 목차·자료배치 재검토 | 정합성 감사 템플릿 §5 |
+
+## 11. 2026-09-22 current / archive 분리
+
+- `ppt/current/README.md`를 현재 규칙의 유일한 진입점으로 신설했다.
+- 과거 guideline v10·v11.1과 소스 교체안내는 `ppt/archive/source_rules/`로 이동했다.
+- `ppt/source_rules/`에는 현재 보조적으로 적용되는 `standard_structure_v4`, `ops_handbook_v4`, `courseplan_reconciliation`만 남긴다.
+- archive 파일 내부의 ‘유일한 현행 지침’ 자기선언은 현재 효력이 없다.
+- 향후 새 Canonical이 생기면 `current/README.md`를 먼저 갱신하고, superseded 문서는 `archive/`로 이동한다.
