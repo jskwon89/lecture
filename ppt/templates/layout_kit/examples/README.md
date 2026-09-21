@@ -23,6 +23,8 @@ Claude가 전달한 2026-09-22 패키지의 생성 산출물 식별값:
 | component_catalog_overview.jpg | `9b2746c12ec94cdf4f0b67aa473ca5f655eb527cc4a14dcc833e134332ca4d5b` | 606,577 B |
 | layout_examples_overview.jpg | `0f22470e63bbc29588ba384bbb139226e682c73f1f35ff98eeaaaf9f7405d607` | 1,039,661 B |
 
+두 overview JPG는 `lecture_layout_kit.zip` 내부 사본보다 뒤 시각(17:42)에 압축 최상위에 함께 전달된 최신 미리보기 사본을 Git에 보존한다. PPTX 두 파일은 내부 패키지와 Git blob이 일치한다.
+
 현재 Git에는 **코드와 생성된 바이너리 견본을 함께 보존**한다. Python 코드가 재현 가능한 소스 기준본이고, PPTX·JPG는 사람이 바로 열어 보고 고를 수 있는 시각 참조본이다. 코드가 바뀌면 위 스크립트로 바이너리를 다시 생성하고 함께 갱신한다.
 
 ## 사용 주의
