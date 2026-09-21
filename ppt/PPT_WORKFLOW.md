@@ -15,10 +15,11 @@
 6. **새 주차의 목차·제목·본문구조를 설계할 때** `ppt/references/COMPLETED_DECK_PATTERN_W2_W3_W4_20260921.md`
 7. **자료 조사·보강 시** `ppt/DOMESTIC_FIRST_RESEARCH_PROTOCOL.md`
 8. **신규 주차·전면 재구성·대규모 보강 시** `ppt/WEEK_RESEARCH_COVERAGE_TEMPLATE.md` — 12개 필수 자료유형 + 통계 5축 하드게이트
-9. **비교정책·효과자료를 설계하는 경우** `ppt/references/COMPARATIVE_EFFECT_SLIDE_DESIGN_LESSONS_20260919.md` — 근거수준 대칭은 최신 콘텐츠 추가규칙 §7에 따라 해석
-10. 해당 주차의 최신 논제·목차·직전 확정사항. 4주차는 `ppt/handoffs/CURRENT_W4.md` 및 현재 참조 대장을 확인한다.
-11. **가장 가까운 실제 완성 PPTX 1~2개**를 `ppt/references/completed/`에서 확인한다. 사실관계를 복사하는 목적이 아니라 목차 밀도·한 장의 정보량·사건/연구 분할·종합 길이·보충 분리 방식을 캘리브레이션한다.
-12. **평가·제출물·OT·마무리 안내 화면을 만드는 경우** `ppt/source_rules/courseplan_reconciliation_20260901-2.md`
+9. **논제 이탈을 막는 중간감사 시** `ppt/PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md` — 목차 전 / 목차 후 / 각 단원 구성 후 / 전체 초안 후 반복
+10. **비교정책·효과자료를 설계하는 경우** `ppt/references/COMPARATIVE_EFFECT_SLIDE_DESIGN_LESSONS_20260919.md` — 근거수준 대칭은 최신 콘텐츠 추가규칙 §7에 따라 해석
+11. 해당 주차의 최신 논제·목차·직전 확정사항. 4주차는 `ppt/handoffs/CURRENT_W4.md` 및 현재 참조 대장을 확인한다.
+12. **가장 가까운 실제 완성 PPTX 1~2개**를 `ppt/references/completed/`에서 확인한다. 사실관계를 복사하는 목적이 아니라 목차 밀도·한 장의 정보량·사건/연구 분할·종합 길이·보충 분리 방식을 캘리브레이션한다.
+13. **평가·제출물·OT·마무리 안내 화면을 만드는 경우** `ppt/source_rules/courseplan_reconciliation_20260901-2.md`
 
 과거 원문이 필요할 때만 `ppt/source_rules/`로 내려간다. Canonical과 원문이 충돌하면 조용히 섞지 말고 `RULE_SOURCE_MAP.md`의 우선순위를 따른다. `PPT_RULES.md` v1.5의 전문은 보존하며, 이후 사용자 지시의 콘텐츠·조사 변경은 `PPT_CONTENT_RULES.md`와 이 절차에 따라 적용한다.
 
@@ -131,6 +132,29 @@
 자료유형 자체를 목차로 자동 승격하지 않는다. 사건·통계·연구는 각각 **논제를 이해하는 어느 단계에서 어떤 질문에 답하는지**에 따라 배치한다.
 
 강의용 가상사례는 사용자가 명시적으로 허용하지 않는 한 새로 만들지 않는다. 실제 사례가 필요하면 국내 실제 사건·판례·지원사례·공식 사례기록을 먼저 찾는다.
+
+### 논제 정합성 중간감사
+
+`PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md`를 사용해 다음 시점마다 논제 이탈을 다시 검사한다.
+
+1. 자료조사 하드게이트 PASS 후, `오늘 볼 것` 최종 승인 전
+2. 목차 승인 후, 페이지별 구성안 확정 전
+3. 각 대단원 구성안이 끝날 때
+4. 전체 초안 완성 후, 디자인·렌더 QA 전
+5. 대규모 자료추가·단원 재배치 후
+
+각 단원·슬라이드는 `DIRECT / NECESSARY BASELINE / INDIRECT / OUT OF SCOPE`로 판정한다. `OUT OF SCOPE`는 본편에서 삭제하거나 보충으로 이동한다. `INDIRECT`는 왜 필요한지와 무엇까지 말할 수 없는지를 명시한다.
+
+특히 다음 논제 변형을 하드게이트로 막는다.
+
+- 논제 대상과 다른 집단 자료가 핵심 결론을 대신하는 **대상 이동**
+- 논제 행위 대신 인접 피해·범죄로 중심이 바뀌는 **행위 이동**
+- 원래 비교가 ‘정책 A vs 정책 B’인데 ‘A vs 방치’로 바뀌는 **비교대안 이동**
+- 효과 대신 서비스 이용·기관 목표를 제시하는 **결과 이동**
+- 법적 문턱을 위험성·보호필요성만으로 대신하는 **법적 질문 이동**
+- 사전개입 논제에서 사후 사건자료가 직접 결론을 대신하는 **시점 이동**
+
+감사가 HOLD이면 다음 제작단계로 넘어가지 않는다.
 
 ## 4. 목차·종합 선예약과 PPT 구성안
 
