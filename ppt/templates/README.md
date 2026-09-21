@@ -21,3 +21,17 @@
 ## 범위 주의
 
 `skeleton_types.pptx`의 **초반 승인 골격 구간**은 현행 좌표·색·폰트 기준의 실물 참조다. 뒤쪽에 함께 실린 2주차 원본 예시 장들은 과거 산출물의 사례이므로 **현행 좌표·여백·색상값을 역산하는 기준으로 쓰지 않는다.**
+
+## 양식 키트
+
+그래프·표·흐름·글 부품과 자동 배치 도구는 `layout_kit/`에 있다.
+
+- 시작: `layout_kit/README.md`
+- 부품 목록: `layout_kit/COMPONENTS.md`
+- 현행 Canonical과의 관계: `layout_kit/CANONICAL_COMPATIBILITY.md`
+- 부품 견본 생성: `layout_kit/catalog.py`
+- 예시 장 생성: `layout_kit/examples.py`
+
+키트는 **구성·배치 부품 라이브러리**이며, 색·글자크기·고정 좌표·출처표기·최종 QA는 `../PPT_RULES.md`가 우선한다. 키트와 Canonical이 충돌하면 `CANONICAL_COMPATIBILITY.md`에 기록된 대로 Canonical을 따른다.
+
+예시 덱은 생성 스크립트의 산출물이다. Git에 바이너리 견본이 없거나 오래되었으면 `catalog.py` / `examples.py`를 실행해 최신 코드에서 다시 생성한다.
