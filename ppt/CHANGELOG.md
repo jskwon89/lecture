@@ -13,7 +13,8 @@ Claude가 완성본 디자인 언어를 바탕으로 작성한 재사용형 PPT 
 - 사용자 제공 코드는 커밋 단계에서 임의 수정하지 않고 원형 보존
 - 현행 Canonical과 다른 디자인 값·0.5pt 축소·행 중앙정렬·인용 위치는 `CANONICAL_COMPATIBILITY.md`에 충돌로 등록하고 실제 강의덱에서는 Canonical 우선
 - 로컬 검증에서 `catalog.py`와 `examples.py` 실행 성공. 한 예시에서 `영역 부족 필요 0.57 / 가용 0.25` 경고가 발생하여 좁은 영역 조합은 제작자가 로그를 확인하도록 기록
-- 바이너리 견본은 생성 산출물로 취급하고, 코드·문서가 기준본이다. 필요 시 스크립트에서 재생성한다.
+- PPTX 2개와 overview JPG 2개를 실제 Git binary로 추가: commit `3c91ce71a5351c165dcf575ce8be64b000f3b322`
+- 바이너리 견본도 `ppt/templates/layout_kit/examples/`에 함께 보존한다. 코드·문서는 재현 가능한 기준본이고, PPTX·JPG는 사람이 바로 확인하는 시각 참조본이다. 코드 변경 시 스크립트로 재생성해 함께 갱신한다.
 
 ## 2026-09-22 · CURRENT / ARCHIVE 규칙 분리
 
