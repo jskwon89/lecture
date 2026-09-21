@@ -19,7 +19,7 @@ PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로
 10. `ppt/references/completed/`에서 가장 가까운 실제 완성 PPTX 1~2개를 구조 캘리브레이션용으로 확인한다.
 11. 실제 원자료·법령·논문·보고서·정부발표·보도·기사
 
-현재 사용자의 명시적 지시가 우선한다. `PPT_RULES.md`의 기존 전문과 수치 규칙은 보존하고, 2026-09-21까지의 콘텐츠·조사 지시는 `PPT_CONTENT_RULES.md`와 `PPT_WORKFLOW.md`에서 추가 적용한다. 충돌·변경 범위는 `RULE_SOURCE_MAP.md`와 `CHANGELOG.md`에 기록한다. 추가규칙을 생략하고 예전 원문 소스만으로 제작하지 않는다.
+현재 사용자의 명시적 지시가 우선한다. `PPT_RULES.md`의 기존 전문과 수치 규칙은 보존하고, 2026-09-22까지의 콘텐츠·조사 지시는 `PPT_CONTENT_RULES.md`와 `PPT_WORKFLOW.md`에서 추가 적용한다. 충돌·변경 범위는 `RULE_SOURCE_MAP.md`와 `CHANGELOG.md`에 기록한다. 추가규칙을 생략하고 예전 원문 소스만으로 제작하지 않는다.
 
 ## 핵심 원칙
 
