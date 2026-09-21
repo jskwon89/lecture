@@ -264,6 +264,9 @@
 
 - 원본 `skeleton_types.pptx`가 작업환경에 있으면 가장 가까운 골격을 우선 사용한다. Git에서는 `ppt/templates/skeleton_types_parsed.md`와 `ppt/tools/`를 구조 기준으로 둔다.
 - `ppt/tools/`의 생성·배치 도구를 사용한다.
+- 표·그래프·흐름·텍스트 조합이 필요한 경우 `ppt/templates/layout_kit/COMPONENTS.md`에서 가장 가까운 부품을 먼저 고르고, `layout_kit/examples.py`의 예시 조합을 참고할 수 있다.
+- layout kit는 **배치 구현 도구**다. `layout_kit/CANONICAL_COMPATIBILITY.md`를 함께 읽고, 색·글자크기·고정좌표·출처표기·최종 QA는 `PPT_RULES.md`를 우선한다.
+- 한 장에서 여러 부품을 섞을 때는 먼저 `split_h`·`split_v`로 영역을 나눈 뒤 각 영역에 부품을 넣는다. 실행 로그의 `영역 부족` 경고를 무시하고 글자를 더 줄이지 않는다. 공간이 부족하면 구성 변경 또는 장 분할을 우선한다.
 - 가장 가까운 참조 덱의 디자인 언어를 확인한다. **좌표·여백·색상값·글자크기·각주 위치는 참조 덱이 아니라 `PPT_RULES.md`·`tools/`·승인 골격에서 가져온다(`RULE_SOURCE_MAP` §5).**
 - 글자를 임의로 줄여 한 장에 우겨 넣지 말고 장을 나눈다.
 - 화면 문구와 대본·노트를 함께 갱신한다.
