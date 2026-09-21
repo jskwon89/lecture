@@ -17,6 +17,7 @@
 9. `../source_rules/standard_structure_v4_20260918.md` — 현행 표준구조 보조규칙
 10. `../source_rules/ops_handbook_v4.md` — 과목 운영·논증·토론 보조규칙
 11. `../source_rules/courseplan_reconciliation_20260901-2.md` — 평가·제출물 화면에서만 운영 정합성 확인
+12. **실제 화면 부품·그래프·표·흐름을 만들 때** `../templates/layout_kit/README.md`와 `CANONICAL_COMPATIBILITY.md` — Canonical을 읽은 뒤 보조 구현도구로 사용
 
 ## 절대 적용하지 말 것
 
@@ -27,3 +28,7 @@
 ## 현재 규칙의 한 문장 정의
 
 > 현재 작업은 `PPT_CONTENT_RULES + PPT_RULES + PPT_WORKFLOW`를 핵심으로 하고, `standard_structure_v4` 등은 보조규칙으로 적용한다. 과거 guideline 버전은 적용하지 않는다.
+
+## 양식 키트의 지위
+
+`templates/layout_kit/`은 현행 규칙을 대체하지 않는 **구현 부품 라이브러리**다. 표·그래프·흐름·텍스트 부품과 예시 조합을 재사용할 수 있지만, 디자인 값이나 자동 맞춤이 Canonical과 충돌하면 `PPT_RULES.md`가 우선한다.
