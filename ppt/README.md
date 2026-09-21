@@ -7,15 +7,16 @@
 
 PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로 확인한다.
 
-1. `ppt/PPT_RULES.md` — 기존 Canonical v1.4 전문·디자인·QA 규칙
+1. `ppt/PPT_RULES.md` — 현행 Canonical v1.5 전문·디자인·QA 규칙
 2. `ppt/PPT_CONTENT_RULES.md` — 이후 사용자 지시를 반영한 **필수 콘텐츠·조사 추가규칙**
 3. `ppt/PPT_WORKFLOW.md` — 국내 자료조사 → 국외 보완 → 구성안 → 제작 → 검수 절차
 4. `ppt/RULE_SOURCE_MAP.md` — 원문 소스와 적용·supersede 관계
 5. `ppt/references/REFERENCE_INDEX.md` — 해당 작업에 가장 가까운 최종·성숙 참조본
 6. **새 주차 콘텐츠 설계 시** `ppt/references/COMPLETED_DECK_PATTERN_W2_W3_W4_20260921.md`
 7. **자료 조사·보강 시** `ppt/DOMESTIC_FIRST_RESEARCH_PROTOCOL.md`
-8. 해당 주차의 최신 논제·목차·사용자 지시. 4주차는 `ppt/handoffs/CURRENT_W4.md`를 확인한다.
-9. 실제 원자료·법령·논문·보고서·정부발표·보도·기사
+8. 해당 주차의 최신 논제·목차·사용자 지시. 기존 덱 보강이면 현재 PPT를 먼저 읽고 유지/수정/재구성/신설/보충 이동으로 분류한다.
+9. `ppt/references/completed/`에서 가장 가까운 실제 완성 PPTX 1~2개를 구조 캘리브레이션용으로 확인한다.
+10. 실제 원자료·법령·논문·보고서·정부발표·보도·기사
 
 현재 사용자의 명시적 지시가 우선한다. `PPT_RULES.md`의 기존 전문과 수치 규칙은 보존하고, 2026-09-21까지의 콘텐츠·조사 지시는 `PPT_CONTENT_RULES.md`와 `PPT_WORKFLOW.md`에서 추가 적용한다. 충돌·변경 범위는 `RULE_SOURCE_MAP.md`와 `CHANGELOG.md`에 기록한다. 추가규칙을 생략하고 예전 원문 소스만으로 제작하지 않는다.
 
