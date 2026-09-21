@@ -1,5 +1,18 @@
 # PPT 규칙 변경 이력
 
+## 2026-09-22 · CURRENT / ARCHIVE 규칙 분리
+
+과거 guideline 파일 내부의 ‘유일한 현행 지침’ 문구가 새 작업자에게 혼동을 주는 문제를 해소하기 위해 현재 규칙과 역사본을 물리적으로 분리했다.
+
+- `ppt/current/README.md` 신설: 현재 실제 적용 규칙의 유일한 진입점
+- `ppt/archive/README.md` 신설: 역사본 창고, 현재 작업 적용 금지
+- `guideline_v10_20260918.md`, `guideline_v11_1_20260918.md`, `gpt_source_replacement_20260918.md`를 `ppt/archive/source_rules/`로 이동
+- `ppt/source_rules/`에는 `standard_structure_v4`, `ops_handbook_v4`, `courseplan_reconciliation`만 남겨 현재 보조규칙과 역사본을 분리
+- `RULE_SOURCE_MAP.md`에서 archive 파일을 적용 우선순위에서 제거
+- `ppt/README.md` 시작 순서의 0번을 `ppt/current/README.md`로 지정
+- 개인 Library에는 `PPT_RULES_CURRENT` / `PPT_RULES_ARCHIVE` 폴더와 `00_CURRENT_RULES_OVERRIDE.md`를 생성
+- Project 지식/첨부로 고정된 과거 파일은 채팅에서 이동·이름변경할 수 없으므로, 현재 규칙에서 명시적으로 비활성화 처리
+
 ## 2026-09-22 · 논제 정합성 중간감사 하드게이트
 
 5주차 자료조사·목차 설계 과정에서 자료가 풍부해질수록 논제 자체가 인접 문제로 퍼질 위험을 막기 위해 반복 정합성 감사를 추가했다.
