@@ -56,3 +56,12 @@
 
 - `component_catalog.pptx`, `layout_examples.pptx`, 두 overview JPG를 `ppt/templates/layout_kit/examples/`에 실제 바이너리로 등록했다.
 - binary commit: `3c91ce71a5351c165dcf575ce8be64b000f3b322`
+
+## HANDOFF 재감사
+
+- `HANDOFF_FOR_COMMIT.md`가 지정한 Python/Markdown 핵심 파일을 원 패키지와 Git blob SHA로 재대조했다.
+- 초기 등록본 중 `core.py`, `catalog.py`, `examples.py`가 원 패키지와 달랐고, 2026-09-22 재감사에서 원본과 동일한 blob으로 복원했다.
+- `ppt/tools/rowfit.py`와 `ppt/tools/pptlib.py`는 layout_kit 도입 직전 기준 commit `f291b786...`과 현재 master의 blob SHA가 동일하여 **변경되지 않았다**.
+- `__pycache__` 파일은 Git에 없다.
+- PPTX 두 파일은 원 패키지와 blob SHA가 일치한다.
+- overview JPG는 압축 최상위에 별도 제공된 더 최신(17:42) 사본을 커밋했으며, 실제 SHA-256과 크기는 `examples/README.md`에 기록했다.
