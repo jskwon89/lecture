@@ -11,6 +11,7 @@ Claude가 완성본 디자인 언어를 바탕으로 작성한 재사용형 PPT 
 - `catalog.py`와 `examples.py`로 부품 견본 덱과 예시 덱을 재생성 가능
 - 끝줄 고아 방지, 행 높이 계산, 겹선 제거, 폭에 따른 연도축 축약, 영역 부족 로그 포함
 - 사용자 제공 코드는 커밋 단계에서 임의 수정하지 않고 원형 보존
+- 커밋 재감사에서 `core.py`, `catalog.py`, `examples.py`의 초기 전사본이 원 패키지와 달랐음을 확인하여 **원 패키지 Git blob과 완전히 일치하도록 복원**했다(`core.py` b5ea6305…, `catalog.py` 9a533395…, `examples.py` 1f607ea4…).
 - 현행 Canonical과 다른 디자인 값·0.5pt 축소·행 중앙정렬·인용 위치는 `CANONICAL_COMPATIBILITY.md`에 충돌로 등록하고 실제 강의덱에서는 Canonical 우선
 - 로컬 검증에서 `catalog.py`와 `examples.py` 실행 성공. 한 예시에서 `영역 부족 필요 0.57 / 가용 0.25` 경고가 발생하여 좁은 영역 조합은 제작자가 로그를 확인하도록 기록
 - PPTX 2개와 overview JPG 2개를 실제 Git binary로 추가: commit `3c91ce71a5351c165dcf575ce8be64b000f3b322`
