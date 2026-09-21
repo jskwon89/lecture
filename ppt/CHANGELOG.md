@@ -1,5 +1,17 @@
 # PPT 규칙 변경 이력
 
+## 2026-09-22 · 논제 정합성 중간감사 하드게이트
+
+5주차 자료조사·목차 설계 과정에서 자료가 풍부해질수록 논제 자체가 인접 문제로 퍼질 위험을 막기 위해 반복 정합성 감사를 추가했다.
+
+- `PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md` 신설
+- 감사 시점: 자료조사 PASS 후 목차 전 / 목차 승인 후 페이지 구성 전 / 각 대단원 후 / 전체 초안 후 / 대규모 자료·순서 변경 후
+- 각 단원·슬라이드를 DIRECT / NECESSARY BASELINE / INDIRECT / OUT OF SCOPE로 분류
+- OUT OF SCOPE는 본편 삭제·보충 이동, INDIRECT는 연결이유와 적용한계 명시
+- 대상 이동 / 행위 이동 / 비교대안 이동 / 결과 이동 / 법적 질문 이동 / 시점 이동을 명시적 HOLD 사유로 추가
+- ‘문제가 크다·보호가 필요하다’와 ‘따라서 이 특정 개입을 우선해야 한다’를 구분
+- `WEEK_RESEARCH_COVERAGE_TEMPLATE`, `PPT_WORKFLOW`, `PPT_CONTENT_RULES`, README, RULE_SOURCE_MAP에 연결
+
 ## 2026-09-22 · 주차별 필수 자료유형 전수점검 하드게이트
 
 5주차 설계에서 공식통계가 목차 단계에서 누락될 뻔한 문제를 계기로, 신규 주차에서 자료유형을 하나씩 강제 확인하는 사전 게이트를 추가했다.
