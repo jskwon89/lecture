@@ -1,6 +1,6 @@
 # 4주차 현재 참조본·페이지 역할 대장 — 2026-09-21
 
-상태: CURRENT REFERENCE SNAPSHOT. 모든 사실의 재검증 완료 또는 사용자 FINAL 승인이라는 뜻은 아니다.
+상태: **SUPERSEDED HISTORICAL SNAPSHOT — 61장 작업본 기록.** 현재 4주차 기준은 `ppt/references/completed/w4_juvenile_drugs_final_20260921.pptx` 64장과 `COMPLETED_DECK_PATTERN_W2_W3_W4_20260921.md`이다. 아래 내용은 64장 최종본 이전의 변경이력을 추적할 때만 사용한다.
 논제: **마약류를 투약·사용한 청소년에게는 형사처벌보다 치료·재활을 우선하여야 하는가?**
 
 ## 1. 파일 식별과 버전 경계

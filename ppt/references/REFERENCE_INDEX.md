@@ -16,8 +16,9 @@
 
 | 문서 | 상태 | 주로 볼 것 |
 |---|---|---|
-| `COMPLETED_DECK_PATTERN_W2_W3_W4_20260921.md` | **CURRENT PRIMARY CONTENT REFERENCE** | 2·3주차 완성본과 4주차 최신61쪽의 목차·자료 유형·국내 사례·제도와 서비스·주장/근거·그래프·중복 관리. 새 주차 설계 시 먼저 읽는다. |
-| `W4_REFERENCE_MANIFEST_20260921.md` | **CURRENT W4 SNAPSHOT / SOURCE INVENTORY** | 현재61쪽·7단원·4쟁점의 파일 해시와 61쪽별 역할. 실제 구현과 제안만 된 수정, 그래프 보류사항 구별. |
+| `COMPLETED_DECK_PATTERN_W2_W3_W4_20260921.md` | **CURRENT PRIMARY CONTENT REFERENCE** | 실제 Git 등록 W2 50장·W3 85장(본편62+보충23)·W4 64장의 목차·자료 유형·국내 사례·제도와 서비스·주장/근거·종합·분량 캘리브레이션. 새 주차 설계 시 먼저 읽는다. |
+| `COMPLETED_DECK_FILES_W2_W3_W4_20260921.md` | **CURRENT COMPLETED-DECK FILE MANIFEST** | 실제 PPTX 경로·SHA-256·슬라이드 수·본편/보충 경계와 관찰된 형식 요약. |
+| `W4_REFERENCE_MANIFEST_20260921.md` | **HISTORICAL W4 61-SLIDE SNAPSHOT** | 64장 최종본 이전의 61장 스냅샷. 현재 분량·구성 기준으로 사용하지 않는다. |
 | `COMPLETED_DECK_PATTERN_W2_W3_20260919.md` | PRESERVED W2/W3 DETAIL / PREVIOUS PRIMARY | 기존 2·3주차 세부 분석은 보존한다. 전체 새 주차 적용은 위 최신 통합 분석을 먼저 보고, 이 문서는 상세 사례 확인에 쓴다. |
 | `COMPARATIVE_EFFECT_SLIDE_DESIGN_LESSONS_20260919.md` | SUPPORTING CONTENT REFERENCE | 논제 선택지→처우유형→결과축, 한 장 한 논리, 결합형 분리. ‘근거수준 대칭’은 최신 콘텐츠 규칙에 따라 수치 비교와 논거 비교를 구별한다. |
 
@@ -29,8 +30,9 @@
 | 주제 | 경로·식별 | 상태 | 주로 볼 것 |
 |---|---|---|---|
 | 2주차 사형제 v28(6) | `examples/w2_death_penalty_v28_6_parsed.md` | MATURE_REFERENCE (PRE-V8 GEOMETRY) | 제목·밴드의 역할·행머리글·출처·대본 구조·장 간 연결만 참고. 좌표·여백·색상값·각주 y·제목 pt는 참고 금지. |
-| 2주차 완성본50쪽 / 3주차 완성본85쪽 | 통합 분석 §0 및 W4 대장의 해시표 | COMPLETED-DECK CONTENT REFERENCES | 실제 강의 흐름·이론/법/사례/연구의 역할·종합 방식. 원본 파일이 Git에 자동 등록된 것으로 가정하지 않는다. |
-| 4주차 최신61쪽 | `W4_REFERENCE_MANIFEST_20260921.md` | CURRENT REFERENCE SNAPSHOT | 국내 제도·사건·실행조건과 치료내용을 구체화하는 방식, 네 쟁점의 주장·근거 회수. 전면 사실검증 완료본은 아님. |
+| 2주차 실제 완성본 | `completed/w2_death_penalty_final_20260921.pptx` | **COMPLETED_DECK / CURRENT CONTENT REFERENCE** | 50장. 철학·법·헌법재판·효과·오판·여론을 종합으로 회수하는 구조. |
+| 3주차 실제 완성본 | `completed/w3_delinquent_age_final_20260921.pptx` | **COMPLETED_DECK / CURRENT CONTENT REFERENCE** | 85장 = 본편62 + 보충23. 현행경로·정책대안·효과·권리보장·보충자료 분리의 대표 참조. |
+| 4주차 실제 완성본 | `completed/w4_juvenile_drugs_final_20260921.pptx` | **COMPLETED_DECK / CURRENT CONTENT REFERENCE** | 64장. 국내 제도·사건·프로그램·실행조건·효과를 7단원과 6쟁점으로 회수하는 구조. |
 | 청소년/성인 접촉경로 별도1쪽 | 같은 대장의 §6 | DRAFT GRAPH — DATA QA HOLD | 그래프 제시 요구의 예시. 범주 합산·0값·출처 재확인 전에는 수치 참조로 사용하지 않는다. |
 
 ## Git 바이너리 참조 덱
