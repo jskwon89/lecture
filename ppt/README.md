@@ -7,6 +7,7 @@
 
 PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로 확인한다.
 
+0. **`ppt/current/README.md` — 현재 적용 규칙만 모은 진입점. 여기서 시작한다.**
 1. `ppt/PPT_RULES.md` — 현행 Canonical v1.5 전문·디자인·QA 규칙
 2. `ppt/PPT_CONTENT_RULES.md` — 이후 사용자 지시를 반영한 **필수 콘텐츠·조사 추가규칙**
 3. `ppt/PPT_WORKFLOW.md` — 국내 자료조사 → 국외 보완 → 구성안 → 제작 → 검수 절차
@@ -51,7 +52,9 @@ PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로
 - `WEEK_RESEARCH_COVERAGE_TEMPLATE.md` — 신규 주차의 12개 필수 자료유형·통계 5축·자료→목차 사상표 하드게이트
 - `PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md` — 논제 대상·행위·비교대안·결과·시점 이탈을 반복 점검하는 중간감사 템플릿
 - `RULE_SOURCE_MAP.md` — 원문 소스·도구·참조본과 현재 규칙의 대응표
-- `source_rules/` — 기존 프로젝트 소스 원문 보존
+- `current/README.md` — **현재 적용 규칙 진입점**
+- `source_rules/` — 현재 Canonical을 보조하는 현행 구조·운영 소스만 보존
+- `archive/` — 과거 guideline·교체안내를 보관하는 창고. 현재 작업에 적용하지 않음
 - `tools/` — PPT 생성·정렬·QA 코드
 - `templates/` — 승인된 골격 PPT
 - `references/` — 참조 덱·인덱스·완성본 패턴·버전 대장
@@ -64,4 +67,4 @@ PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로
 
 `jskwon89/lecture`는 이번 확인 시 public이다. 개인·민감정보, 배포권이 없는 원문, 폰트 파일은 커밋하지 않는다.
 
-> 새 PPT 안을 제시하기 전에 README·기본 Canonical·콘텐츠 추가규칙·WORKFLOW를 읽고 해당 주차의 현재 파일을 확인한다.
+> 새 PPT 안을 제시하기 전에 **`current/README.md`를 먼저 읽고**, README·기본 Canonical·콘텐츠 추가규칙·WORKFLOW를 확인한다. `archive/`는 현재 작업에 적용하지 않는다.
