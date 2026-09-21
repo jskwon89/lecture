@@ -1,0 +1,18 @@
+year,status_offender_case_count,measure,source_layer,source_url,qa_status
+2013,107,reception_or_case_count,NYPI_RECONSTRUCTED_FROM_JUDICIAL_YEARBOOK,https://www.nypi.re.kr/repository/bitstream/2022.oak/6253/2/23-%EA%B8%B0%EB%B3%B809.pdf,CROSSCHECKED_SECONDARY_OFFICIAL_RESEARCH
+2014,131,reception_or_case_count,NYPI_RECONSTRUCTED_FROM_JUDICIAL_YEARBOOK,https://www.nypi.re.kr/repository/bitstream/2022.oak/6253/2/23-%EA%B8%B0%EB%B3%B809.pdf,CROSSCHECKED_SECONDARY_OFFICIAL_RESEARCH
+2015,266,reception_or_case_count,NYPI_RECONSTRUCTED_FROM_JUDICIAL_YEARBOOK,https://www.nypi.re.kr/repository/bitstream/2022.oak/6253/2/23-%EA%B8%B0%EB%B3%B809.pdf,CROSSCHECKED_SECONDARY_OFFICIAL_RESEARCH
+2016,367,reception_or_case_count,NYPI_RECONSTRUCTED_FROM_JUDICIAL_YEARBOOK,https://www.nypi.re.kr/repository/bitstream/2022.oak/6253/2/23-%EA%B8%B0%EB%B3%B809.pdf,CROSSCHECKED_SECONDARY_OFFICIAL_RESEARCH
+2017,526,reception_or_case_count,NYPI_RECONSTRUCTED_FROM_JUDICIAL_YEARBOOK,https://www.nypi.re.kr/repository/bitstream/2022.oak/6253/2/23-%EA%B8%B0%EB%B3%B809.pdf,CROSSCHECKED_SECONDARY_OFFICIAL_RESEARCH
+2018,664,reception_or_case_count,NYPI_RECONSTRUCTED_FROM_JUDICIAL_YEARBOOK,https://www.nypi.re.kr/repository/bitstream/2022.oak/6253/2/23-%EA%B8%B0%EB%B3%B809.pdf,CROSSCHECKED_SECONDARY_OFFICIAL_RESEARCH
+2019,1114,reception_or_case_count,NYPI_RECONSTRUCTED_FROM_JUDICIAL_YEARBOOK,https://www.nypi.re.kr/repository/bitstream/2022.oak/6253/2/23-%EA%B8%B0%EB%B3%B809.pdf,CROSSCHECKED_SECONDARY_OFFICIAL_RESEARCH
+2020,1446,reception_or_case_count,NYPI_RECONSTRUCTED_FROM_JUDICIAL_YEARBOOK,https://www.nypi.re.kr/repository/bitstream/2022.oak/6253/2/23-%EA%B8%B0%EB%B3%B809.pdf,CROSSCHECKED_SECONDARY_OFFICIAL_RESEARCH
+2021,1202,reception_or_case_count,NYPI_RECONSTRUCTED_FROM_JUDICIAL_YEARBOOK,https://www.nypi.re.kr/repository/bitstream/2022.oak/6253/2/23-%EA%B8%B0%EB%B3%B809.pdf,CROSSCHECKED_SECONDARY_OFFICIAL_RESEARCH
+2022,960,reception_or_case_count,REPORTED_FROM_COURT_STATISTICS,see_SOURCE_MANIFEST,DATA_QA_HOLD_ORIGINAL_TABLE
+2023,1256,reception_or_case_count,KICJ_RESEARCH_CITING_COURT_DATA,https://www.kicj.re.kr/board.es?act=view&bid=0001&list_no=15971&mid=a10101000000,CROSSCHECKED_SECONDARY_OFFICIAL_RESEARCH
+2024,1572,reception_or_case_count,SECONDARY_MATERIAL_CITING_JUDICIAL_YEARBOOK,see_W5_RESEARCH_COVERAGE_v0_2,DATA_QA_HOLD_ORIGINAL_TABLE
+2025,1085,reception_or_case_count,SECONDARY_MATERIAL_CITING_MONTHLY_COURT_STATISTICS,see_W5_RESEARCH_COVERAGE_v0_2,DATA_QA_HOLD_ORIGINAL_TABLE
+
+# Working table only. Values flagged DATA_QA_HOLD must not be used as final slide numbers until the court original table is directly checked.
+# Do not divide these counts by police/prosecution counts as though they are the same cohort.
+# 'Reception/case count' must be distinguished from disposition counts and juvenile-reformatory admissions.
