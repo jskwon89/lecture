@@ -28,6 +28,7 @@
 | F03 | 7 | New York State Senate | Safe Harbour for Exploited Children Act §§447-A,B | 해외 법령 | 공식 | https://www.nysenate.gov/legislation/laws/SOS/A6T8-A | 공식 링크 | safe house·child welfare services·피해자 서비스 | ‘법원관여 없음’으로 단순화하지 않음 |
 | F04 | 7 | UN Committee on the Rights of the Child | CRC/C/KOR/CO/5-6 (2019) | 국제기구 권고 | 공식 PDF | https://docstore.ohchr.org/SelfServices/FilesHandler.ashx?enc=AnltzemWiEcpYzz%2BbtH15Gu3OhO61jheQJYP%2BCsq%2BDa7vtiWeTBpxD8NXD0Shlx87EduMO8uHWFbyQ4maXjAUg%3D%3D | 공식 원문 링크 | 우범소년 규정 폐지·diversion·구금 최후수단 권고 | 국내법적 구속력 있는 판결/법률로 표현하지 않음 |
 | E01 | 7 | Campbell Collaboration / PMC | Formal system processing of juveniles: effects on delinquency | 체계적 문헌고찰 | 오픈액세스 | https://pmc.ncbi.nlm.nih.gov/articles/PMC8427984/ | 공식 OA 링크; 재배포 조건 확인 후에만 파일 미러 | 경찰단계 diversion 간접효과 | 저위험 청소년 중심·오래된 연구·한국 논제 직접효과 아님 |
+| L04 | 1 | 국가법령정보센터 / 경찰청 | 경찰수사규칙 제107조(법원송치) | 행정규칙 | 공식원문 | https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0107&lsiSeq=287735&urlMode=lsScJoRltInfoR | 링크 등록 | 소년법 제4조제2항에 따른 실제 법원송치 서류·송부 절차 확인 | 행정규칙상 송부절차=우범요건 판단기준으로 확대하지 않음 |
 
 ## 원문 파일 미러링 정책
 
