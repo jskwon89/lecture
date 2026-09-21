@@ -15,9 +15,10 @@ PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로
 6. **새 주차 콘텐츠 설계 시** `ppt/references/COMPLETED_DECK_PATTERN_W2_W3_W4_20260921.md`
 7. **자료 조사·보강 시** `ppt/DOMESTIC_FIRST_RESEARCH_PROTOCOL.md`
 8. **신규 주차·전면 재구성·대규모 보강 시** `ppt/WEEK_RESEARCH_COVERAGE_TEMPLATE.md`를 복제해 12개 자료유형 + 통계 5축을 전수점검하고 PASS
-9. 해당 주차의 최신 논제·목차·사용자 지시. 기존 덱 보강이면 현재 PPT를 먼저 읽고 유지/수정/재구성/신설/보충 이동으로 분류한다.
-10. `ppt/references/completed/`에서 가장 가까운 실제 완성 PPTX 1~2개를 구조 캘리브레이션용으로 확인한다.
-11. 실제 원자료·법령·논문·보고서·정부발표·보도·기사
+9. **논제 정합성 중간감사 시** `ppt/PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md` — 목차 전/후, 각 단원 후, 전체 초안 후 반복
+10. 해당 주차의 최신 논제·목차·사용자 지시. 기존 덱 보강이면 현재 PPT를 먼저 읽고 유지/수정/재구성/신설/보충 이동으로 분류한다.
+11. `ppt/references/completed/`에서 가장 가까운 실제 완성 PPTX 1~2개를 구조 캘리브레이션용으로 확인한다.
+12. 실제 원자료·법령·논문·보고서·정부발표·보도·기사
 
 현재 사용자의 명시적 지시가 우선한다. `PPT_RULES.md`의 기존 전문과 수치 규칙은 보존하고, 2026-09-22까지의 콘텐츠·조사 지시는 `PPT_CONTENT_RULES.md`와 `PPT_WORKFLOW.md`에서 추가 적용한다. 충돌·변경 범위는 `RULE_SOURCE_MAP.md`와 `CHANGELOG.md`에 기록한다. 추가규칙을 생략하고 예전 원문 소스만으로 제작하지 않는다.
 
@@ -25,6 +26,7 @@ PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로
 
 - **국내 자료·보도·기사·정부발표자료를 먼저 충분히 조사하고, 확인한 점과 남는 질문을 정리한 뒤 국외 자료를 조사한다.**
 - **신규 주차는 12개 필수 자료유형과 공식통계 5축을 전수점검하고 `WEEK_RESEARCH_COVERAGE_TEMPLATE.md`가 PASS 되기 전에는 목차 최종 승인·페이지 구성·PPT 제작을 시작하지 않는다.**
+- **자료가 많아져도 논제가 변형되지 않도록 `PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md`를 목차 전·후, 각 대단원 후, 전체 초안 후 반복 적용한다. OUT OF SCOPE는 삭제·보충 이동하고, INDIRECT는 연결이유와 한계를 명시한다.**
 - PPT는 **대본 없이 화면만 보아도 핵심 내용을 이해할 수 있게** 작성한다.
 - 제목은 설명문을 길게 욱여넣지 말고 **그 장을 구별하는 핵심을 간결한 표제형으로** 쓴다.
 - 문맥상 자명한 대상·조건은 제목에서 반복하지 않는다.
@@ -47,6 +49,7 @@ PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로
 - `PPT_WORKFLOW.md` — 실제 작업 절차 및 제작 게이트
 - `DOMESTIC_FIRST_RESEARCH_PROTOCOL.md` — 국내 우선 조사 순서·확인 범위·자료대장
 - `WEEK_RESEARCH_COVERAGE_TEMPLATE.md` — 신규 주차의 12개 필수 자료유형·통계 5축·자료→목차 사상표 하드게이트
+- `PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md` — 논제 대상·행위·비교대안·결과·시점 이탈을 반복 점검하는 중간감사 템플릿
 - `RULE_SOURCE_MAP.md` — 원문 소스·도구·참조본과 현재 규칙의 대응표
 - `source_rules/` — 기존 프로젝트 소스 원문 보존
 - `tools/` — PPT 생성·정렬·QA 코드
