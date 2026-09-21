@@ -65,7 +65,7 @@ def _():
     matrix(s,b.take(2.6)[0],['집단 A · 함께 비교한 집단','집단 B · 실험 집단'],[('청소년에게 제공한 보상',['치료에 출석하면 보상','약물을 사용하지 않은 것이 확인되면 보상']),('부모에게 요청한 활동',['약물 문제와 대응에 관한 정보 교육','약물사용 확인과 보상 적용 방법 훈련'])],shade=1)
 @comp
 def _():
-    s,b=page('tables',"matrix(style='bars') — 두 입장 대조표",'matrix(s, box, [입장…], [(행 머리, [칸…], 굵게)], style='bars', align='l')')
+    s,b=page('tables',"matrix(style='bars') — 두 입장 대조표",'matrix(s, box, [입장…], [(행 머리, [칸…], 굵게)], style=\'bars\', align=\'l\')')
     matrix(s,b.take(3.4)[0],['치료·재활을 먼저 적용하는 입장','형사제재의 필요성을 강조하는 입장'],[('주장',['불참 사유를 먼저 확인하고 참여를 이어가야 한다','중대한 위반이 반복되면 처분을 바꿀 수 있어야 한다'],True),('근거·이유',['치료를 받으라는 요구만으로 참여가 보장되지는 않는다','보호관찰에는 처분 변경 절차가 있다'],False)],head_w=1.55,style='bars',cell_pt=13,align='l')
 @comp
 def _():
@@ -73,7 +73,7 @@ def _():
     grouped_bars(s,b.take(3.6)[0],AGE,list(range(2018,2026)),highlight=5,vmax=200)
 @comp
 def _():
-    s,b=page('charts','bars — 세로 막대',"bars(s, box, [(라벨, 값)], colors=[…], unit='%', axis_note=주석)")
+    s,b=page('charts','bars — 세로 막대','bars(s, box, [(라벨, 값)], colors=[…], unit=\'%\', axis_note=주석)')
     L,Rr=split_h(b.take(3.2)[0],(1,1),0.8)
     bars(s,L,[('일반 소년법원',60),('소년약물치료법원',32)],axis_note='공식 법원 행정자료')
     bars(s,Rr,[('출석 보상',18),('단약 보상',50)],colors=[NAVY_F,NAVY])
