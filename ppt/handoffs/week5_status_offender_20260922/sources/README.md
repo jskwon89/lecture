@@ -14,6 +14,8 @@
 5. `statistics/support_center_2021_2025.csv` — 지원센터 공식 수치 재구성
 6. `statistics/status_offender_series_working.csv` — 우범소년 통계 작업표와 DATA-QA 상태
 7. `legal/LEGAL_SOURCE_NOTES.md` — 소년법·청소년성보호법·대법원 2025트6의 공식 원문 위치
+8. `legal/JUVENILE_ACT_RELEVANT_TEXT_20260922.md` — 소년법 제2·4·18·32조 원문 발췌 보존
+9. `legal/YOUTH_SEXUAL_PROTECTION_ACT_RELEVANT_TEXT_20260922.md` — 청소년성보호법 제38·47조의2 및 2020 개정 비교용 원문 발췌
 
 ## 원문 보존 원칙
 
