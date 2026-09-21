@@ -74,7 +74,7 @@ def T(s,x,y,w,text,pt,col,bold=False,align='l',anchor='t',h=None,spc=None):
     nl=n_lines(plain(text),pt,w,bold); pct=125 if nl>1 else 118
     hh=h if h else nl*lh(pt,pct)+0.04
     b=tb(s,x,y,w,hh,[(rich(text,pt,col,bold),pct,None)],anchor=anchor,align=align)
-    if spc:
+    if spc: 
         for r in b.text_frame.paragraphs[0].runs: r._r.get_or_add_rPr().set('spc',str(spc))
     return nl*lh(pt,pct)
 
@@ -223,3 +223,4 @@ def closing2(s,concl,supps=(),limit=None,pad=0.18):
     top=LAST_RULE-h-2*pad
     hline(s,M_L,top,M_W); tb(s,M_L,top+pad-0.035,M_W,h+0.05,ps); hline(s,M_L,LAST_RULE,M_W,NAVY,1.5)
     return top
+def end_rule(s): hline(s,M_L,LAST_RULE,M_W,NAVY,1.5)
