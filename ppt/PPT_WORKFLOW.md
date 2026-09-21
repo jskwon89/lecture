@@ -9,7 +9,7 @@
 
 1. `ppt/README.md`
 2. `ppt/PPT_RULES.md` — 기존 Canonical 전문·디자인·QA
-3. `ppt/PPT_CONTENT_RULES.md` — 2026-09-21 사용자 지시와 4주차에서 확정한 콘텐츠 추가규칙
+3. `ppt/PPT_CONTENT_RULES.md` — 2026-09-22까지의 사용자 지시와 4주차에서 확정한 콘텐츠 추가규칙
 4. `ppt/RULE_SOURCE_MAP.md`
 5. `ppt/references/REFERENCE_INDEX.md`
 6. **새 주차의 목차·제목·본문구조를 설계할 때** `ppt/references/COMPLETED_DECK_PATTERN_W2_W3_W4_20260921.md`
@@ -131,6 +131,7 @@
 자료유형 자체를 목차로 자동 승격하지 않는다. 사건·통계·연구는 각각 **논제를 이해하는 어느 단계에서 어떤 질문에 답하는지**에 따라 배치한다.
 
 강의용 가상사례는 사용자가 명시적으로 허용하지 않는 한 새로 만들지 않는다. 실제 사례가 필요하면 국내 실제 사건·판례·지원사례·공식 사례기록을 먼저 찾는다.
+
 ## 4. 목차·종합 선예약과 PPT 구성안
 
 페이지별 구성안에 들어가기 전에 다음 두 가지를 먼저 승인한다.
