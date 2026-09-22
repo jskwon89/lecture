@@ -9,7 +9,7 @@ PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로
 
 00. **`ppt/AGENTS.md` — 모든 에이전트 공통 작업 방식(저장소 받기, 폰트, 산출물 전달, 커밋 규칙, 역할 분담).**
 0. **`ppt/current/README.md` — 현재 적용 규칙만 모은 진입점. 여기서 시작한다.**
-1. `ppt/PPT_RULES.md` — 현행 Canonical v1.5 전문·디자인·QA 규칙
+1. `ppt/PPT_RULES.md` — 현행 Canonical v1.6 전문·디자인·QA 규칙
 2. `ppt/PPT_CONTENT_RULES.md` — 이후 사용자 지시를 반영한 **필수 콘텐츠·조사 추가규칙**
 3. `ppt/PPT_WORKFLOW.md` — 국내 자료조사 → 국외 보완 → 구성안 → 제작 → 검수 절차
 4. `ppt/RULE_SOURCE_MAP.md` — 원문 소스와 적용·supersede 관계
@@ -22,7 +22,7 @@ PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로
 11. `ppt/references/completed/`에서 가장 가까운 실제 완성 PPTX 1~2개를 구조 캘리브레이션용으로 확인한다.
 12. 실제 원자료·법령·논문·보고서·정부발표·보도·기사
 
-현재 사용자의 명시적 지시가 우선한다. `PPT_RULES.md`의 기존 전문과 수치 규칙은 보존하고, 2026-09-22까지의 콘텐츠·조사 지시는 `PPT_CONTENT_RULES.md`와 `PPT_WORKFLOW.md`에서 추가 적용한다. 충돌·변경 범위는 `RULE_SOURCE_MAP.md`와 `CHANGELOG.md`에 기록한다. 추가규칙을 생략하고 예전 원문 소스만으로 제작하지 않는다.
+현재 사용자의 명시적 지시가 우선한다. `PPT_RULES.md` v1.6은 승인된 행 글자 크기·본문 배치·칩 미사용을 반영한다. 나머지 기존 전문과 수치 규칙은 보존하고, 2026-09-22까지의 콘텐츠·조사 지시는 `PPT_CONTENT_RULES.md`와 `PPT_WORKFLOW.md`에서 추가 적용한다. 충돌·변경 범위는 `RULE_SOURCE_MAP.md`와 `CHANGELOG.md`에 기록한다. 추가규칙을 생략하고 예전 원문 소스만으로 제작하지 않는다.
 
 ## 핵심 원칙
 

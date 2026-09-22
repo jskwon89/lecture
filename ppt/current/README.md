@@ -8,7 +8,7 @@
 
 1. `../README.md` — 전체 진입점
 2. `../PPT_CONTENT_RULES.md` — 최신 콘텐츠·조사 추가규칙
-3. `../PPT_RULES.md` — Canonical v1.5 전문·디자인·QA
+3. `../PPT_RULES.md` — Canonical v1.6 전문·디자인·QA
 4. `../PPT_WORKFLOW.md` — 실제 작업절차·하드게이트
 5. `../RULE_SOURCE_MAP.md` — 충돌·우선순위·supersede
 6. `../DOMESTIC_FIRST_RESEARCH_PROTOCOL.md` — 국내우선 조사
@@ -32,3 +32,6 @@
 ## 양식 키트의 지위
 
 `templates/layout_kit/`은 현행 규칙을 대체하지 않는 **구현 부품 라이브러리**다. 표·그래프·흐름·텍스트 부품과 예시 조합을 재사용할 수 있지만, 디자인 값이나 자동 맞춤이 Canonical과 충돌하면 `PPT_RULES.md`가 우선한다.
+
+
+2026-09-22 사용자 승인으로 행 결론·보충 글자 크기, 본문 묶음의 행 내 배치, 제목 오른쪽 칩 미사용을 Canonical v1.6에 반영했다. `CANONICAL_COMPATIBILITY.md`의 승인 반영 표를 함께 확인하며, 이 세 항목을 이전 Canonical 값으로 되돌리지 않는다.

@@ -21,7 +21,7 @@
 12. **가장 가까운 실제 완성 PPTX 1~2개**를 `ppt/references/completed/`에서 확인한다. 사실관계를 복사하는 목적이 아니라 목차 밀도·한 장의 정보량·사건/연구 분할·종합 길이·보충 분리 방식을 캘리브레이션한다.
 13. **평가·제출물·OT·마무리 안내 화면을 만드는 경우** `ppt/source_rules/courseplan_reconciliation_20260901-2.md`
 
-과거 원문이 필요할 때만 `ppt/source_rules/`로 내려간다. Canonical과 원문이 충돌하면 조용히 섞지 말고 `RULE_SOURCE_MAP.md`의 우선순위를 따른다. `PPT_RULES.md` v1.5의 전문은 보존하며, 이후 사용자 지시의 콘텐츠·조사 변경은 `PPT_CONTENT_RULES.md`와 이 절차에 따라 적용한다.
+과거 원문이 필요할 때만 `ppt/source_rules/`로 내려간다. Canonical과 원문이 충돌하면 조용히 섞지 말고 `RULE_SOURCE_MAP.md`의 우선순위를 따른다. 디자인은 사용자 승인 정합화를 반영한 `PPT_RULES.md` v1.6을 적용하며, 콘텐츠·조사 변경은 `PPT_CONTENT_RULES.md`와 이 절차에 따라 적용한다.
 
 ## 2. 작업모드와 기준본 캘리브레이션
 
