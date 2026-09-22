@@ -8,7 +8,7 @@
 
 1. `../README.md` — 전체 진입점
 2. `../PPT_CONTENT_RULES.md` — 최신 콘텐츠·조사 추가규칙
-3. `../PPT_RULES.md` — Canonical v1.6 전문·디자인·QA
+3. `../PPT_RULES.md` — Canonical v1.7 전문·디자인·QA
 4. `../PPT_WORKFLOW.md` — 실제 작업절차·하드게이트
 5. `../RULE_SOURCE_MAP.md` — 충돌·우선순위·supersede
 6. `../DOMESTIC_FIRST_RESEARCH_PROTOCOL.md` — 국내우선 조사
@@ -34,4 +34,6 @@
 `templates/layout_kit/`은 현행 규칙을 대체하지 않는 **구현 부품 라이브러리**다. 표·그래프·흐름·텍스트 부품과 예시 조합을 재사용할 수 있지만, 디자인 값이나 자동 맞춤이 Canonical과 충돌하면 `PPT_RULES.md`가 우선한다.
 
 
-2026-09-22 사용자 승인으로 행 결론·보충 글자 크기, 본문 묶음의 행 내 배치, 제목 오른쪽 칩 미사용을 Canonical v1.6에 반영했다. `CANONICAL_COMPATIBILITY.md`의 승인 반영 표를 함께 확인하며, 이 세 항목을 이전 Canonical 값으로 되돌리지 않는다.
+2026-09-22 사용자 승인으로 행 결론·보충 글자 크기, 본문 묶음의 행 내 배치, 제목 오른쪽 칩 미사용을 Canonical v1.7에 반영했다. `CANONICAL_COMPATIBILITY.md`의 승인 반영 표를 함께 확인하며, 이 세 항목을 이전 Canonical 값으로 되돌리지 않는다.
+
+2026-09-23 사용자 승인으로 **화면 단독 이해·주체/행위 구체화 하드게이트**를 Canonical v1.7에 반영했다. 대본을 가리고도 한 장만으로 주체·행위·대상·조건·결과·논제 연결이 이해되지 않으면 HOLD한다. 원문이 특정하지 않은 사실을 추정해 구체화하지 않는다. 세부 절차는 `PPT_CONTENT_RULES.md` §4-1과 `PPT_WORKFLOW.md`의 SCRIPT-HIDDEN TEST를 따른다.
