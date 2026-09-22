@@ -1,5 +1,17 @@
 # PPT 규칙 변경 이력
 
+## 2026-09-22 · layout_kit 파일 원본 복구와 공통 에이전트 안내
+
+- layout_kit 파일 원본으로 복구(`core.py` end_rule 누락, `examples.py` 18번 내용, `catalog.py` 문법 오류)
+- `ppt/AGENTS.md` 추가
+- `ppt/templates/layout_kit/PROJECT_INSTRUCTIONS_BOOTSTRAP.md` 삭제(`ppt/AGENTS.md`로 대체)
+- `ppt/templates/layout_kit/HANDOFF_FOR_COMMIT.md` 삭제(커밋 안내는 저장소에 두지 않음)
+- `ppt/references/source_verification_20260808.md` 이관
+- `ppt/tools/legacy/slot_align.py` 이관
+- `ppt/templates/layout_kit/.gitignore` 추가로 `__pycache__` 제외
+- 전달받은 `lecture_layout_kit_fix.zip`의 `MANIFEST.sha256` 전수 확인 결과 모두 OK
+- `python3 ppt/templates/layout_kit/examples.py`와 `catalog.py` 모두 오류 없이 종료
+
 ## 2026-09-22 · layout_kit 부품 라이브러리 추가
 
 Claude가 완성본 디자인 언어를 바탕으로 작성한 재사용형 PPT 부품 키트를 `ppt/templates/layout_kit/`에 등록했다.

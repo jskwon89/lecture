@@ -65,3 +65,26 @@
 - `__pycache__` 파일은 Git에 없다.
 - PPTX 두 파일은 원 패키지와 blob SHA가 일치한다.
 - overview JPG는 압축 최상위에 별도 제공된 더 최신(17:42) 사본을 커밋했으며, 실제 SHA-256과 크기는 `examples/README.md`에 기록했다.
+
+## lecture_layout_kit_fix 복구 및 HANDOFF §5 확인
+
+대상: 사용자 제공 `lecture_layout_kit_fix.zip`
+
+### 복구
+- `ppt/templates/layout_kit/`의 HANDOFF 지정 파일을 fix 패키지 원본 기준으로 대조했다.
+- `core.py`, `catalog.py`, `examples.py`는 fix 패키지 원본 blob과 일치하는 상태로 유지한다.
+- overview JPG 2개는 이번 fix 패키지의 바이트로 교체했다.
+- `ppt/AGENTS.md`, `source_verification_20260808.md`, `.gitignore`, `tools/legacy/slot_align.py`를 추가했다.
+- `PROJECT_INSTRUCTIONS_BOOTSTRAP.md`와 저장소 내 `HANDOFF_FOR_COMMIT.md`는 삭제 대상으로 반영했다.
+- `HANDOFF_FOR_COMMIT.md`와 `MANIFEST.sha256` 자체는 저장소에 커밋하지 않는다.
+
+### HANDOFF §5 확인 결과
+- `sha256sum -c MANIFEST.sha256` → **전 항목 OK**
+- `python3 ppt/templates/layout_kit/examples.py` → **exit 0, 오류 없이 종료**
+- `python3 ppt/templates/layout_kit/catalog.py` → **exit 0, 오류 없이 종료**
+- `examples.py` 실행 로그에는 기존 예시 배치의 `items: 영역 부족 필요 0.57 / 가용 0.25` 경고 1건이 있었으나 실행 오류는 아니었다.
+- 두 스크립트 실행으로 다시 생성된 PPTX는 검증용으로만 사용했고, 커밋 대상 바이너리는 fix 패키지 원본을 유지했다.
+
+### 커밋 후 확인
+- Git blob SHA를 fix 패키지에서 계산한 blob SHA와 대조한다.
+- `__pycache__` / `*.pyc`가 저장소에 없는지 확인한다.

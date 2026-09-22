@@ -7,6 +7,7 @@
 
 PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로 확인한다.
 
+00. **`ppt/AGENTS.md` — 모든 에이전트 공통 작업 방식(저장소 받기, 폰트, 산출물 전달, 커밋 규칙, 역할 분담).**
 0. **`ppt/current/README.md` — 현재 적용 규칙만 모은 진입점. 여기서 시작한다.**
 1. `ppt/PPT_RULES.md` — 현행 Canonical v1.5 전문·디자인·QA 규칙
 2. `ppt/PPT_CONTENT_RULES.md` — 이후 사용자 지시를 반영한 **필수 콘텐츠·조사 추가규칙**
