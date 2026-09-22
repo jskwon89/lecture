@@ -9,7 +9,7 @@
 
 1. `ppt/README.md`
 2. `ppt/PPT_RULES.md` — 기존 Canonical 전문·디자인·QA
-3. `ppt/PPT_CONTENT_RULES.md` — 2026-09-22까지의 사용자 지시와 4주차에서 확정한 콘텐츠 추가규칙
+3. `ppt/PPT_CONTENT_RULES.md` — 2026-09-23까지의 사용자 지시와 4주차에서 확정한 콘텐츠 추가규칙
 4. `ppt/RULE_SOURCE_MAP.md`
 5. `ppt/references/REFERENCE_INDEX.md`
 6. **새 주차의 목차·제목·본문구조를 설계할 때** `ppt/references/COMPLETED_DECK_PATTERN_W2_W3_W4_20260921.md`
