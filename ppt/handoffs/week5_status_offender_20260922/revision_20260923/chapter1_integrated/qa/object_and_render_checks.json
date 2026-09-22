@@ -1,0 +1,99 @@
+{
+  "pptx_sha256": "60a8dc9173ba8936b4acb8fce149e66ffe06c39cea32bc859318eebf5b0739da",
+  "pptx_slides": 11,
+  "docx_pages_rendered": 15,
+  "per_slide": [
+    {
+      "slide": 1,
+      "text_boxes": 16,
+      "accidental_textbox_outlines": [],
+      "notes_have_script": true,
+      "notes_have_source_links": true
+    },
+    {
+      "slide": 2,
+      "text_boxes": 18,
+      "accidental_textbox_outlines": [],
+      "notes_have_script": true,
+      "notes_have_source_links": true
+    },
+    {
+      "slide": 3,
+      "text_boxes": 13,
+      "accidental_textbox_outlines": [],
+      "notes_have_script": true,
+      "notes_have_source_links": true
+    },
+    {
+      "slide": 4,
+      "text_boxes": 15,
+      "accidental_textbox_outlines": [],
+      "notes_have_script": true,
+      "notes_have_source_links": true
+    },
+    {
+      "slide": 5,
+      "text_boxes": 16,
+      "accidental_textbox_outlines": [],
+      "notes_have_script": true,
+      "notes_have_source_links": true
+    },
+    {
+      "slide": 6,
+      "text_boxes": 15,
+      "accidental_textbox_outlines": [],
+      "notes_have_script": true,
+      "notes_have_source_links": true
+    },
+    {
+      "slide": 7,
+      "text_boxes": 20,
+      "accidental_textbox_outlines": [],
+      "notes_have_script": true,
+      "notes_have_source_links": true
+    },
+    {
+      "slide": 8,
+      "text_boxes": 15,
+      "accidental_textbox_outlines": [],
+      "notes_have_script": true,
+      "notes_have_source_links": true
+    },
+    {
+      "slide": 9,
+      "text_boxes": 14,
+      "accidental_textbox_outlines": [],
+      "notes_have_script": true,
+      "notes_have_source_links": true
+    },
+    {
+      "slide": 10,
+      "text_boxes": 15,
+      "accidental_textbox_outlines": [],
+      "notes_have_script": true,
+      "notes_have_source_links": true
+    },
+    {
+      "slide": 11,
+      "text_boxes": 18,
+      "accidental_textbox_outlines": [],
+      "notes_have_script": true,
+      "notes_have_source_links": true
+    }
+  ],
+  "slide_xml_sha256": [
+    "ed2a83f13672870bb8036a9558bebae9b5ae6d7bb18cd120028bd24205330df6",
+    "264f99038ed3ed1b04c6b91f0920f7c9bef1e9b6ed60d23d90f629a065ec0aab",
+    "d538eea84fbd2e273363bc953aaa43f233cd77de23049f2e27eead41fb81cde0",
+    "9424d4225f5ef57ab80b65735c9f76da6e319ac4855c7e1dc27fd852298144e1",
+    "4f70989bde886177a37464904cc55937f13d98250333f28f27929d011fe95a00",
+    "53f66c30417a6e4b7b2be51127f35b5de0bb809964b52b468031019c9acafa14",
+    "7763da7dd64cb9c849ac8b0c7fa3d3421e393bd4bca9fa13763223c0a83376d3",
+    "0f56058d85590ff6f6371c83acd49bbde10f0905cef230a4d182ab7cfa1d1241",
+    "3413676df151729ea9259355d460321a4e9176063248a6ff9b996fb2ee87559c",
+    "0f456be671a738cd9c43b77f226a090b70ef5c8f090e7bb3405c155a0544f51e",
+    "b81fa0e765f262a74006c97edc8668ead1864a68fba55697e542b68d727f2d94"
+  ],
+  "visual_review": "All 11 slides and all 15 DOCX pages individually reviewed; reference Claude/GPT renders compared in same environment. Functional line, risk-column labels and two case details preserved.",
+  "render_engine": "LibreOffice; Pretendard Regular/Bold installed. PowerPoint native execution not performed."
+}
