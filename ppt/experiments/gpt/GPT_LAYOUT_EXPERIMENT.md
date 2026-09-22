@@ -1,6 +1,6 @@
 # GPT Layout Experiment — CONTENT → STRUCTURE → SLIDE
 
-갱신: 2026-09-22  
+갱신: 2026-09-23  
 상태: GPT 전용 실험 overlay  
 적용: GPT가 실제 PPTX를 제작·수정하거나, GPT본과 Claude 등 다른 제작자의 실제 PPTX를 비교·평가할 때
 
@@ -17,7 +17,7 @@
 
 충돌하면 위 순서가 우선한다.
 
-2026-09-22 사용자 승인 디자인 정합화는 공통 `PPT_RULES.md` v1.6과 `RULE_SOURCE_MAP.md` §15에 반영되었다. GPT 실험도 이 현행 기준을 따른다. 승인된 행 글자 크기·본문 묶음 배치·칩 미사용을 과거 Canonical 값으로 되돌리지 않는다. 세부 수치를 이 overlay에서 별도로 재정의하지 않는다.
+2026-09-22 사용자 승인 디자인 정합화는 처음 Canonical v1.6에 반영되었고, 현재 공통 `PPT_RULES.md` v1.7이 이를 계승한다. `RULE_SOURCE_MAP.md` §15와 §16을 함께 적용한다. GPT 실험도 이 현행 기준을 따른다. 승인된 행 글자 크기·본문 묶음 배치·칩 미사용을 과거 Canonical 값으로 되돌리지 않는다. 세부 수치를 이 overlay에서 별도로 재정의하지 않는다.
 
 ---
 
