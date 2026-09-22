@@ -1,6 +1,6 @@
 # PPT 규칙 소스 맵
 
-기준일: 2026-09-22
+기준일: 2026-09-23
 
 이 문서는 기존 `ppt/PPT_RULES.md` 전문과 이후 콘텐츠·조사 추가규칙의 출처·적용관계를 추적하는 감사표다. 현행 Canonical v1.7을 기준으로 하고, 2026-09-23까지의 사용자 지시는 `PPT_CONTENT_RULES.md` 및 `PPT_WORKFLOW.md`에 추가 적용한다. 신규 주차의 자료 누락 방지는 `WEEK_RESEARCH_COVERAGE_TEMPLATE.md` 하드게이트로 강제한다.
 
