@@ -1,5 +1,11 @@
 # PPT 규칙 변경 이력
 
+## 2026-09-22 · skeleton_types.pptx 바이너리 등록
+
+- `ppt/templates/skeleton_types.pptx`를 실제 바이너리로 Git에 등록
+- 기존 `skeleton_types_parsed.md`는 텍스트·노트 파싱 참조본으로 유지
+- Project Source에 있던 skeleton_types 원본을 Git 기준본으로 이관해, 이후 Project Source에서 제거 가능하도록 정리
+
 ## 2026-09-22 · layout_kit 파일 원본 복구와 공통 에이전트 안내
 
 - layout_kit 파일 원본으로 복구(`core.py` end_rule 누락, `examples.py` 18번 내용, `catalog.py` 문법 오류)

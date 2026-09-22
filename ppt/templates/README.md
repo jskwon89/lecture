@@ -12,8 +12,8 @@
 
 ## 현재 파일
 
+- `skeleton_types.pptx` — 승인 골격 유형의 실제 PPTX 바이너리
 - `skeleton_types_parsed.md` — 화면 유형 27장의 텍스트·노트 파싱본
-- 실제 PPTX 바이너리는 현재 대화의 원본 자산으로 유지한다. Git에서 시각 검수할 때는 `ppt/references/legacy/`의 기존 PPTX와 함께 본다.
 
 폰트 파일은 Git에 넣지 않는다.
 
