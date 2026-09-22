@@ -85,6 +85,10 @@
 - `examples.py` 실행 로그에는 기존 예시 배치의 `items: 영역 부족 필요 0.57 / 가용 0.25` 경고 1건이 있었으나 실행 오류는 아니었다.
 - 두 스크립트 실행으로 다시 생성된 PPTX는 검증용으로만 사용했고, 커밋 대상 바이너리는 fix 패키지 원본을 유지했다.
 
-### 커밋 후 확인
-- Git blob SHA를 fix 패키지에서 계산한 blob SHA와 대조한다.
-- `__pycache__` / `*.pyc`가 저장소에 없는지 확인한다.
+### 커밋 후 확인 결과
+- package restore commit: `04b836192eac3b361f0b3c69d518ed19859cabd0`
+- `MANIFEST.sha256`에 포함된 20개 파일을 Git tree와 재대조했다. **20개 모두 fix 패키지에서 계산한 Git blob SHA와 일치**했다.
+- `PROJECT_INSTRUCTIONS_BOOTSTRAP.md`와 저장소 내 `HANDOFF_FOR_COMMIT.md`가 삭제된 것을 확인했다.
+- `HANDOFF_FOR_COMMIT.md`와 `MANIFEST.sha256` 자체가 커밋되지 않은 것을 확인했다.
+- 저장소 전체 tree에서 `__pycache__` 및 `*.pyc`는 **0개**였다.
+- 따라서 HANDOFF §1~§5 기준 복구·추가·삭제·문서 수정·검증이 모두 완료되었다.
