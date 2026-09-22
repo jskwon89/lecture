@@ -13,6 +13,10 @@
 
 - `GPT_LAYOUT_EXPERIMENT.md` — 승인된 콘텐츠를 실제 화면 구조로 옮길 때의 GPT 전용 선택 게이트
 
+## 변경 이력
+
+- 2026-09-22: GPT 생성 PPT에서 텍스트박스 기본 외곽선이 검은 네모 상자로 남는 문제를 막기 위해 `GPT_LAYOUT_EXPERIMENT.md`에 **텍스트박스 외곽선 제거 QA**를 추가했다.
+
 ## GPT 작업 프롬프트용 한 줄
 
 > GPT는 실제 PPT 디자인·배치 작업에서 공통 Canonical을 읽은 뒤 추가로 `ppt/experiments/gpt/GPT_LAYOUT_EXPERIMENT.md`를 읽고 적용한다. Canonical과 충돌하면 Canonical이 우선한다.
