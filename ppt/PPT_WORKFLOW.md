@@ -14,7 +14,7 @@
 5. `ppt/references/REFERENCE_INDEX.md`
 6. **새 주차의 목차·제목·본문구조를 설계할 때** `ppt/references/COMPLETED_DECK_PATTERN_W2_W3_W4_20260921.md`
 7. **자료 조사·보강 시** `ppt/DOMESTIC_FIRST_RESEARCH_PROTOCOL.md`
-8. **신규 주차·전면 재구성·대규모 보강 시** `ppt/WEEK_RESEARCH_COVERAGE_TEMPLATE.md` — 12개 필수 자료유형 + 통계 5축 하드게이트
+8. **신규 주차·전면 재구성·대규모 보강 시** `ppt/WEEK_RESEARCH_COVERAGE_TEMPLATE.md` — 12개 필수 자료유형 + 통계 5축 + 주요 공개논의 + 판례/헌재결정 선행 스캔 하드게이트
 9. **논제 이탈을 막는 중간감사 시** `ppt/PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md` — 목차 전 / 목차 후 / 각 단원 구성 후 / 전체 초안 후 반복
 10. **비교정책·효과자료를 설계하는 경우** `ppt/references/COMPARATIVE_EFFECT_SLIDE_DESIGN_LESSONS_20260919.md` — 근거수준 대칭은 최신 콘텐츠 추가규칙 §7에 따라 해석
 11. 해당 주차의 최신 논제·목차·직전 확정사항. 4주차는 `ppt/handoffs/CURRENT_W4.md` 및 현재 참조 대장을 확인한다.
