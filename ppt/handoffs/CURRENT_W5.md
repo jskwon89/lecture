@@ -1,5 +1,9 @@
 # 5주차 현재 작업 진입점
 
+> **2026-09-26 최우선 후속 인수인계:** [W5_NEW_CHAT_CONTINUITY_HANDOFF_20260926_v1.md](week5_status_offender_20260922/W5_NEW_CHAT_CONTINUITY_HANDOFF_20260926_v1.md)를 가장 먼저 적용한다.  
+> 2026-09-25~26 작업에서 후반부 구조가 **‘필요론 장 / 문제제기 장 / 효과검토 장’ 분리 방식에서 ‘7개 쟁점 안에 서로 다른 입장과 근거를 맞붙이는 방식’으로 재구성**되었다. 이 최신 결정과 충돌하는 과거 제5~7장 구성은 이 범위에서 우선하지 않는다.  
+> 최신 작업파일 기준: w5_issues_1_2_4_final.pptx / w5_ch5_v1.pptx / w5_issues_5_6_7_v3.pptx. 특히 w5_ch5_v1.pptx가 쟁점③ 관련 최신 사용자 수정본이다.
+
 최신 상태는 [W5_HANDOFF_20260923.md](week5_status_offender_20260922/W5_HANDOFF_20260923.md)를 읽은 뒤, **후속 결정인 [W5_MAJOR_PUBLIC_DEBATE_MAP_AND_TOC_v1_20260923.md](week5_status_offender_20260922/W5_MAJOR_PUBLIC_DEBATE_MAP_AND_TOC_v1_20260923.md)를 반드시 적용한다.** 후속 결정이 기존 인수인계와 충돌하면 이 공개논의 기반 목차 문서가 우선한다.
 
 - 논제: **성매매가 우려되는 가출 청소년을 우범소년으로 송치하여야 하는가?**
