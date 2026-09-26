@@ -12,12 +12,13 @@
 4. `../PPT_WORKFLOW.md` — 실제 작업절차·하드게이트
 5. `../RULE_SOURCE_MAP.md` — 충돌·우선순위·supersede
 6. `../DOMESTIC_FIRST_RESEARCH_PROTOCOL.md` — 국내우선 조사
-7. `../WEEK_RESEARCH_COVERAGE_TEMPLATE.md` — 12개 자료유형 + 통계 5축
-8. `../PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md` — 논제 정합성 중간감사
-9. `../source_rules/standard_structure_v4_20260918.md` — 현행 표준구조 보조규칙
-10. `../source_rules/ops_handbook_v4.md` — 과목 운영·논증·토론 보조규칙
-11. `../source_rules/courseplan_reconciliation_20260901-2.md` — 평가·제출물 화면에서만 운영 정합성 확인
-12. **실제 화면 부품·그래프·표·흐름을 만들 때** `../templates/layout_kit/README.md`와 `CANONICAL_COMPATIBILITY.md` — Canonical을 읽은 뒤 보조 구현도구로 사용
+7. `../WEEK_INITIAL_BUILD_PROTOCOL.md` — 신규 주차의 공개논의→직접 국외자료→잠정 쟁점→표적조사 초기 설계
+8. `../WEEK_RESEARCH_COVERAGE_TEMPLATE.md` — 12개 자료유형 + 통계 5축
+9. `../PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md` — 논제 정합성 중간감사
+10. `../source_rules/standard_structure_v4_20260918.md` — 현행 표준구조 보조규칙
+11. `../source_rules/ops_handbook_v4.md` — 과목 운영·논증·토론 보조규칙
+12. `../source_rules/courseplan_reconciliation_20260901-2.md` — 평가·제출물 화면에서만 운영 정합성 확인
+13. **실제 화면 부품·그래프·표·흐름을 만들 때** `../templates/layout_kit/README.md`와 `CANONICAL_COMPATIBILITY.md` — Canonical을 읽은 뒤 보조 구현도구로 사용
 
 ## 절대 적용하지 말 것
 
@@ -38,6 +39,8 @@
 
 2026-09-23 사용자 승인으로 **화면 단독 이해·주체/행위 구체화 하드게이트**를 Canonical v1.7에 반영했다. 대본을 가리고도 한 장만으로 주체·행위·대상·조건·결과·논제 연결이 이해되지 않으면 HOLD한다. 원문이 특정하지 않은 사실을 추정해 구체화하지 않는다. 세부 절차는 `PPT_CONTENT_RULES.md` §4-1과 `PPT_WORKFLOW.md`의 SCRIPT-HIDDEN TEST를 따른다.
 
+
+2026-09-27 사용자 승인으로 **신규 주차 공개논의→쟁점→표적조사 프로토콜**을 추가했다. 신규 주차는 국내 공개논의·정책·사법자료를 먼저 넓게 스캔하고, 직접적인 국외자료를 확인한 뒤 잠정 쟁점 5~7개 안팎을 도출한다. 이후 쟁점별 표적조사로 12개 자료영역·통계 5축을 최종 PASS하고 목차·페이지 제작으로 넘어간다. 세부 절차는 `WEEK_INITIAL_BUILD_PROTOCOL.md`를 따른다.
 
 2026-09-23 사용자 승인으로 **주요 공개논의·사법판단 선행 스캔 하드게이트**를 추가했다. 신규 주차·전면 재구성·대규모 보강에서는 목차 전에 국회·정부·법원·경찰·인권위·전문기관 등의 토론회·공청회·숙의/공론화·경청회·공식 의견수렴·기관 권고/회신과 함께 **대법원·각급 법원 판결/결정 및 헌법재판소 결정**을 반드시 먼저 찾는다. 공개논의에서는 실제 입장·근거·반론·실행조건을, 사법판단에서는 사건번호·쟁점·주문·핵심 판시·논제 적용범위를 추출한다. 두 맵이 완성되기 전 목차를 최종 승인하지 않는다.
 
