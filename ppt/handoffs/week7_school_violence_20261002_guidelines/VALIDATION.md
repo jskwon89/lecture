@@ -1,0 +1,176 @@
+# 변경 검증 기록
+
+검증 범위: 제작 지침·W7 수정 데이터·인계 문서. 새 PPT 제작이나 법령·판례의 재조사 검증은 아니다.
+
+판정: **PASS**.
+
+- ppt/PPT_CONTENT_RULES.md 현재 조항 번호 중복 없음
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ## 1. 최신 기준본부터 고정하라
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 2-1. 필수 자료유형 전수점검 하드게이트
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 2-1-1. 신규 주차는 공개논의 → 쟁점 → 표적조사 순서로 시작한다
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 2-2. 주요 공개논의·사법판단 선행 스캔 하드게이트
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 2-3. 논제 정합성을 중간마다 다시 감사하라
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ## 3. 목차·쟁점·슬라이드의 수를 구별하라
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 4-0. 대본 비의존 원칙 — 필수 내용은 반드시 PPT 화면에 둔다
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 4-1. 화면 단독 이해 하드게이트 — 대본으로 모호함을 보충하지 마라
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 4-2. 화면과 낭독용 대본은 자료의 실제 내용을 직접 설명한다
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 4-3. 내용을 대신하는 제작자·진행자 메타서술 금지
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 4-4. 낭독용 대본 — 필요한 사실과 이유를 간결하게 설명한다
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 4-5. 원자료 구체성 — 상세자료에 필요한 정보와 근거를 보존한다
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 4-6. 강사용 상세자료 페이지 — 처분·조치 이유까지 근거층위를 표시한다
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 4-7. 첫 제안부터 정식명칭·적용범위를 잠그는 하드게이트 — 임시 요약문 금지
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 4-8. 학생용 PPT 화면의 참고문헌·출처 각주 생략
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ### 4-9. 페이지 자체의 핵심을 먼저 말하라 — 논제 연결 반복 금지
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ## 5. 사법경로·실제 개입·논제상 입장을 구별하라
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ## 6. 주장에는 그 주장을 지지하는 근거를 붙여라
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ## 7. 비교표의 대칭을 정확하게 적용하라
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ## 8. 결과의 범위는 수치와 문장 안에 담아라
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ## 9. 그래프는 데이터의 범주·단위를 보존해 그려라
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ## 10. 분량·본편·보충을 완성본에 맞춰 운영하라
+- ppt/PPT_CONTENT_RULES.md 빈 같은 단계 제목 없음 ## 11. 중복·표시본·전달상태를 점검하라
+- ppt/PPT_RULES.md 현재 조항 번호 중복 없음
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ## 1. 기준문서와 효력
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 2-1. 정체성
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ## 3. 공통 개념 체계
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 4-1. 8기능 블록
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 4-2. 쟁점 지도의 위치
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 4-3. 쟁점 지도 장의 구조
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 4-4. 학기 구성 (참조)
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 4-5. 완성본 기반 내러티브 규칙
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 5-1. 검증
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 5-2. 경찰청 범죄통계를 쓰기 전에
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 5-3. 여론조사·공론화
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 5-4. 다루지 않는 것
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 5-5. 언론 인용
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 5-6. 학생에게 요구하는 수준과 검색처
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 5-7. 그 밖의 원칙
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 6-1. 행의 구성
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 6-2. 강조 표시 규약 (구성안 작성 시)
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 6-3. 밴드
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 6-4. 제목·사건번호·단서
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 6-5. 화면 유형 (12종)
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 6-5-0. 논제 중심축과 제목급 중요도를 먼저 잠근다
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 6-5-1. 상단·하단은 본문에서 도출한다
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 6-5-2. 학생 화면과 검수 메모를 분리한다
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 6-5-3. 제작자·진행자 메타서술을 학생 화면·대본에 쓰지 않는다
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 6-5-4. 연결된 행·열의 외곽 크기를 동일하게 유지한다
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 6-5-5. 낭독용 대본은 핵심 사실과 이유를 간결하게 설명한다
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 6-5-6. 원자료의 구체성은 강사용 상세자료에도 보존한다
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 7-2. 색
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 7-3. 타이포그래피
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 8-1. 제작 경로 (기본)
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 8-2. 자동 점검 항목
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ### 8-3. 콘텐츠 자가점검
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ## 9. 대본과 노트
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ## 10. 작업 방식
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ## 11. 내용 선택의 네 시험과 이동 원칙
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ## 12. 문서 체계와 개정 이력
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ## 부록 A. 확정 등록부 (동결)
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ## 부록 B. 표현 규칙 목록
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ## 부록 C. 검색처
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ## 부록 D. 표준구조 4판 주요 변경 (사본)
+- ppt/PPT_RULES.md 빈 같은 단계 제목 없음 ## 부록 E. 정렬 점검 실행 순서 (8판 신설)
+- ppt/PPT_WORKFLOW.md 현재 조항 번호 중복 없음
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ## 1. 시작 전
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 2-1. 신규 주차 모드
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 2-1-1. 신규 주차의 초기 쟁점 도출 순서
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 2-2. 기존 덱 보강 모드
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 신규 주차: 1차 쟁점 발견 스캔 → 2차 표적조사
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 국내 우선 게이트
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 원자료 기록
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 #### 주요 공개논의·사법판단 선행 스캔 하드게이트
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 #### 공식통계 독립 하드게이트
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 4-1. `오늘 볼 것` 승인
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 4-1-1. 단원 역할표 — 새 설명과 다음 질문을 먼저 정한다
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 4-2. 종합·학생 판단 슬롯 선예약
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 4-3. 자료의 본편 위치를 먼저 분류
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 논제 중심축·제목급 중요도 게이트
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 페이지 로컬 메시지 게이트
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### FIRST-PASS PRECISION 게이트 — 구성안 첫 문구부터 정확하게 쓴다
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### SLIDE-ESSENTIAL CONTENT 게이트 — 필수정보는 화면에 둔다
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 낭독 대본·상세자료 구체성 게이트
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 쉬운 설명·가상 비교 사용 게이트
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 제작자·진행자 메타서술 게이트
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 화면·낭독용 대본의 검토용 문구 점검
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 연결 행·열 동일 크기 게이트
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 좁은 보충행 정렬 게이트
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 논제-역할 게이트
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 주장-근거 게이트
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ### 정보위계 게이트
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ## 5. 제목 QA
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ## 6. 제작
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ## 7. 자동·구조 QA
+- ppt/PPT_WORKFLOW.md 빈 같은 단계 제목 없음 ## 9. 대본·노트 동기화와 내용 흐름 검수
+- 분량·확장 강제 대체: 수정 작업에서도 원자료를 다시 열어 대본을 확장한다
+- 분량·확장 강제 대체: 대본이 다시 두세 문장 요약으로 줄어들면 HOLD
+- 분량·확장 강제 대체: 강사가 실제 수업에서 읽는 스크립트가 아니라
+- 분량·확장 강제 대체: 대본은 ‘두세 문장 요약’으로 끝내지 않는다
+- 기존 디자인·정렬·동결 구역 보존 ## 5.
+- 기존 디자인·정렬·동결 구역 보존 ### 6-1.
+- 기존 디자인·정렬·동결 구역 보존 ### 6-5-4.
+- 기존 디자인·정렬·동결 구역 보존 ## 7.
+- 기존 디자인·정렬·동결 구역 보존 ## 부록 A.
+- 기존 디자인·정렬·동결 구역 보존 ## 부록 F.
+- v14 원본 바이트 보존 ppt_revision_v14.json
+- v14 원본 바이트 보존 SOURCE_MAP.md
+- v14 29장·25장 기준·실제 PPT 미수정 상태
+- v14 페이지 순서
+- v14 페이지별 출처 ID 대응
+- v14 p.1 노트의 낭독 대본 대응
+- v14 p.2 노트의 낭독 대본 대응
+- v14 p.3 노트의 낭독 대본 대응
+- v14 p.4 노트의 낭독 대본 대응
+- v14 p.5 노트의 낭독 대본 대응
+- v14 p.6 노트의 낭독 대본 대응
+- v14 p.7 노트의 낭독 대본 대응
+- v14 p.8 노트의 낭독 대본 대응
+- v14 p.9 노트의 낭독 대본 대응
+- v14 p.10 노트의 낭독 대본 대응
+- v14 p.11 노트의 낭독 대본 대응
+- v14 p.12 노트의 낭독 대본 대응
+- v14 p.13 노트의 낭독 대본 대응
+- v14 p.14 노트의 낭독 대본 대응
+- v14 p.15 노트의 낭독 대본 대응
+- v14 p.16 노트의 낭독 대본 대응
+- v14 p.17 노트의 낭독 대본 대응
+- v14 p.18 노트의 낭독 대본 대응
+- v14 p.19 노트의 낭독 대본 대응
+- v14 p.20 노트의 낭독 대본 대응
+- v14 p.21 노트의 낭독 대본 대응
+- v14 p.22 노트의 낭독 대본 대응
+- v14 p.23 노트의 낭독 대본 대응
+- v14 p.24 노트의 낭독 대본 대응
+- v14 p.25 노트의 낭독 대본 대응
+- v14 p.26 노트의 낭독 대본 대응
+- v14 p.27 노트의 낭독 대본 대응
+- v14 p.28 노트의 낭독 대본 대응
+- v14 p.29 노트의 낭독 대본 대응
+- v14 가상 A·B 반복 미복원
+- W7 상태와 다음 목차 구분
+- 실제 PPT 기준 파일 해시 보존
+- 현재 실제 v12 해시 대조
+- Markdown 공백·변경표시 검사 ppt/WEEK_RESEARCH_COVERAGE_TEMPLATE.md
+- Markdown 공백·변경표시 검사 ppt/PPT_RULES.md
+- Markdown 공백·변경표시 검사 ppt/README.md
+- Markdown 공백·변경표시 검사 ppt/PPT_WORKFLOW.md
+- Markdown 공백·변경표시 검사 ppt/PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md
+- Markdown 공백·변경표시 검사 ppt/PPT_CONTENT_RULES.md
+- Markdown 공백·변경표시 검사 ppt/RULE_SOURCE_MAP.md
+- Markdown 공백·변경표시 검사 ppt/CHANGELOG.md
+- Markdown 공백·변경표시 검사 ppt/CLAUDE_REVIEW_PROMPT.md
+- Markdown 공백·변경표시 검사 ppt/DOMESTIC_FIRST_RESEARCH_PROTOCOL.md
+- Markdown 공백·변경표시 검사 ppt/WEEK_INITIAL_BUILD_PROTOCOL.md
+- Markdown 공백·변경표시 검사 ppt/handoffs/CURRENT_W7.md
+- 새 문서 상대 링크 week7_school_violence_20261001_v14/README.md
+- 새 문서 상대 링크 week7_school_violence_20261001_v14/ppt_revision_v14.json
+- 새 문서 상대 링크 week7_school_violence_20261001_v14/SOURCE_MAP.md
+- Markdown 공백·변경표시 검사 ppt/current/README.md
+- Markdown 공백·변경표시 검사 ppt/handoffs/week7_school_violence_20261001_v14/SOURCE_MAP.md
+- Markdown 공백·변경표시 검사 ppt/handoffs/week7_school_violence_20261001_v14/README.md
+- 새 문서 상대 링크 ../CURRENT_W7.md
+- Markdown 공백·변경표시 검사 ppt/handoffs/week7_school_violence_20261002_guidelines/FILE_CHANGES.md
+- Markdown 공백·변경표시 검사 ppt/handoffs/week7_school_violence_20261002_guidelines/READ_RECORD.md
+
+## Git 반영 검증 방법
+
+최신 master 재확인 → 기존 tree 기반으로 변경 파일만 반영 → 원격 파일을 해당 커밋으로 다시 받아 SHA-256 manifest를 대조 → 강제 갱신 없이 master 반영. 원격 검증 실행 결과는 반영 후 보고한다. 이 문서의 PASS는 위 로컬 검증 범위를 뜻한다.
