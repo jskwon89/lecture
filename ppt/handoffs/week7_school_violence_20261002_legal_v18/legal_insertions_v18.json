@@ -1,0 +1,223 @@
+{
+  "version": "v18",
+  "kind": "verified legal excerpt insertions",
+  "status": "content insertion draft; actual PPT and DOCX unchanged",
+  "base_commit": "2fd230330b61df6fa1f0ea5126254c8c63787273",
+  "date": "2026-10-02",
+  "timezone": "Asia/Seoul",
+  "proposition": "학교 안에서 발생한 학생 간 폭력은 학교 밖에서 발생한 청소년 간 폭력보다 중히 처벌되어야 하는가?",
+  "context_adoption": {
+    "source_version": "v17",
+    "user_message": "오케이. 근데 그 학교폭력 처벌법에 관련해서 직접적으로 뭐 적용이 되거나 관련된 법 조항을 전문이든 뭐 그 중에 해당 부분이든을 넣어주는 게 이해에 도움이 되지 않을까?",
+    "status": "v17 revision directions accepted; clause insertion requested",
+    "order": {
+      "introduction": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "chapter1": [
+        5,
+        7,
+        9,
+        10,
+        12,
+        11
+      ],
+      "move_to_chapter3": [
+        6
+      ],
+      "move_to_chapter4": [
+        13
+      ],
+      "move_to_chapter5": [
+        8
+      ],
+      "absorb_transition": [
+        14
+      ]
+    },
+    "moves": [
+      {
+        "old_n": 6,
+        "to_chapter": 3
+      },
+      {
+        "old_n": 8,
+        "to_chapter": 5
+      },
+      {
+        "old_n": 13,
+        "to_chapter": 4
+      }
+    ],
+    "actual_full_script_rewritten": false
+  },
+  "display_rule": "실제 조문 번호·원문 발췌·쉬운 설명을 한 구획으로 작성한다. 원문 생략은 …로 표시하고 설명은 원문과 분리한다. 자세한 출처와 시행일은 노트·자료대장에 보존한다.",
+  "canonical_excerpt_file": "LEGAL_INSERTIONS_v18.md",
+  "insertions": [
+    {
+      "old_n": 5,
+      "title": "학교폭력의 정의와 적용 범위",
+      "article": "학교폭력예방법 제2조 제1호",
+      "canonical_block": "p5-definition",
+      "source_ids": [
+        "L01"
+      ],
+      "placement": "학생 지위별 적용 표 앞. 대학 범위의 세부는 강사용 자료로 이동.",
+      "screen_explanation_ref": "LEGAL_INSERTIONS_v18.md#p5-definition",
+      "script_ref": "LEGAL_INSERTIONS_v18.md#p5-definition"
+    },
+    {
+      "old_n": 7,
+      "title": "교내외·온라인으로 이어지는 사건",
+      "article": "학교폭력예방법 제2조 제1의3호",
+      "canonical_block": "p7-cyber-definition",
+      "source_ids": [
+        "L01"
+      ],
+      "placement": "기존 p7의 짧은 설명에 정의의 해당 부분을 붙인다. 딥페이크 열거·정보통신망의 다른 법 정의 전체는 상세자료에 보존한다.",
+      "screen_explanation_ref": "LEGAL_INSERTIONS_v18.md#p7-cyber-definition",
+      "script_ref": "LEGAL_INSERTIONS_v18.md#p7-cyber-definition"
+    },
+    {
+      "old_n": 9,
+      "title": "세 가지 제재 제도의 구분",
+      "article": "학교폭력예방법 제17조 제1항",
+      "canonical_block": "p9-purpose",
+      "source_ids": [
+        "L02"
+      ],
+      "placement": "기존 세 제재 비교의 가해학생 조치 설명에 붙인다. 제17조 전체 17개 항을 한 화면에 넣지 않는다.",
+      "screen_explanation_ref": "LEGAL_INSERTIONS_v18.md#p9-purpose",
+      "script_ref": "LEGAL_INSERTIONS_v18.md#p9-purpose"
+    },
+    {
+      "old_n": 9,
+      "title": "퇴학의 적용 범위",
+      "article": "학교폭력예방법 제17조 제1항 단서",
+      "canonical_block": "p9-exception",
+      "source_ids": [
+        "L02"
+      ],
+      "placement": "관련 조치의 예외 설명으로 원문 단서 한 문장을 둔다. 별도 사례나 새 판단 절차를 만들지 않는다.",
+      "screen_explanation_ref": "LEGAL_INSERTIONS_v18.md#p9-exception",
+      "script_ref": "LEGAL_INSERTIONS_v18.md#p9-exception"
+    },
+    {
+      "old_n": 10,
+      "title": "연령에 따른 처리 범위",
+      "article": "형법 제9조",
+      "canonical_block": "p10-criminal-age",
+      "source_ids": [
+        "L03"
+      ],
+      "placement": "기존 연령 표 위에 짧은 전문을 인용. 소년법 연령·판단 시점 설명은 v16 확인 범위를 유지한다.",
+      "screen_explanation_ref": "LEGAL_INSERTIONS_v18.md#p10-criminal-age",
+      "script_ref": "LEGAL_INSERTIONS_v18.md#p10-criminal-age"
+    },
+    {
+      "old_n": 12,
+      "title": "형벌의 양형 조건",
+      "article": "형법 제51조 각 호",
+      "canonical_block": "p12-sentencing",
+      "source_ids": [
+        "L05"
+      ],
+      "placement": "기존 p12의 형벌 부분에 실제 항목을 제시. 시행령 기준과 합쳐 과밀하면 별도 화면으로 나눈다.",
+      "screen_explanation_ref": "LEGAL_INSERTIONS_v18.md#p12-sentencing",
+      "script_ref": "LEGAL_INSERTIONS_v18.md#p12-sentencing"
+    },
+    {
+      "old_n": 12,
+      "title": "가해학생 조치의 판단 기준",
+      "article": "학교폭력예방법 시행령 제19조 각 호",
+      "canonical_block": "p12-school-measures",
+      "source_ids": [
+        "L06"
+      ],
+      "placement": "기존 p12의 가해학생 조치 부분을 실제 5개 항목으로 작성. 형법 4개 항목과 한 화면에 과밀해지면 두 화면으로 나눈다.",
+      "screen_explanation_ref": "LEGAL_INSERTIONS_v18.md#p12-school-measures",
+      "script_ref": "LEGAL_INSERTIONS_v18.md#p12-school-measures"
+    },
+    {
+      "old_n": 12,
+      "title": "협박·보복과 법정 가중",
+      "article": "학교폭력예방법 제17조 제2항",
+      "canonical_block": "p12-retaliation",
+      "source_ids": [
+        "L02"
+      ],
+      "placement": "기존 p12의 협박·보복 부분. 짧은 원문을 조건 설명과 함께 배치한다.",
+      "screen_explanation_ref": "LEGAL_INSERTIONS_v18.md#p12-retaliation",
+      "script_ref": "LEGAL_INSERTIONS_v18.md#p12-retaliation"
+    },
+    {
+      "old_n": 11,
+      "title": "여러 조치의 병과",
+      "article": "학교폭력예방법 제17조 제1항",
+      "canonical_block": "p11-multiple-measures",
+      "source_ids": [
+        "L02"
+      ],
+      "placement": "기존 p11의 병과 설명에 짧은 근거 발췌를 붙인다.",
+      "screen_explanation_ref": "LEGAL_INSERTIONS_v18.md#p11-multiple-measures",
+      "script_ref": "LEGAL_INSERTIONS_v18.md#p11-multiple-measures"
+    }
+  ],
+  "sources": [
+    {
+      "id": "L01",
+      "law": "학교폭력예방 및 대책에 관한 법률",
+      "article": "제2조 제1호·제1의3호",
+      "effective": "2026-06-02",
+      "url": "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1029133055",
+      "verified": "학교폭력·사이버폭력 정의의 원문과 시행일",
+      "retrieved": "2026-10-02"
+    },
+    {
+      "id": "L02",
+      "law": "학교폭력예방 및 대책에 관한 법률",
+      "article": "제17조 제1·2항",
+      "effective": "2026-06-02",
+      "url": "https://law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=1011228995",
+      "verified": "조치의 목적·요청 주체·병과·퇴학 예외·협박 및 보복의 가중 원문",
+      "retrieved": "2026-10-02"
+    },
+    {
+      "id": "L06",
+      "law": "학교폭력예방 및 대책에 관한 법률 시행령",
+      "article": "제19조 각 호",
+      "effective": "2026-01-02",
+      "url": "https://www.law.go.kr/LSW/lumLsLinkPop.do?chrClsCd=010202&lspttninfSeq=65256",
+      "verified": "5개 조치별 판단 항목의 원문",
+      "retrieved": "2026-10-02"
+    },
+    {
+      "id": "L03",
+      "law": "형법",
+      "article": "제9조",
+      "effective": "2026-10-02",
+      "url": "https://www.law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=900779548",
+      "verified": "조문 전문과 시행일",
+      "retrieved": "2026-10-02"
+    },
+    {
+      "id": "L05",
+      "law": "형법",
+      "article": "제51조 각 호",
+      "effective": "2026-10-02",
+      "url": "https://law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=1016060037",
+      "verified": "4개 양형 항목의 원문",
+      "retrieved": "2026-10-02"
+    }
+  ],
+  "source_scope": [
+    "이번에 위 5개 공식 조문 페이지를 다시 읽었다.",
+    "소년법 전문·세부 고시·2026 가이드북 확인 상태는 v16의 남은 과제를 승계한다.",
+    "제17조의 긴급조치·심의 경로는 4장 이동을 유지하고 이번 1장 삽입안에 되돌리지 않는다."
+  ],
+  "notes_rule": "각 법령 페이지의 노트는 낭독 대본 / 출처 / 강사용 상세자료 / 내부 제작 메모로 구분한다. 원문 출처·시행일·확인 위치와 생략 범위를 보존한다.",
+  "canonical_note": "원문·화면 설명·낭독 대본의 정확한 텍스트는 MD 한 곳에 보관한다. JSON은 해당 구획의 ID와 삽입 위치를 연결한다."
+}
