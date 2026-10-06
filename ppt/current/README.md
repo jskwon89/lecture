@@ -1,6 +1,6 @@
 # CURRENT RULESET — READ THIS FIRST
 
-기준일: 2026-10-02
+기준일: 2026-10-06
 
 이 폴더는 **현재 실제 작업에 적용할 규칙만 가리키는 진입점**이다. 규칙 본문을 중복 복사하지 않는다. 중복 복사본이 생기면 서로 다른 버전으로 갈라질 수 있기 때문이다.
 
@@ -14,13 +14,15 @@
 6. `../DOMESTIC_FIRST_RESEARCH_PROTOCOL.md` — 국내우선 조사
 7. `../WEEK_INITIAL_BUILD_PROTOCOL.md` — 신규 주차의 공개논의→직접 국외자료→잠정 쟁점→표적조사 초기 설계
 8. `../WEEK_RESEARCH_COVERAGE_TEMPLATE.md` — 12개 자료유형 + 통계 5축
-9. `../PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md` — 논제 정합성 중간감사
+9. `../PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md` — 논제 정합성 중간감사·첫 제출 전 전 페이지 내용 검수
 10. `../source_rules/standard_structure_v4_20260918.md` — 현행 표준구조 보조규칙
 11. `../source_rules/ops_handbook_v4.md` — 과목 운영·논증·토론 보조규칙
 12. `../source_rules/courseplan_reconciliation_20260901-2.md` — 평가·제출물 화면에서만 운영 정합성 확인
 13. **실제 화면 부품·그래프·표·흐름을 만들 때** `../templates/layout_kit/README.md`와 `CANONICAL_COMPATIBILITY.md` — Canonical을 읽은 뒤 보조 구현도구로 사용
 
 ## 이번 작업에서 적용할 내용 보완
+
+2026-10-06 사용자 승인으로 **전체 장·단원 초안의 첫 제출 전 전 페이지 내용 검수**를 필수화했다. `../PPT_WORKFLOW.md` §4-4와 `../PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md` §4-1·§7에 따라 실제 화면 문구·대본·앞뒤 연결을 검수하고 근거·전달본·PASS/HOLD를 기록한다. 프로그램·연구의 대상 구분은 CONTENT §4-11, 비교 수준과 관계는 §7, 노트에 대본만 요청한 경우는 §4-4를 따른다. 기존 규칙과 적용관계는 SOURCE_MAP §28에 기록했다.
 
 2026-10-02 사용자 지시를 반영했다. **목차의 단원 역할·새 질문**은 `../PPT_WORKFLOW.md` §4-1-1, **간결한 낭독 대본과 상세자료 역할**은 `../PPT_CONTENT_RULES.md` §4-4·§4-5, **쉬운 말·반복·가상 비교**는 §4-10, **전체 검수·완료 상태 구분**은 WORKFLOW §9를 따른다. 기존 대본의 분량·확장 강제와 충돌하는 범위는 `../RULE_SOURCE_MAP.md` §27에 기록했다.
 
