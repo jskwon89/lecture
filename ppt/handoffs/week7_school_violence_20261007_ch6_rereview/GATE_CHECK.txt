@@ -1,0 +1,6 @@
+valid record accepted
+missing page rejected
+stale hash rejected
+invented screen quote rejected
+PASS with unresolved issue rejected
+This checks evidence linkage, not comprehension.
