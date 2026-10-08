@@ -85,6 +85,7 @@ PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로
 - `references/` — 참조 덱·인덱스·완성본 패턴·버전 대장
 - `handoffs/CURRENT_W4.md` — 4주차 현재 기준과 과거 인수인계의 관계
 - `handoffs/CURRENT_W7.md` — 7주차 v14 내용·대본 수정안, 실제 PPT 반영 상태와 다음 작업
+- `handoffs/CURRENT_W8.md` — 8주차 AI CCTV 자료 80항목, 목차·PPT 53장·대본 초안과 전 페이지 검수 기록
 - `finals/` — 사용자 확정 최종본
 - `CLAUDE_REVIEW_PROMPT.md` — 실제 PPT 제작 담당자의 규칙 감사 프롬프트
 - `CHANGELOG.md` — 규칙 변경 이력
@@ -94,3 +95,4 @@ PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로
 `jskwon89/lecture`는 이번 확인 시 public이다. 개인·민감정보, 배포권이 없는 원문, 폰트 파일은 커밋하지 않는다.
 
 > 새 PPT 안을 제시하기 전에 **`current/README.md`를 먼저 읽고**, README·기본 Canonical·콘텐츠 추가규칙·WORKFLOW를 확인한다. `archive/`는 현재 작업에 적용하지 않는다.
+

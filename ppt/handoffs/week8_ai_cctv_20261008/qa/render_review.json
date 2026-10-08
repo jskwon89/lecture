@@ -1,0 +1,600 @@
+{
+  "pptx_sha256": "b9b9fc87d287d390f38bba4c96e59f8a53062789bc1a3dcf96f234282f310c04",
+  "docx_sha256": "30d7ec1beff7f01f85fc9cddff24d33480574cd753a55a335eea98f36247a734",
+  "ppt_pages": [
+    {
+      "slide": 1,
+      "png_sha256": "2dc037ed9b92840a7be2e54f52b4b0601c192dc5a28575c632b4712015e7d8cc",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 2,
+      "png_sha256": "017462c6020c92c3cfa706f81fb1c23dbced5123ba5a0eced281b8e15ef4e8b1",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 3,
+      "png_sha256": "a5483ac668a1f32105b92e55c143488c5374d97f705e7ac13219a0b24a94ffac",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 4,
+      "png_sha256": "d819ea168333b8de7dc91d86fa2a635d0ee27892436038d38ebb4bff21b4740e",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 5,
+      "png_sha256": "3229f08b1a93242e0df855efe9e5b265b963413d1a6a13799ee43b3245c72b1d",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 6,
+      "png_sha256": "f5735297ca7d7008f22d6cb17df8ff4c5dc02f000ff2a65751fd66cb8b798863",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 7,
+      "png_sha256": "39e454d5549d5a03334e87a5b89ca31fb6ef59a929d4935fe2a6eef2c025a9dc",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 8,
+      "png_sha256": "18ac9b42acf264e256d13ee8817b7e306061eb7016bcc629d072ee1df0eab7c9",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 9,
+      "png_sha256": "a0fd217b373b41180d1d5c254618b2299cc103089e1cfdcf5c1dc8caf822e310",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 10,
+      "png_sha256": "30f950c7229927cf134904b39f2d6c4402c0c8f5a697ca34d0b34e27d1992370",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 11,
+      "png_sha256": "f3977e0fb879d1b2ada9ff6e98bbc15984e2973d5c7b17c7a7c3d8fe4bf44409",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 12,
+      "png_sha256": "4910d4ae33244b73f201457d3d274785fb149f8dfd7c58034988e15a876878be",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 13,
+      "png_sha256": "4a5e3b4b89713342413099f6f566bba2e314af9c647608e3da7b2ee82415901b",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 14,
+      "png_sha256": "4ed48d0f888f07d425544d2ae3907f354634cbac5991d081636968677a44a5db",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 15,
+      "png_sha256": "d16d28bc1d2b600db788d5867779582f327743df79064c19b9ac61cea610a384",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 16,
+      "png_sha256": "5c60fdcc0bb6b50b1bb285412f4f927abb6a56d27770f352a6cdf38ef6890ea3",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 17,
+      "png_sha256": "880c9548963e3bb2f5b22d667c3ee5e345ad0c6fc37e73e378696c74532b9e93",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 18,
+      "png_sha256": "c88610edf05f666b50bd28166af54c7de129facf0b877327a7a778e19cf79fde",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 19,
+      "png_sha256": "70f280e62827be65cbf59d25b1d46ab118ef8a1ba4c8e69a70d37162bd01edea",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 20,
+      "png_sha256": "5087d5c489aeaa29fc391d5710fae6eead13d7c04af40cd29abea0682f7fdf36",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 21,
+      "png_sha256": "599f99aadf3f37ec52a2b5ff5e7efeab1fd4863ca554567d0f8955396d7fa995",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 22,
+      "png_sha256": "1ab98645b3ac7651e74ccaea13c55688b6c83b3476fdbaa247127988d71c2fd6",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 23,
+      "png_sha256": "43eedfe6d9db74d9217291204e4cf88150747058a3a6dd77e2f45367d4041dc4",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 24,
+      "png_sha256": "da84a98bb2a99677a6bf510296a2943881d042dbce6d7b2fb545ed18ee19be18",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 25,
+      "png_sha256": "31ebe82f10bb16478a8957d20b7a730abea8d5e8049bff35ce7ba558ed00d400",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 26,
+      "png_sha256": "8d21cb624e0e3dea58bf4e4abac00feeb8d1d8c9aa58cecc5b5508d2c1d0b982",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 27,
+      "png_sha256": "840aa71ce8149ebe450d800abca510b467e902705e8f35435b92c9c326c2c5e1",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 28,
+      "png_sha256": "c6adbc49cc1ca2bed952302379e6e5dec3fe2fb2a03a03c7c545bf37e467796e",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 29,
+      "png_sha256": "a07a0a186f0c308e64c1b1e62385178af32c989e2979976e223feae97b1c7048",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 30,
+      "png_sha256": "61e648297cc62bd53eb638684e32d8584b8669847488766b0e3e917714cceb13",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 31,
+      "png_sha256": "350e8df2cb1e84197b7eefa9643c534858494f0fe1d9c14654437f2f20bf2885",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 32,
+      "png_sha256": "5b017109fc902ba432dc7e0ca6a8a578dc3a11fa45469b717fdee0a8cc8c2bf4",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 33,
+      "png_sha256": "7d50ad153ffd551905ecd47c6aad573d2e2863613014dbd03bf3598245da54ca",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 34,
+      "png_sha256": "289c8a8834bbc183c439091877d9902cfa2f1287f4d2544843d67af8ef8d1369",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 35,
+      "png_sha256": "380ad85ea1dd0ac44b397be54f235c7747f68ea9644e57766f637135e197066e",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 36,
+      "png_sha256": "ca8402b5c21cb7d36b8532ff95ff50e677e829d6e112ebf1c95b8b850a01e6ca",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 37,
+      "png_sha256": "ce0f2cd9450bfb7fb36053f1b0a3195e111a5d4969298a788a099dab505de6e0",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 38,
+      "png_sha256": "dd6c0946f1ca02c430f9c772898b674cb5ed5eeeb556e0a324f9cfa988889ac8",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 39,
+      "png_sha256": "3aa85296392ed508a65af23d44bbc569bd8023cb24d6992280097deb600d199d",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 40,
+      "png_sha256": "68876fe53f4a0cc84398f268d318b70aa8c366051d5316e3032e3f34814a793f",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 41,
+      "png_sha256": "7352fa3bf4b2c6394b73a7eb21c4f857da5f10046b6d814b9d1b0696da6048a6",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 42,
+      "png_sha256": "67b83640e295a5fa2de49295902cd799c425f5220669bfccb50171b955dcee59",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 43,
+      "png_sha256": "a83d85c44419a364c12700c5a6bc7eef4a1bd549f6e05740e76866d7509780de",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 44,
+      "png_sha256": "cbdc8044cba8cad67c07c07d7553b683913dbf5ca900c533ccdc9df23a0b86e6",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 45,
+      "png_sha256": "ccb9081bfe8b518cd5fabbef8f5ed9ee610c0a0d5c4afe15ec02c8fd5e536d9c",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 46,
+      "png_sha256": "d896426ab3fb640d787221b4d5f41d3ee06c24e2534aa026a4bb75a9faea4597",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 47,
+      "png_sha256": "8c0528445e4aa9659e0d185abdfb5af6aadb1178f722f46427cfe745df4ea284",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 48,
+      "png_sha256": "8ec50d144a185d2f1095eb670f9a77a228b26adef57b19bbe6c6aa9e553839b2",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 49,
+      "png_sha256": "55a117fb54c7dca3116bf5ad0b8010b2f483b26f9d45816e420ca19d32bdac21",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 50,
+      "png_sha256": "62d25840c7ca49d0868c1c7b2265a8cdb51a550453255ca183a7df246b9565d4",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 51,
+      "png_sha256": "1a4d9c1039d62d3285f531afb3b18ec3e8509713d6f852b8c2e9418baa0a7ea8",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 52,
+      "png_sha256": "3a3af0fc897f475ef2ce2645383b36dfc54865d2f9c62c500ccad4780bf9f8cb",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    },
+    {
+      "slide": 53,
+      "png_sha256": "50c7439f119ead0e494bdcbe47ae49d2f41b43af19ac60658dc3e32f3ab7648e",
+      "last_rule_y_in": 6.7133,
+      "visual_status": "PASS",
+      "note": "전문 크기 이미지에서 제목·본문·표·그림의 잘림·겹침·누락과 읽기 순서를 확인했다."
+    }
+  ],
+  "docx_pages": [
+    {
+      "page": 1,
+      "visible_items": [
+        "표지·논제·일곱 단원 목차"
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "d80ae17cf51b0f2c3ddfd3a700a75fb91ae32eabc9e988a84c5c561445e94425"
+    },
+    {
+      "page": 2,
+      "visible_items": [
+        "대본 사용·95분 운영안·종합·출처 한계·기준 저장소"
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "0db9ef8fa5cdff3b80d6d3a5c6cec3a7bde925ecd9a49a860e56dc1bf7dd2b51"
+    },
+    {
+      "page": 3,
+      "visible_items": [
+        "01  ",
+        "02  ",
+        "03  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "704f6a5fc78f461f4cf9119fd9d513c1e66fe27eb4862efc6d1a0fbed0c7b610"
+    },
+    {
+      "page": 4,
+      "visible_items": [
+        "04  AI ",
+        "05  ",
+        "06  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "3f0e382eb87a013cef46e5c7fecf14b327abb1ef15c8d298129610ea97665ebf"
+    },
+    {
+      "page": 5,
+      "visible_items": [
+        "07  ",
+        "08  ",
+        "09  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "30d7331c48601400c5673d8f595567c4880e4cc75d5d7b172f551c9c29621963"
+    },
+    {
+      "page": 6,
+      "visible_items": [
+        "10  ",
+        "11  ",
+        "12  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "3e4ae9a30db06a21958ab0fb1ab618b300b957525cfcd15a8c95fb9836602d0f"
+    },
+    {
+      "page": 7,
+      "visible_items": [
+        "13  ",
+        "14  ",
+        "15  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "a12b00650b08887614df207eab6e92c775520c62ddee110ca7d712fcfd35c518"
+    },
+    {
+      "page": 8,
+      "visible_items": [
+        "16  ",
+        "17  ",
+        "18  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "5584c035e89df19fd4142fa66d93534c4b75093942085f0f0199f962bd1cb7de"
+    },
+    {
+      "page": 9,
+      "visible_items": [
+        "19  ",
+        "20  ",
+        "21  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "78f8aa0eb01a4fbe0d0e83045065446e37f9a9dedd4344a1db0ecb38a6caf042"
+    },
+    {
+      "page": 10,
+      "visible_items": [
+        "22  ",
+        "23  ",
+        "24  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "3edf6b6bd303b6b12f2f13eb56fbba0b52125e97a842709cc0a1d65abab202f2"
+    },
+    {
+      "page": 11,
+      "visible_items": [
+        "25  ",
+        "26  ",
+        "27  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "2a49049e28aa217436097bb6dd28c5697e0521d8f0664bcf960788a1e00afee0"
+    },
+    {
+      "page": 12,
+      "visible_items": [
+        "28  ",
+        "29  ",
+        "30  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "610035183aa8a5227d6fb8a3d4825cd6541977cbfe2b1af6bc93f98145502dee"
+    },
+    {
+      "page": 13,
+      "visible_items": [
+        "31  EU",
+        "32  ",
+        "33  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "6f54ca1836aad6bd47070ffb122db1717225077621e050e0f5067f973b13e0e7"
+    },
+    {
+      "page": 14,
+      "visible_items": [
+        "34  ",
+        "35  ",
+        "36  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "a7b1980496f4f613d8248da03035f3918ec6e0b2742687852173356a9b6b55c0"
+    },
+    {
+      "page": 15,
+      "visible_items": [
+        "37  시작·확대·",
+        "38  ",
+        "39  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "8e5f0f1b5411e928fdf751775285b524d5281a70b6204102696e72b78a246c86"
+    },
+    {
+      "page": 16,
+      "visible_items": [
+        "40  ",
+        "41  ",
+        "42  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "6854b42ee3fa10bd79daebfe6905938998c15e29471bb4e56dd9907ea84a42a4"
+    },
+    {
+      "page": 17,
+      "visible_items": [
+        "43  ",
+        "44  ",
+        "45  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "7737c9c62193a425ff07b898075b3284143330950da9bdc4abc88e7f78d70bad"
+    },
+    {
+      "page": 18,
+      "visible_items": [
+        "46  Face ID",
+        "47  ",
+        "48  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "a4b5ecbf8faf2ed0020e0bf0038ef477540e0f408532ede93662dd2b70371154"
+    },
+    {
+      "page": 19,
+      "visible_items": [
+        "49  ",
+        "50  ",
+        "51  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "e6f890df5bf857abec78fd574746f2396252c0866c72eb3a71c87f09836685e0"
+    },
+    {
+      "page": 20,
+      "visible_items": [
+        "52  ",
+        "53  "
+      ],
+      "status": "PASS",
+      "visual_check": "한 페이지씩 이미지를 열어 본문·출처 링크·표·제목·쪽번호를 읽었다. 잘림, 겹침, 머리말 고립 및 빈 페이지 없음.",
+      "png_sha256": "161056df4b2a7bb6d634ff1d4343b56aa4743e103add82ce3d715c52854a2454"
+    }
+  ],
+  "ppt_pass": 53,
+  "docx_pass": 20,
+  "hold": 0,
+  "unreviewed": 0,
+  "render_engine": "LibreOffice PDF export; PPT PDF rasterized at 150 dpi; DOCX render_docx.py",
+  "native_powerpoint_tested": false
+}

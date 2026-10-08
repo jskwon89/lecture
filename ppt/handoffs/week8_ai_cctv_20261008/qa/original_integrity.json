@@ -1,0 +1,107 @@
+[
+  {
+    "path": "materials/baseline/AI_CCTV_검토기록.md",
+    "sha256": "9e4642086d3b749aaa2fb3c08c00899cef999c9c3e606423024abd73148ed0e3",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/baseline/AI_CCTV_변경기록.md",
+    "sha256": "eef27ca9795f6dedd87dba106b45993d82e95f6c2ce3faa5962ef91cdfc67c33",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/baseline/AI_CCTV_읽기안내.docx",
+    "sha256": "0c545190f4faafc7b3e9d61783ac10922d636ee053e18824d319b5d8f0eabb2c",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/baseline/AI_CCTV_자료대장.csv",
+    "sha256": "3caea564eaa5587246915793c3333b643866d6baaf968b788ac3aae265eedcb7",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/baseline/AI_CCTV_자료조사.md",
+    "sha256": "8fc0b19fe15b257b4f7e0c3547d2bf2f61ee4e28975b5aeaac204edb2e75f2ab",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/baseline/AI_CCTV_조사경로.md",
+    "sha256": "555f4552e64ea281b042a7727b26f943f5be94461ac417a36b209e52e2e0b4d0",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/baseline/AI_CCTV_조사자료묶음.zip",
+    "sha256": "00513b2b52967f7498e8493a15dea91d66f2d126cf1f99809c5fd22cad754b03",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/baseline/MANIFEST_SHA256.txt",
+    "sha256": "c2c80711eec4537f8342d6b093ea6eb7fb92b311bb6de3eb96b542f19d351013",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/baseline/README.md",
+    "sha256": "3a48d78846654ec04b1370ff3eb47dd59240dc40a86c4870bea743be9f6858ad",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/baseline/ai_cctv_issues.json",
+    "sha256": "7dd56f5ccfd9c26ef66987b8053c600a96cee799c486e92e8d2ee44924287ac0",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/baseline/ai_cctv_sources.json",
+    "sha256": "bd4d480afdfef0aa6c5400c300e8b5d890886919b7b99be654babecb3d1bb45e",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/history/AI_CCTV_역사사례_검수기록.json",
+    "sha256": "0c4cd717d89410cb6beb3af4d1733c4987d5aedef3aa903c1e35ae6b29b8675b",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/history/AI_CCTV_역사사례_검수기록.md",
+    "sha256": "afc18eed789d58e445bf025d67cfd3985590ca37cef78d2c6a02dd566eec6e25",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/history/AI_CCTV_역사사례_보완묶음.zip",
+    "sha256": "0e62c0fea0d4b81fd26976e67a7eb0c318074b1d06937235d6a6e57b9b4343f6",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/history/AI_CCTV_역사사례_사례데이터.json",
+    "sha256": "79483a171ed13bc28db12a2dfd398eccad115e0314357fe98d5595d87fbc651f",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/history/AI_CCTV_역사사례_출처목록.csv",
+    "sha256": "2ecf08a32284f735ddf59de94f786a1d5c628db5bd4a2849bf1aa901510fbf16",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/history/AI_CCTV_역사사례_페이지내용.json",
+    "sha256": "3911ada190734d6a6f4ab284c7808fc1034deed6b4794529a25a25d37e9e8ad5",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/history/AI_CCTV_역사와_사례_보완자료.docx",
+    "sha256": "2d5846379520a78d0574274d86eae78f16ca8f4887bf0f771fd20f7bb1054973",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/history/AI_CCTV_역사와_사례_보완자료.md",
+    "sha256": "fede1b8dc9c07f935766b6ae3c7257fb4c95c214a118b5e37c0ac1b2e2c237ac",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/history/README.md",
+    "sha256": "d8d9ae418ca2559614dcaffcf37804151f4166d654384873361b582b52f7206b",
+    "byte_identical": true
+  },
+  {
+    "path": "materials/history/tools/check_content_review.py",
+    "sha256": "f9336fb928f320658137c061187e07545c733f4ff27b6d77ed7a0e323649a980",
+    "byte_identical": true
+  }
+]
