@@ -8,6 +8,7 @@
 - `rowfit.py` — Pretendard 실제 글자폭을 사용해 줄 수와 내용 높이를 계산
 - `layout.py` — 행 내용 높이는 고정하고 남는 공간은 모든 행의 동일 위·아래 여백으로 배분
 - `check_spacing.py` — 150dpi 렌더에서 여백·행머리글 중심·마지막 구분선·각주 간격을 실측
+- `check_script_screen.py` — 발표자 노트의 낭독 대본 문단별로 핵심어가 같은 장 화면에 같은 말로 있는지 비율을 내고, 위치 지시 문단과 방어문 후보를 찾는다(`PPT_CONTENT_RULES.md` §4-2-2 보조). 의미 판정은 사람이 한다. 예: `python3 ppt/tools/check_script_screen.py deck.pptx --pages 1-49 --out report.md`
 
 ## 전제
 
