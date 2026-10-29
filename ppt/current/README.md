@@ -1,8 +1,27 @@
 # CURRENT RULESET — READ THIS FIRST
 
-기준일: 2026-10-08
+기준일: 2026-10-29
 
 이 폴더는 **현재 실제 작업에 적용할 규칙만 가리키는 진입점**이다. 규칙 본문을 중복 복사하지 않는다. 중복 복사본이 생기면 서로 다른 버전으로 갈라질 수 있기 때문이다.
+
+## 자료조사·강의 PPT 작업 안내 — 2026-10-29 통합
+
+이번 작업의 수정사항은 아래 **기존 본문에 통합**했다. 이 표는 찾아가는 순서이며 별도 규칙집이 아니다. 사용자 확정사항·수정 이유·중복 처리 기록은 [이번 반영 내역](../handoffs/research_ppt_review_20261029/FILE_CHANGES.md)에 둔다.
+
+| 단계 | 확인·작업 위치 |
+|---|---|
+| 확정 논제·비교 대상 보존 | [초기 설계 §1](../WEEK_INITIAL_BUILD_PROTOCOL.md) |
+| 국내 자료 조사와 필요한 국외 보완 | [국내 우선 조사 §1–7](../DOMESTIC_FIRST_RESEARCH_PROTOCOL.md) |
+| 주장별 원문 대조·미접근 링크 | [국내 우선 조사 §4-3·§8-3](../DOMESTIC_FIRST_RESEARCH_PROTOCOL.md) |
+| 판결 절차·사실 시점·법령 버전 | [콘텐츠 §2-2·§4-5](../PPT_CONTENT_RULES.md) |
+| 찬반 자료 귀속·동일 정책 비교·연구 해석 | [콘텐츠 §6–9](../PPT_CONTENT_RULES.md) |
+| 수업용 영상의 직접 링크·길이 | [국내 우선 조사 §5-1](../DOMESTIC_FIRST_RESEARCH_PROTOCOL.md) |
+| 실제 PPT 쪽수·앞 자료와 끝 쟁점 연결 | [작업 절차 §2-2](../PPT_WORKFLOW.md), [정합성 감사 §3-1](../PROPOSITION_ALIGNMENT_AUDIT_TEMPLATE.md) |
+| 전할 말 → 대본 → 화면, 명사형 제목·메시지 띠 | [콘텐츠 §4-2-1–§4-2-3](../PPT_CONTENT_RULES.md) |
+| 중복 제거·화면 검수·수정 반영 확인 | [화면 우선 검수](../SCREEN_FIRST_REVIEW.md), [작업 절차 §4-4·§8–9](../PPT_WORKFLOW.md) |
+| 이번 중간평가 논제·형식·간단한 5항목 평가표 | [운영 기준 §3](../source_rules/ops_handbook_v4.md), [학기 운영 대조](../source_rules/courseplan_reconciliation_20260901-2.md) |
+
+W9의 쟁점 네 개와 이번 중간평가의 평가표·마감일은 해당 작업에 적용한다. 다른 주차·과제의 고정 규칙으로 확대하지 않는다.
 
 ## 2026-10-08 구체적 설명과 방어문 처리
 
