@@ -20,6 +20,7 @@
 | 전할 말 → 대본 → 화면, 명사형 제목·메시지 띠 | [콘텐츠 §4-2-1–§4-2-3](../PPT_CONTENT_RULES.md) |
 | 중복 제거·화면 검수·수정 반영 확인 | [화면 우선 검수](../SCREEN_FIRST_REVIEW.md), [작업 절차 §4-4·§8–9](../PPT_WORKFLOW.md) |
 | 이번 중간평가 논제·형식·간단한 5항목 평가표 | [운영 기준 §3](../source_rules/ops_handbook_v4.md), [학기 운영 대조](../source_rules/courseplan_reconciliation_20260901-2.md) |
+| W9에서 정한 작업 운영·화면 문장·쟁점 쪽 형식·영상 링크·전달 전 점검(위 문서에 없는 항목만) | [W9 작업 유의사항](../W9_LESSONS_20261029.md), 9주차 자료 [CURRENT_W9](../handoffs/CURRENT_W9.md) |
 
 W9의 쟁점 네 개와 이번 중간평가의 평가표·마감일은 해당 작업에 적용한다. 다른 주차·과제의 고정 규칙으로 확대하지 않는다.
 
