@@ -33,6 +33,7 @@
 | 2주차 실제 완성본 | `completed/w2_death_penalty_final_20260921.pptx` | **COMPLETED_DECK / CURRENT CONTENT REFERENCE** | 50장. 철학·법·헌법재판·효과·오판·여론을 종합으로 회수하는 구조. |
 | 3주차 실제 완성본 | `completed/w3_delinquent_age_final_20260921.pptx` | **COMPLETED_DECK / CURRENT CONTENT REFERENCE** | 85장 = 본편62 + 보충23. 현행경로·정책대안·효과·권리보장·보충자료 분리의 대표 참조. |
 | 4주차 실제 완성본 | `completed/w4_juvenile_drugs_final_20260921.pptx` | **COMPLETED_DECK / CURRENT CONTENT REFERENCE** | 64장. 국내 제도·사건·프로그램·실행조건·효과를 7단원과 6쟁점으로 회수하는 구조. |
+| 11주차 최종본 | `../finals/w11_safety_measures/w11_safety_measures_final_v1.pptx` | **FINAL (2026-11-10)** | 70장. 번호 카드·판례 판단/결과 카드·'생각해 볼 지점' 상자, 2장 하위 간지(2-1~2-4) 구성. |
 | 청소년/성인 접촉경로 별도1쪽 | 같은 대장의 §6 | DRAFT GRAPH — DATA QA HOLD | 그래프 제시 요구의 예시. 범주 합산·0값·출처 재확인 전에는 수치 참조로 사용하지 않는다. |
 
 ## Git 바이너리 참조 덱
