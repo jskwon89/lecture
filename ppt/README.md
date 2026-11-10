@@ -94,6 +94,7 @@ PPT 구성안·대본·실제 PPT를 만들기 전에 반드시 다음 순서로
 - `handoffs/CURRENT_W4.md` — 4주차 현재 기준과 과거 인수인계의 관계
 - `handoffs/CURRENT_W7.md` — 7주차 v14 내용·대본 수정안, 실제 PPT 반영 상태와 다음 작업
 - `handoffs/CURRENT_W8.md` — 8주차 AI CCTV 자료 80항목, 목차·PPT 53장·대본 초안과 전 페이지 검수 기록
+- `finals/w11_safety_measures/` — 11주차 범죄피해자 안전조치 FINAL v1(70장)
 - `handoffs/CURRENT_W9.md` — 9주차 출소자 주거 제한 v76(62장), 중간평가 두 장, 반영 대기 항목
 - `finals/` — 사용자 확정 최종본
 - `CLAUDE_REVIEW_PROMPT.md` — 실제 PPT 제작 담당자의 규칙 감사 프롬프트
